@@ -1,0 +1,27 @@
+---------------------------------------------------------------------------------------------------  
+---------------------------------------COMPILING AND RUNNING---------------------------------------
+To run the CDFT_SAFTVRMIE code, compile the "main.f95" and "association.f95" files with the FORTRAN 
+compiler of your preference, and run the executable.
+---------------------------------------------------------------------------------------------------
+-------------------------------------INPUT DATA----------------------------------------------------
+The "input.dat" file has the following structure:
+Line 1: Temperature (K);
+Line 2: Number of components, which should be set equal to 1;
+Line 3: Bulk molecular density (A-³), sigma_fluid (A), epsilon_fluid/kB (K), lambda_a, lambda_r, m, 
+Phi, epsilon_hb/kB (K), rc/sigma, rd/sigma, sites;
+Line 4: ns(1), ns(2),...,ns(sites).
+In Line 3, "Phi" is calculated in accordance with Equation 22;
+In Line 4, "sites" is the number of types of association sites (2 for water, following the 4C 
+scheme), and "ns(i)" is the number os sites of type "i". The parameters "sigma_fluid", 
+"epsilon_fluid/kB", "lambda_a", "lambda_r", "m", "epsilon_hb/kB", "rc/sigma" and "rd/sigma" 
+are equal to the ones of the bulk SAFT-VR Mie EoS, as mentioned in the main text.
+---------------------------------------------------------------------------------------------------
+-------------------------------------OUTPUT DATA---------------------------------------------------
+During the execution of code, two types of information are printed to the screen: the residual 
+chemical potential, in reduced form, i.e. divided by (kB.T), and the total difference between the 
+density profiles of two consecutive iterations (error). Once the normalized error (error/number 
+of slabs) is less or equal to the specified tolerance, the calculation is finished, and the 
+resulting density profile is printed to the file "profile.dat". For high bulk densities, it might
+be necessary to decrease the value of parameter "alpha", which is the mixing parameter of the 
+Picard iteration scheme, and the tolerance. 
+--------------------------------------------------------------------------------------------------- 
