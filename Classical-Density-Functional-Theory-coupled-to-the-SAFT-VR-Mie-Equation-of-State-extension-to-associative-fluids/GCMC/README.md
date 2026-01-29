@@ -32,3 +32,9 @@
                          \______/   |__/  \__/  |______/   \______/   |__/  |__/  |__/     |__/  |__/
 ```
 <p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
+
+<p align="center"><b>Authors</b></p>
+<p align="center">
+André de Freitas Gonçalves<br>
+Nathan Barros de Souza<br>
+Luís Fernando Mercier Franco<br></p>
