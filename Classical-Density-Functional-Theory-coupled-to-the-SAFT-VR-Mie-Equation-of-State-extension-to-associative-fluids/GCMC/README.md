@@ -39,7 +39,7 @@ André de Freitas Gonçalves<br>
 Nathan Barros de Souza<br>
 Luís Fernando Mercier Franco<br></p>
 
-# <p align="center"><b>Grand Canonical Monte Carlo</b> (GCMC) simulation of associative fluids</p>
+# <p align="center"><b>Grand Canonical Monte Carlo</b> (GCMC):<br> associative fluids</p>
 
 ## Contents
 1. [Disclaimer](#disclaimer)
