@@ -57,6 +57,6 @@ Luís Fernando Mercier Franco<br></p>
 
 <p align="justify">
 The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
- recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in studies involving mixtures of hard convex bodies.
+ recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in simulation studies involving associative fluids.
  All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
 </p>
