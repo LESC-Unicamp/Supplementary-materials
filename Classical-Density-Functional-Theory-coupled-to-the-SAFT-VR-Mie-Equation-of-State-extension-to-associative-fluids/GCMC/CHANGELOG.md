@@ -1,4 +1,4 @@
-# <p align="center">Classical Density Functional Theory coupled to the SAFT-VR Mie Equation of State: <br>extension to associating fluids</p>
+# <p align="center">Grand Canonical Monte Carlo</b> (GCMC):<br> associative fluids</p>
 <p align="right"><b><sub>Version: 1.0.0</sub></b></p>
 
 <p align="center"><b>Authors</b></p>
