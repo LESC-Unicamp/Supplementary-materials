@@ -65,6 +65,7 @@ The authors make no warranties about the use of this software. The authors hold 
 
 ![paper_front](https://github.com/user-attachments/assets/aeb09568-e8db-4063-9a0b-4d46e148cb46)
 
-![paper_top](https://github.com/user-attachments/assets/36c51a83-578a-4ae8-aa4c-5ef66b94b2e3)
+![paper_top](https://github.com/user-attachments/assets/b5e9363c-66f8-4979-9850-c473925b1bd1)
+
 
 
