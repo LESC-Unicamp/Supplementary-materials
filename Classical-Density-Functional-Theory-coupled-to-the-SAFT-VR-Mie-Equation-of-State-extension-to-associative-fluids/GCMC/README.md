@@ -257,7 +257,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 - Multiply by the conversion factor 10<sup>30</sup> to convert the density from [kg/Å³] to [kg/m³].
 
 <p align="justify">
-  The <code>initial_configuration.xyz</code> file 
+  The <code>initial_configuration.xyz</code> file contains information on the structure of the initial configuration of the system, including particle positions, orientations, and box dimensions. Similarly, the <code>trajectory.xyz</code> file stores the structural information of the configurations generated during the simulation, with one frame saved every <code>N_SAVE_CONF</code> cycles. Both files are formatted to be opened with the open visualization software <a href="https://www.ovito.org/" target="_blank">OVITO</a>.
 </p>
 
 <p align="justify">
