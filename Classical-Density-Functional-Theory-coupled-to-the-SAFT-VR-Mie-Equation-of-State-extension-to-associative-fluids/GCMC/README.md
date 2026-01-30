@@ -198,15 +198,32 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Seed type | <code>RANDOM_SEED_LOGICAL</code> | Represents the seed type for pseudorandom number generator routines | <ul><li><code>.TRUE.</code> for a random seed</li><li><code>.FALSE.</code> for a fixed seed (ensures reproducibility) </li></ul> |
 | Number of layers | <code>NUMBER_SLABS</code> | Represents the number of layers used to compute the density profile | Any positive <code>INTEGER</code> number |
 
-POTENTIAL_SOL_ENABLED=true POTENTIAL_MIE_ENABLED=true POTENTIAL_ASSOC_ENABLED=true
-POTENTIAL_HS_ENABLED=false POTENTIAL_SW_ENABLED=false SW_RANGE
-OVERWRITE_COMBININGR SIGMA_SF EPSILON_SF
-RELEASE_XY=false PROB_TRANSLATION_XY
+<p align="justify">
+  A few additional parameters must be configured to perform the GCMC simulation for the water system. The flags <code>POTENTIAL_SOL_ENABLED</code>, <code>POTENTIAL_MIE_ENABLED</code>, and <code>POTENTIAL_ASSOC_ENABLED</code> must be set to <code>.TRUE.</code> to ensure that the fluid–solid, dispersive fluid–fluid, and associative fluid–fluid interactions are properly computed. Furthermore, the flags <code>POTENTIAL_HS_ENABLED</code> and <code>POTENTIAL_SW_ENABLED</code>, which refer to the hard-sphere and square-well potentials for dispersive fluid–fluid interactions, must be set to <code>.FALSE.</code>. The parameter <code>SW_RANGE</code> controls the range of this square-well potential (not to be confused with the associative square-well potential).
+</p>
 
-RANDOM_CONFIGURATION=true
+<p align="justify">
+  For the simulations presented in the paper, the Lorentz–Berthelot (LB) combining rules were used to compute the cross-interaction parameters between the solid and the fluid. These parameters are obtained by setting the flag <code>OVERWRITE_COMBININGR</code> to <code>.FALSE.</code>. If <code>OVERWRITE_COMBININGR</code> is set to <code>.TRUE.</code>, the LB rules are overridden by user-specified values stored in the variables <code>SIGMA_SF</code> (size parameter) and <code>EPSILON_SF</code> (energy parameter).
+</p>
 
-DO_NPT_RANDOM=false MAX_ATTEMPTS_NPT MAX_ISO_RD MAX_ANISO_RD PRESSURE_RANDOM PROBABILITY_ISO ACC_ISO ACC_ANISO MAX_DISTORTION
+<p align="justify">
+  Moreover, the flag <code>RELEASE_XY</code> controls whether translations along the <em>x</em>- and <em>y</em>-directions are decoupled from translations along the <em>z</em>-direction with respect to the maximum translational displacement parameter. The parameter <code>PROB_TRANSLATION_XY</code> defines the probability of attempting translations in the <em>x</em>–<em>y</em> plane relative to translations along the <em>z</em>-direction. In this case, it is recommended to set <code>RELEASE_XY</code> to <code>.FALSE.</code>.
+</p>
 
-CONSIDER_CONFINEMENT=true
+<p align="justify">
+  The random-configuration routine is based on a trial-and-error NVT algorithm in which particles are repeatedly inserted into the simulation box at a constant (user-defined) density until the target number of molecules (<code>NUMBER_PARTICLES</code>) is reached. If the NVT procedure alone fails to generate a valid configuration, an NPT algorithm may be used instead. This situation may occur at higher densities, where particle insertion becomes difficult due to the lack of available space. In such cases, it is advisable to first insert molecules at a lower density and subsequently compress the system to reach the desired initial density before performing the GCMC simulation.
+</p>
 
-CONSIDER_WIDOM=false WIDOM_FREQ
+<p align="justify">
+  The NPT algorithm is enabled by setting <code>DO_NPT_RANDOM</code> to <code>.TRUE.</code>. It is controlled by the parameters <code>MAX_ATTEMPTS_NPT</code> (maximum number of NPT cycles), <code>MAX_ISO_RD</code> (maximum isotropic volume change), <code>MAX_ANISO_RD</code> (maximum anisotropic volume change), <code>PRESSURE_RANDOM</code> (target pressure in MPa), <code>PROBABILITY_ISO</code> (probability of selecting isotropic rather than anisotropic volume changes), <code>ACC_ISO</code> (acceptance threshold for isotropic volume changes), and <code>ACC_ANISO</code> (acceptance threshold for anisotropic volume changes). The anisotropic volume change is defined as a modification of one box dimension at a time while preserving the orthorhombic shape of the simulation box. This behavior is controlled by the parameter <code>MAX_DISTORTION</code>, which specifies the maximum allowed ratio between any two box lengths. Any attempted volume change that results in a box edge ratio larger than <code>MAX_DISTORTION</code> is rejected.
+</p>
+
+<p align="justify">
+  As an additional feature, the user can compute the excess chemical potential by enabling the Widom insertion method. This is done by setting the flag <code>CONSIDER_WIDOM</code> to <code>.TRUE.</code>, which activates the Widom insertion routine. The frequency of Widom insertions is controlled by the parameter <code>WIDOM_FREQ</code>, meaning that the routine is executed every <code>WIDOM_FREQ</code> cycles.
+</p>
+
+<p align="justify">
+  Finally, to perform a simulation under confinement (slit pores), the user must set the flag <code>CONSIDER_CONFINEMENT</code> to <code>.TRUE.</code>. If <code>CONSIDER_CONFINEMENT</code> is set to <code>.FALSE.</code>, the initial-configuration routine generates a cubic simulation box whose volume is determined from the prespecified initial density of the system.
+</p>
+
+## <a name="running"></a>Running the Code
