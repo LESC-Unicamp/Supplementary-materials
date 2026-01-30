@@ -123,7 +123,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 ```
 
 <p align="justify">
-  The <code>/src/</code> folder contains two 'Makefiles' that you can use to compile the code. Each of these 'Makefiles' contains different compilation options. You can use either the 'makefile' to compile the standard version of the code or the 'makefile-debug' to compile the debug version of the code.
+  The <code>/src/</code> folder contains a 'Makefile' that you can use to compile the standard version of the code.
 </p>
 
 <p align="justify">
@@ -135,15 +135,12 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 ```
 
 <p align="justify">
-  Then, to compile the source code, run one of the commands below, depending on the chosen compilation type:
+  Then, to compile the source code, run the command below:
 </p>
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-debug">Debug (without OpenMP)</a> | ```make -f makefile-debug``` |
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-debug-openmp">Debug (with OpenMP)</a> | ```make -f makefile-debug-openmp``` |
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile">Standard (without OpenMP)</a> | ```make -f makefile``` |
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-openmp">Standard (with OpenMP)</a> | ```make -f makefile-openmp``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/src/makefile">Standard (with OpenMP)</a> | ```make -f makefile``` |
 
 If your compilation option includes the OpenMP API (**Version 1.3.1**), you can also choose the number of threads to be used on your simulation via the following command:
 
