@@ -261,9 +261,17 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 </p>
 
 <p align="justify">
-  The <code>trajectory.xyz</code> file 
+  Finally, if the flag <code>CONSIDER_WIDOM</code> is set to <code>.TRUE.</code>, a file named <code>widom.dat</code> is generated. This file contains information on the number of Widom insertion trials (second column), the accumulated Widom insertion energy (third column), the ideal-gas contribution to the chemical potential (fourth column), and the excess chemical potential obtained from Widom insertion (fifth column).
 </p>
 
-IF WIDOM
-
 ## <a name="running"></a>Running the Code
+
+<p align="justify">
+  Finally, it is time to run the code! After compilation, the executable can be found in the <code>/bin/</code> folder and can be executed using:
+</p>
+
+**Standard compilation**
+
+```
+./gcmc_mie_assoc.out
+```
