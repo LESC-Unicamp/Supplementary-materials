@@ -275,3 +275,13 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 ```
 ./gcmc_mie_assoc.out
 ```
+
+## <a name="reporting"></a>Reporting Errors
+
+<p align="justify">
+  If you spot an error in the program files and all other documentation, please submit an issue report using the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/issues">Issues</a> tab.
+</p>
+
+## <a name="citation"></a>Citing Us
+
+Unavailable.
