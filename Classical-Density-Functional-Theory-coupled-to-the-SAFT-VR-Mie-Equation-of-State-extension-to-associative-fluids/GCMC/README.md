@@ -164,11 +164,11 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represent the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any <code>FLOAT</code> number |
 | Pore width | <code>PORE_WIDTH</code> | Represent the width in [Å] of the simulation box along the _z_-direction (confinement) | Any positive <code>FLOAT</code> number |
 | Pore height | <code>PORE_HEIGHT</code> | Represent the height in [Å] of the simulation box along the _x_-direction (PBC)<br>**NOTE**: The length along the _y_-direction is calculated from the provided initial number density | Any positive <code>FLOAT</code> number |
-
 | Solid density | <code>SOLID_DENSITY</code> | Represent the density of the solid phase (graphite) | Any positive <code>FLOAT</code> number |
 | Interlayer spacing | <code>INTERLAYER_SPACING</code> | Represent the distance between adjacent graphene layers in the solid phase | Any positive <code>FLOAT</code> number |
 | Size parameter<br>(solid) | <code>SIGMA_SOLID</code> | Represent the size parameter of the solid<br>**NOTE**: used in the Lorentz combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
 | Energy parameter<br>(solid) | <code>EPSILON_SOLID</code> | Represent the energy parameter of the solid<br>**NOTE**: used in the Berthelot combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
+
 | Size parameter<br>(fluid) | <code>SIGMA_FLUID</code> | Represent | Any <code>FLOAT</code> number |
 | Energy parameter<br>(fluid) | <code>EPSILON_FLUID</code> | Represent | Any <code>FLOAT</code> number |
 | Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represent | Any <code>FLOAT</code> number |
