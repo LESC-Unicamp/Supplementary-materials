@@ -66,9 +66,7 @@ The authors make no warranties about the use of this software. The authors hold 
 </p>
 
 <p align="justify">
-The figures below illustrate the geometry of the simulation box containing water molecules confined within a slit pore of width <b>30 Å</b> (along the <i>z</i>-direction) at a reduced chemical potential μ<sup>*</sup> = μ / (kT) = −14.364
-
-under a reduced chemical potential of \mu^\ast=\mu/(kT)=-14.364, where k is the Boltzmann constant and T is the system temperature.
+The figures below illustrate the geometry of the simulation box containing water molecules confined within a slit pore of width <b>30 Å</b> (along the <i>z</i>-direction) at a reduced chemical potential &mu;<sup>*</sup> = &mu; / (kT) = −14.364, where <em>k</em> is the Boltzmann constant and <em>T</em> is the system temperature.
 </p>
 
 | |
