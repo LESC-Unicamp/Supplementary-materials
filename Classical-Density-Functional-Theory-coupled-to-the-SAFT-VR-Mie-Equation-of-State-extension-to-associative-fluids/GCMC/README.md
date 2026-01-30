@@ -159,3 +159,10 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Number of particles | <code>NUMBER_PARTICLES</code> | Represent the initial number of particles/molecules in GCMC simulations | Any positive, non-zero <code>INTEGER</code> number |
+| Number density | <code>DENSITY</code> | Represent the initial number density (&rho; = N / V) of the system | Any positive, non-zero <code>INTEGER</code> number |
+
+
+
+
+
+
