@@ -153,7 +153,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 ## <a name="datainput"></a>Data Input
 
 <p align="justify">
-  Apart from the executable file, the <code>/bin/</code> folder contains an initialization file named <code>parameters.ini</code> that must be configured. The available options are straightforward and include comments; however, we provide a brief explanation of each of them below.
+  Apart from the executable file, the <code>/bin/</code> folder contains an initialization file named <code>parameters.ini</code> that must be configured. The available options are straightforward and include comments; however, we provide a brief explanation of some of them below.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
@@ -162,7 +162,8 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Number density | <code>DENSITY</code> | Represent the initial number density (&rho;) of the system in [1/Å³] | Any positive, non-zero <code>FLOAT</code> number |
 | Temperature | <code>TEMPERATURE</code> | Represent the temperature (T) of the system in [K] | Any positive, non-zero <code>FLOAT</code> number |
 | Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represent the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any <code>FLOAT</code> number |
-
+| Pore width | <code>PORE_WIDTH</code> | Represent the width of the simulation box along the _z_-direction (confinement) | Any <code>FLOAT</code> number |
+| Pore height | <code>PORE_HEIGHT</code> | Represent the height of the simulation box along the _x_-direction (PBC)<br>**NOTE**: The length along the y-direction is calculated from the provided initial number density | Any <code>FLOAT</code> number |
 
 
 
