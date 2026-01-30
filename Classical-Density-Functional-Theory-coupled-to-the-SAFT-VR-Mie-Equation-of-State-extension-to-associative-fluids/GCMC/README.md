@@ -63,9 +63,19 @@ The authors make no warranties about the use of this software. The authors hold 
 
 ## <a name="overview"></a>Overview
 
-![paper_front](https://github.com/user-attachments/assets/aeb09568-e8db-4063-9a0b-4d46e148cb46)
+| |
+|:---:|
+| |
+| **Oblate Ellipsoids of Revolution** |
+| ![paper_front](https://github.com/user-attachments/assets/44e39b38-56bb-48ba-a6c1-35430ca855a4) |
+| **Thin Spherocylinders** |
+| ![paper_top](https://github.com/user-attachments/assets/fea7664f-8719-463e-ba6b-4a11f84a3728) |
+| |
 
-![paper_top](https://github.com/user-attachments/assets/b5e9363c-66f8-4979-9850-c473925b1bd1)
+
+
+
+
 
 
 
