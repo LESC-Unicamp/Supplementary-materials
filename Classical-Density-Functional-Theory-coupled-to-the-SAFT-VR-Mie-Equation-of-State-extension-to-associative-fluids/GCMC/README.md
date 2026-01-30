@@ -158,25 +158,25 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of particles | <code>NUMBER_PARTICLES</code> | Represent the initial number of particles/molecules (N) in GCMC simulations | Any positive, non-zero <code>INTEGER</code> number |
-| Number density | <code>DENSITY</code> | Represent the initial number density (&rho;) of the system in [1/Å³] | Any positive, non-zero <code>FLOAT</code> number |
-| Temperature | <code>TEMPERATURE</code> | Represent the temperature (T) of the system in [K] | Any positive, non-zero <code>FLOAT</code> number |
-| Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represent the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any <code>FLOAT</code> number |
-| Pore width | <code>PORE_WIDTH</code> | Represent the width in [Å] of the simulation box along the _z_-direction (confinement) | Any positive <code>FLOAT</code> number |
-| Pore height | <code>PORE_HEIGHT</code> | Represent the height in [Å] of the simulation box along the _x_-direction (PBC)<br>**NOTE**: The length along the _y_-direction is calculated from the provided initial number density | Any positive <code>FLOAT</code> number |
-| Solid density | <code>SOLID_DENSITY</code> | Represent the density of the solid phase (graphite) | Any positive <code>FLOAT</code> number |
-| Interlayer spacing | <code>INTERLAYER_SPACING</code> | Represent the distance between adjacent graphene layers in the solid phase | Any positive <code>FLOAT</code> number |
-| Size parameter<br>(solid) | <code>SIGMA_SOLID</code> | Represent the size parameter of the solid<br>**NOTE**: used in the Lorentz combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
-| Energy parameter<br>(solid) | <code>EPSILON_SOLID</code> | Represent the energy parameter of the solid<br>**NOTE**: used in the Berthelot combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
-| Size parameter<br>(fluid) | <code>SIGMA_FLUID</code> | Represent the size parameter of the fluid | Any positive <code>FLOAT</code> number |
-| Energy parameter<br>(fluid) | <code>EPSILON_FLUID</code> | Represent the energy parameter of the fluid | Any positive <code>FLOAT</code> number |
-| Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represent the cutoff radius for dispersive fluid-fluid interactions described by the Mie Potential | Any positive <code>FLOAT</code> number |
-| Attractive range<br>(Mie potential) | <code>ARANGE</code> | Represent the attractive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
-| Repulsive range<br>(Mie potential) | <code>RRANGE</code> | Represent the repulsive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
+| Number of particles | <code>NUMBER_PARTICLES</code> | Represents the initial number of particles/molecules (N) in GCMC simulations | Any positive, non-zero <code>INTEGER</code> number |
+| Number density | <code>DENSITY</code> | Represents the initial number density (&rho;) of the system in [1/Å³] | Any positive, non-zero <code>FLOAT</code> number |
+| Temperature | <code>TEMPERATURE</code> | Represents the temperature (T) of the system in [K] | Any positive, non-zero <code>FLOAT</code> number |
+| Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represents the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any <code>FLOAT</code> number |
+| Pore width | <code>PORE_WIDTH</code> | Represents the width in [Å] of the simulation box along the _z_-direction (confinement) | Any positive <code>FLOAT</code> number |
+| Pore height | <code>PORE_HEIGHT</code> | Represents the height in [Å] of the simulation box along the _x_-direction (PBC)<br>**NOTE**: The length along the _y_-direction is calculated from the provided initial number density | Any positive <code>FLOAT</code> number |
+| Solid density | <code>SOLID_DENSITY</code> | Represents the density of the solid phase (graphite) in [1/Å³] | Any positive <code>FLOAT</code> number |
+| Interlayer spacing | <code>INTERLAYER_SPACING</code> | Represents the distance in [Å] between adjacent graphene layers in the solid phase | Any positive <code>FLOAT</code> number |
+| Size parameter<br>(solid) | <code>SIGMA_SOLID</code> | Represents the size parameter of the solid in [Å]<br>**NOTE**: used in the Lorentz combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
+| Energy parameter<br>(solid) | <code>EPSILON_SOLID</code> | Represents the energy parameter (divided by _k_) of the solid in [K]<br>**NOTE**: used in the Berthelot combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
+| Size parameter<br>(fluid) | <code>SIGMA_FLUID</code> | Represents the size parameter of the fluid in [Å] | Any positive <code>FLOAT</code> number |
+| Energy parameter<br>(fluid) | <code>EPSILON_FLUID</code> | Represents the energy parameter (divided by _k_) of the fluid in [K] | Any positive <code>FLOAT</code> number |
+| Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represents the cutoff radius in [Å] for dispersive fluid-fluid interactions described by the Mie potential | Any positive <code>FLOAT</code> number |
+| Attractive range<br>(Mie potential) | <code>ARANGE</code> | Represents the attractive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
+| Repulsive range<br>(Mie potential) | <code>RRANGE</code> | Represents the repulsive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
 
-| Energy parameter<br>(association) | <code>EPSILON_WATER</code> | Represent | Any <code>FLOAT</code> number |
-| Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represent | Any <code>FLOAT</code> number |
-| Association sites<br>(position) | <code>RADIUS_SITES</code> | Represent | Any <code>FLOAT</code> number |
+| Energy parameter<br>(association) | <code>EPSILON_WATER</code> | Represents the energy parameter of the fluid (association) | Any positive <code>FLOAT</code> number |
+| Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represents the cutoff radius for associative fluid-fluid interactions described by the square-well potential | Any positive <code>FLOAT</code> number |
+| Association sites<br>(position) | <code>RADIUS_SITES</code> | Represents a scaling factor that positions the association sites inside a sphere of diameter <code>SIGMA_FLUID</code><br>**NOTE**:  | Any <code>FLOAT</code> number |
 | Association sites<br>(angle) | <code>WATER_ANGLE</code> | Represent | Any <code>FLOAT</code> number |
 | Pore height | <code></code> | Represent | Any <code>FLOAT</code> number |
 
