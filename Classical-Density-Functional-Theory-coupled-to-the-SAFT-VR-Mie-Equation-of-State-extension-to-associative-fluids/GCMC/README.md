@@ -162,8 +162,25 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Number density | <code>DENSITY</code> | Represent the initial number density (&rho;) of the system in [1/Å³] | Any positive, non-zero <code>FLOAT</code> number |
 | Temperature | <code>TEMPERATURE</code> | Represent the temperature (T) of the system in [K] | Any positive, non-zero <code>FLOAT</code> number |
 | Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represent the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any <code>FLOAT</code> number |
-| Pore width | <code>PORE_WIDTH</code> | Represent the width of the simulation box along the _z_-direction (confinement) | Any <code>FLOAT</code> number |
-| Pore height | <code>PORE_HEIGHT</code> | Represent the height of the simulation box along the _x_-direction (PBC)<br>**NOTE**: The length along the y-direction is calculated from the provided initial number density | Any <code>FLOAT</code> number |
+| Pore width | <code>PORE_WIDTH</code> | Represent the width in [Å] of the simulation box along the _z_-direction (confinement) | Any positive <code>FLOAT</code> number |
+| Pore height | <code>PORE_HEIGHT</code> | Represent the height in [Å] of the simulation box along the _x_-direction (PBC)<br>**NOTE**: The length along the _y_-direction is calculated from the provided initial number density | Any positive <code>FLOAT</code> number |
 
+| Solid density | <code>SOLID_DENSITY</code> | Represent the density of the solid phase (graphite) | Any positive <code>FLOAT</code> number |
+| Interlayer spacing | <code>INTERLAYER_SPACING</code> | Represent the distance between adjacent graphene layers in the solid phase | Any positive <code>FLOAT</code> number |
+| Size parameter<br>(solid) | <code>SIGMA_SOLID</code> | Represent the size parameter of the solid<br>**NOTE**: used in the Lorentz combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
+| Energy parameter<br>(solid) | <code>EPSILON_SOLID</code> | Represent the energy parameter of the solid<br>**NOTE**: used in the Berthelot combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
+| Size parameter<br>(fluid) | <code>SIGMA_FLUID</code> | Represent | Any <code>FLOAT</code> number |
+| Energy parameter<br>(fluid) | <code>EPSILON_FLUID</code> | Represent | Any <code>FLOAT</code> number |
+| Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represent | Any <code>FLOAT</code> number |
+| Attractive range<br>(Mie potential) | <code>ARANGE</code> | Represent | Any <code>FLOAT</code> number |
+| Repulsive range<br>(Mie potential) | <code>RRANGE</code> | Represent | Any <code>FLOAT</code> number |
+| Energy parameter<br>(association) | <code>EPSILON_WATER</code> | Represent | Any <code>FLOAT</code> number |
+| Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represent | Any <code>FLOAT</code> number |
+| Association sites<br>(position) | <code>RADIUS_SITES</code> | Represent | Any <code>FLOAT</code> number |
+| Association sites<br>(angle) | <code>WATER_ANGLE</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code></code> | Represent | Any <code>FLOAT</code> number |
 
+POTENTIAL_SOL_ENABLED=true POTENTIAL_MIE_ENABLED=true POTENTIAL_ASSOC_ENABLED=true
+POTENTIAL_HS_ENABLED=false POTENTIAL_SW_ENABLED=false SW_RANGE
+OVERWRITE_COMBININGR
 
