@@ -140,20 +140,12 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/src/makefile">Standard (with OpenMP)</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/src/makefile">Standard</a> | ```make -f makefile``` |
 
-If your compilation option includes the OpenMP API (**Version 1.3.1**), you can also choose the number of threads to be used on your simulation via the following command:
-
-```
-> export OMP_NUM_THREADS=X
-```
-
-where <code>X</code> is the number of threads.
+Please note that although the compilation includes a parallelization option (OpenMP), it has not yet been implemented in the code. This feature is reserved for future versions.
 
 <p align="justify">
-  Each of these commands will produce an executable with a specific name depending on the chosen compilation type. All executables can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
+  This command will produce an executable named <code>gcmc_mie_assoc.out</code>. The executable can be found in the folder <code>/bin/</code> in the GCMC repository directory. Before running the program, there are a few initialization variables and options you need to set up.
 </p>
-
-
 
 
