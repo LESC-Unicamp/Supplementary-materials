@@ -87,14 +87,13 @@ The following features are supported in the current version:
     - Random Structure
 
 2. Ensembles
-    - Canonical (NVT)
     - Grand Canonical (&mu;VT)
 
 4. Moves
-    - Translation
-    - Rotation (Quaternion Algebra)
-    - Insertion
-    - Deletion
+    - Translation (NVT)
+    - Rotation (NVT)
+    - Insertion (&mu;VT)
+    - Deletion (&mu;VT)
 
 5. Force Fields
     - Mie (for dispersive fluid-fluid interactions)
