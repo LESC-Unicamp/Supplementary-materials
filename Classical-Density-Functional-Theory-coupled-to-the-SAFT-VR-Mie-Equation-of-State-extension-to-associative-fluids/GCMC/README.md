@@ -173,11 +173,11 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represents the cutoff radius in [Å] for dispersive fluid-fluid interactions described by the Mie potential | Any positive <code>FLOAT</code> number |
 | Attractive range<br>(Mie potential) | <code>ARANGE</code> | Represents the attractive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
 | Repulsive range<br>(Mie potential) | <code>RRANGE</code> | Represents the repulsive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
+| Energy parameter<br>(association) | <code>EPSILON_WATER</code> | Represents the energy parameter (divided by _k_) of the fluid (association) in [K] | Any positive <code>FLOAT</code> number |
+| Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represents a cutoff scaling factor for associative fluid-fluid interactions described by the square-well potential<br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
+| Association sites<br>(position) | <code>RADIUS_SITES</code> | Represents a scaling factor that positions the association sites inside a sphere of diameter <code>SIGMA_FLUID</code><br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
+| Association sites<br>(angle) | <code>WATER_ANGLE</code> | Represents the angle in degrees between association sites of the same type | Any positive <code>FLOAT</code> number in between 0 and 180 degrees |
 
-| Energy parameter<br>(association) | <code>EPSILON_WATER</code> | Represents the energy parameter of the fluid (association) | Any positive <code>FLOAT</code> number |
-| Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represents the cutoff radius for associative fluid-fluid interactions described by the square-well potential | Any positive <code>FLOAT</code> number |
-| Association sites<br>(position) | <code>RADIUS_SITES</code> | Represents a scaling factor that positions the association sites inside a sphere of diameter <code>SIGMA_FLUID</code><br>**NOTE**:  | Any <code>FLOAT</code> number |
-| Association sites<br>(angle) | <code>WATER_ANGLE</code> | Represent | Any <code>FLOAT</code> number |
 | Pore height | <code></code> | Represent | Any <code>FLOAT</code> number |
 
 POTENTIAL_SOL_ENABLED=true POTENTIAL_MIE_ENABLED=true POTENTIAL_ASSOC_ENABLED=true
