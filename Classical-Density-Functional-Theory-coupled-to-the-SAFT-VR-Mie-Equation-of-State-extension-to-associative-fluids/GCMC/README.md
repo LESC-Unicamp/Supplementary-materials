@@ -54,7 +54,6 @@ Luís Fernando Mercier Franco<br></p>
 10. [Citing Us](#citation)
 
 ## <a name="disclaimer"></a>Disclaimer
-
 <p align="justify">
 The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
  recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in simulation studies involving associative fluids.
@@ -62,6 +61,17 @@ The authors make no warranties about the use of this software. The authors hold 
 </p>
 
 ## <a name="overview"></a>Overview
+<p align="justify">
+  This Grand Canonical Monte Carlo (GCMC) algorithm was designed to evaluate the density profile of an associative fluid (water) confined in two-dimensional slit pores (graphite). The dispersive fluid–fluid interactions are described by the Mie potential, while the highly directional associative interactions (hydrogen bonding) are modeled using a spherical square-well potential. The solid–fluid interaction is represented by the Steele potential.
+</p>
+
+<p align="justify">
+The figures below illustrate the geometry of the simulation box containing water molecules confined within a slit pore of width **30 Å** (along the *z*-direction) at a reduced chemical potential
+\[
+\mu^\* = \frac{\mu}{kT} = -14.364,
+\]
+under a reduced chemical potential of \mu^\ast=\mu/(kT)=-14.364, where k is the Boltzmann constant and T is the system temperature.
+</p>
 
 | |
 |:---:|
@@ -72,7 +82,10 @@ The authors make no warranties about the use of this software. The authors hold 
 | ![paper_top](https://github.com/user-attachments/assets/fea7664f-8719-463e-ba6b-4a11f84a3728) |
 | |
 
-
+## <a name="language"></a>Language
+<p align="justify">
+  The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
+</p>
 
 
 
