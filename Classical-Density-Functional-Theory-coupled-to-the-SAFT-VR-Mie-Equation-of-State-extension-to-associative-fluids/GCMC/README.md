@@ -194,10 +194,9 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Rotational acceptance threshold | <code>ACC_ROTATION</code> | Represents the acceptance threshold for adjusting rotational movements<br>**NOTE**: during equilibration, <code>MAX_ROT</code> is adjusted whenever the current acceptance ratio is above/below the threshold | Any positive <code>FLOAT</code> number 0 and 1 |
 | Insertion acceptance threshold | <code>ACC_CREATION</code> | Represents the acceptance threshold for insertion movements<br>(not used) | Any positive <code>FLOAT</code> number 0 and 1 |
 | Deletion acceptance threshold | <code>ACC_DESTRUCTION</code> | Represents the acceptance threshold for deletion movements<br>(not used) | Any positive <code>FLOAT</code> number 0 and 1 |
-
-| Initial configuration type | <code>RANDOM_CONFIGURATION</code> | Represents the type of the initial configuration | Any <code>FLOAT</code> number |
-| Seed type | <code>RANDOM_SEED_LOGICAL</code> | Represent (not used) | Any <code>FLOAT</code> number |
-| NUmber of layers | <code>NUMBER_SLABS</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Initial configuration type | <code>RANDOM_CONFIGURATION</code> | Represents the initial configuration of the system | <ul><li><code>.TRUE.</code> to generate a random configuration</li><li><code>.FALSE.</code> to read the initial configuration from an external file named <code>initial_configuration.xyz</code></li></ul> |
+| Seed type | <code>RANDOM_SEED_LOGICAL</code> | Represents the seed type for pseudorandom number generator routines | <ul><li><code>.TRUE.</code> for a random seed</li><li><code>.FALSE.</code> for a fixed seed (ensures reproducibility) </li></ul> |
+| Number of layers | <code>NUMBER_SLABS</code> | Represents the number of layers used to compute the density profile | Any positive <code>INTEGER</code> number |
 
 POTENTIAL_SOL_ENABLED=true POTENTIAL_MIE_ENABLED=true POTENTIAL_ASSOC_ENABLED=true
 POTENTIAL_HS_ENABLED=false POTENTIAL_SW_ENABLED=false SW_RANGE
