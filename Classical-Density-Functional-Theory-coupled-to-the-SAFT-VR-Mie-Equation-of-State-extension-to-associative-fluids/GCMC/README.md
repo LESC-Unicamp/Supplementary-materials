@@ -177,27 +177,27 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represents a cutoff scaling factor for associative fluid-fluid interactions described by the square-well potential<br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
 | Association sites<br>(position) | <code>RADIUS_SITES</code> | Represents a scaling factor that positions the association sites inside a sphere of diameter <code>SIGMA_FLUID</code><br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
 | Association sites<br>(angle) | <code>WATER_ANGLE</code> | Represents the angle in degrees between association sites of the same type | Any positive <code>FLOAT</code> number in between 0 and 180 degrees |
-| Number of simulation cycles | <code>MC_CYCLES</code> | Represent | Any <code>FLOAT</code> number |
-| Number of equilibration cycles | <code>N_EQUILIBRATION</code> | Represent | Any <code>FLOAT</code> number |
+| Number of simulation cycles | <code>MC_CYCLES</code> | Represents the total number of simulation cycles<br>**NOTE**: each cycle contemplates a single movement type | Any positive <code>INTEGER</code> number |
+| Number of equilibration cycles | <code>N_EQUILIBRATION</code> | Represents the number of equilibration cycles | Any positive <code>INTEGER</code> number less than <code>MC_CYCLES</code> |
+| Number of equilibration cycles<br>(random configuration) | <code>N_EQUILIBRATION_RANDOM</code> | Represents the number of equilibration cycles in the random configuration routine | Any positive <code>INTEGER</code> number less than <code>MC_CYCLES</code> |
+| Adjustment frequency | <code>N_ADJUST</code> | Represents how often (every <code>N_ADJUST</code> cycles) the maximum displacement parameters are adjusted during equilibration | Any positive <code>INTEGER</code> number |
 
-| Pore height | <code>N_EQUILIBRATION_RANDOM</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>N_ADJUST</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>N_SAVE</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>N_SAVE_CONF</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>MAX_TRANS</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>MAX_TRANS_RD</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>MAX_ROT</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>MAX_ROT_RD</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>PROBABILITY_MOV</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>PROBABILITY_TRANS</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>PROBABILITY_CREATE</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>ACC_TRANSLATION</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>ACC_ROTATION</code> | Represent | Any <code>FLOAT</code> number |
-| Pore height | <code>ACC_CREATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
-| Pore height | <code>ACC_DESTRUCTION</code> | Represent (not used) | Any <code>FLOAT</code> number |
-| Pore height | <code>RANDOM_CONFIGURATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
-| Pore height | <code>RANDOM_SEED_LOGICAL</code> | Represent (not used) | Any <code>FLOAT</code> number |
-| Pore height | <code>NUMBER_SLABS</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Saving frequency | <code>N_SAVE</code> | Represent | Any <code>INTEGER</code> number |
+| Saving frequency<br>(configuration/trajectory) | <code>N_SAVE_CONF</code> | Represent | Any <code>INTEGER</code> number |
+| Maximum translational displacement | <code>MAX_TRANS</code> | Represent | Any <code>FLOAT</code> number |
+| Maximum translational displacement<br>(random configuration) | <code>MAX_TRANS_RD</code> | Represent | Any <code>FLOAT</code> number |
+| Maximum rotational displacement | <code>MAX_ROT</code> | Represent | Any <code>FLOAT</code> number |
+| Maximum rotational displacement<br>(random configuration) | <code>MAX_ROT_RD</code> | Represent | Any <code>FLOAT</code> number |
+| Probability of displacement moves | <code>PROBABILITY_MOV</code> | Represent | Any <code>FLOAT</code> number |
+| Probability of translation moves | <code>PROBABILITY_TRANS</code> | Represent | Any <code>FLOAT</code> number |
+| Probability of insertion moves | <code>PROBABILITY_CREATE</code> | Represent | Any <code>FLOAT</code> number |
+| Translational acceptance threshold | <code>ACC_TRANSLATION</code> | Represent | Any <code>FLOAT</code> number |
+| Rotational acceptance threshold | <code>ACC_ROTATION</code> | Represent | Any <code>FLOAT</code> number |
+| Insertion acceptance threshold | <code>ACC_CREATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Deletion acceptance threshold | <code>ACC_DESTRUCTION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Initial configuration type | <code>RANDOM_CONFIGURATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Seed type | <code>RANDOM_SEED_LOGICAL</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| NUmber of layers | <code>NUMBER_SLABS</code> | Represent (not used) | Any <code>FLOAT</code> number |
 
 POTENTIAL_SOL_ENABLED=true POTENTIAL_MIE_ENABLED=true POTENTIAL_ASSOC_ENABLED=true
 POTENTIAL_HS_ENABLED=false POTENTIAL_SW_ENABLED=false SW_RANGE
