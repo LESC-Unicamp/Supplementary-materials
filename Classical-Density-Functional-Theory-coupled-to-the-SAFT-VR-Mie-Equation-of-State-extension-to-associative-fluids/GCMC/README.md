@@ -252,11 +252,9 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
   The <code>rdf.dat</code> file contains information on the density profile of the system. This profile is computed only during the production stage and is evaluated for each layer (bin) defined by the parameter <code>NUMBER_SLABS</code>. The first column corresponds to the position of the bin along the <em>z</em>-direction, ranging from 0 to <code>PORE_WIDTH</code> Å. The second column contains the averaged histogram, i.e., the average number of water molecules in each bin. Therefore, the <code>rdf.dat</code> file does not directly provide the true density profile. It must be post-processed by the user. To do so, proceed as follows:
 </p>
 
-- Divide the histogram by the bin volume, defined as  
-  <code>VBIN = PORE_HEIGHT × PORE_LENGTH × PORE_WIDTH</code>.  
-  This yields the number density in units of [1/Å³].
-- Multiply the result by the molar mass of water (0.018 kg/mol) and divide by Avogadro’s number (<code>6.02214076 × 10²³ mol⁻¹</code>) to obtain the mass density in kg/Å³.
-- Multiply by the conversion factor <code>10³⁰</code> to convert the density from kg/Å³ to kg/m³.
+- Divide the histogram by the bin volume, defined as  <code>VBIN = PORE_HEIGHT × PORE_LENGTH × PORE_WIDTH</code>. This yields the number density in units of [1/Å³].
+- Multiply the result by the molar mass of water (0.018 kg/mol) and divide by Avogadro’s number (6.02214076 × 10²³ mol⁻¹) to obtain the mass density in kg/Å³.
+- Multiply by the conversion factor 10³⁰ to convert the density from [kg/Å³] to [kg/m³].
 
 <p align="justify">
   The <code>initial_configuration.xyz</code> file 
