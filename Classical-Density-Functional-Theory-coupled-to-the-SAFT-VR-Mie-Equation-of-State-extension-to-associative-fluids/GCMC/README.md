@@ -253,7 +253,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 </p>
 
 - Divide the histogram by the bin volume, defined as  <code>VBIN = PORE_HEIGHT × PORE_LENGTH × PORE_WIDTH</code>. This yields the number density in units of [1/Å³].
-- Multiply the result by the molar mass of water (0.018 kg/mol) and divide by Avogadro’s number (6.02214076 × 10²³ mol⁻¹) to obtain the mass density in [kg/Å³].
+- Multiply the result by the molar mass of water (0.018 kg/mol) and divide by Avogadro’s number (6.02214076 × 10<sup>23</sup> mol<sup>-1</sup>) to obtain the mass density in [kg/Å³].
 - Multiply by the conversion factor 10<sup>30</sup> to convert the density from [kg/Å³] to [kg/m³].
 
 <p align="justify">
