@@ -181,20 +181,20 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Number of equilibration cycles | <code>N_EQUILIBRATION</code> | Represents the number of equilibration cycles | Any positive <code>INTEGER</code> number less than <code>MC_CYCLES</code> |
 | Number of equilibration cycles<br>(random configuration) | <code>N_EQUILIBRATION_RANDOM</code> | Represents the number of equilibration cycles in the random configuration routine | Any positive <code>INTEGER</code> number less than <code>MC_CYCLES</code> |
 | Adjustment frequency | <code>N_ADJUST</code> | Represents how often (every <code>N_ADJUST</code> cycles) the maximum displacement parameters are adjusted during equilibration | Any positive <code>INTEGER</code> number |
+| Saving frequency | <code>N_SAVE</code> | Represents how often (every <code>N_SAVE</code> cycles) results (such as potential energy) are written out during the simulation | Any positive <code>INTEGER</code> number |
+| Saving frequency<br>(configuration/trajectory) | <code>N_SAVE_CONF</code> | Represents how often (every <code>N_SAVE_CONF</code> cycles) the configuration/trajectory is written out during the simulation | Any positive <code>INTEGER</code> number |
+| Maximum translational displacement | <code>MAX_TRANS</code> | Represents a scaling factor that controls translational movements<br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
+| Maximum translational displacement<br>(random configuration) | <code>MAX_TRANS_RD</code> | Represents a scaling factor that controls translational movements in the random configuration routine<br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
+| Maximum rotational displacement | <code>MAX_ROT</code> | Represents a parameter that controls rotational movements (in radians) | Any positive <code>FLOAT</code> number |
+| Maximum rotational displacement<br>(random configuration) | <code>MAX_ROT_RD</code> | Represents a parameter that controls rotational movements (in radians) in the random configuration routine | Any positive <code>FLOAT</code> number |
+| Probability of displacement moves | <code>PROBABILITY_MOV</code> | Represents the probability of choosing between NVT/&mu;VT moves, i.e., translation/rotation or insertion/deletion | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of translation moves | <code>PROBABILITY_TRANS</code> | Represents the probability of choosing between translation or rotation | Any positive <code>FLOAT</code> number 0 and 1 |
+| Probability of insertion moves | <code>PROBABILITY_CREATE</code> | Represents the probability of choosing between insertion or deletion | Any positive <code>FLOAT</code> number 0 and 1 |
 
-| Saving frequency | <code>N_SAVE</code> | Represent | Any <code>INTEGER</code> number |
-| Saving frequency<br>(configuration/trajectory) | <code>N_SAVE_CONF</code> | Represent | Any <code>INTEGER</code> number |
-| Maximum translational displacement | <code>MAX_TRANS</code> | Represent | Any <code>FLOAT</code> number |
-| Maximum translational displacement<br>(random configuration) | <code>MAX_TRANS_RD</code> | Represent | Any <code>FLOAT</code> number |
-| Maximum rotational displacement | <code>MAX_ROT</code> | Represent | Any <code>FLOAT</code> number |
-| Maximum rotational displacement<br>(random configuration) | <code>MAX_ROT_RD</code> | Represent | Any <code>FLOAT</code> number |
-| Probability of displacement moves | <code>PROBABILITY_MOV</code> | Represent | Any <code>FLOAT</code> number |
-| Probability of translation moves | <code>PROBABILITY_TRANS</code> | Represent | Any <code>FLOAT</code> number |
-| Probability of insertion moves | <code>PROBABILITY_CREATE</code> | Represent | Any <code>FLOAT</code> number |
-| Translational acceptance threshold | <code>ACC_TRANSLATION</code> | Represent | Any <code>FLOAT</code> number |
-| Rotational acceptance threshold | <code>ACC_ROTATION</code> | Represent | Any <code>FLOAT</code> number |
-| Insertion acceptance threshold | <code>ACC_CREATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
-| Deletion acceptance threshold | <code>ACC_DESTRUCTION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Translational acceptance threshold | <code>ACC_TRANSLATION</code> | Represent | Any <code>FLOAT</code> number 0 and 1 |
+| Rotational acceptance threshold | <code>ACC_ROTATION</code> | Represent | Any <code>FLOAT</code> number 0 and 1 |
+| Insertion acceptance threshold | <code>ACC_CREATION</code> | Represent (not used) | Any <code>FLOAT</code> number 0 and 1 |
+| Deletion acceptance threshold | <code>ACC_DESTRUCTION</code> | Represent (not used) | Any <code>FLOAT</code> number 0 and 1 |
 | Initial configuration type | <code>RANDOM_CONFIGURATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
 | Seed type | <code>RANDOM_SEED_LOGICAL</code> | Represent (not used) | Any <code>FLOAT</code> number |
 | NUmber of layers | <code>NUMBER_SLABS</code> | Represent (not used) | Any <code>FLOAT</code> number |
