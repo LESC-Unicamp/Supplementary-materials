@@ -78,6 +78,29 @@ The figures below illustrate the geometry of the simulation box containing water
 | ![paper_top](https://github.com/user-attachments/assets/fea7664f-8719-463e-ba6b-4a11f84a3728) |
 | |
 
+## <a name="features"></a>Features
+<p align="justify">
+The following features are supported in the current version:
+</p>
+
+1. Initial Configurations
+    - Random Structure
+
+2. Ensembles
+    - Canonical (NVT)
+    - Grand Canonical (&mu;VT)
+
+4. Moves
+    - Translation
+    - Rotation (Quaternion Algebra)
+    - Insertion
+    - Deletion
+
+5. Force Fields
+    - Mie (for dispersive fluid-fluid interactions)
+    - Square Well (for associative fluid-fluid interactions)
+    - Steele (for solid-fluid interactions)
+
 ## <a name="language"></a>Language
 <p align="justify">
   The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
