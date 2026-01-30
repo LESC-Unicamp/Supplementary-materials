@@ -188,14 +188,14 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Maximum rotational displacement | <code>MAX_ROT</code> | Represents a parameter that controls rotational movements (in radians) | Any positive <code>FLOAT</code> number |
 | Maximum rotational displacement<br>(random configuration) | <code>MAX_ROT_RD</code> | Represents a parameter that controls rotational movements (in radians) in the random configuration routine | Any positive <code>FLOAT</code> number |
 | Probability of displacement moves | <code>PROBABILITY_MOV</code> | Represents the probability of choosing between NVT/&mu;VT moves, i.e., translation/rotation or insertion/deletion | Any positive <code>FLOAT</code> number between 0 and 1 |
-| Probability of translation moves | <code>PROBABILITY_TRANS</code> | Represents the probability of choosing between translation or rotation | Any positive <code>FLOAT</code> number 0 and 1 |
-| Probability of insertion moves | <code>PROBABILITY_CREATE</code> | Represents the probability of choosing between insertion or deletion | Any positive <code>FLOAT</code> number 0 and 1 |
+| Probability of translation moves | <code>PROBABILITY_TRANS</code> | Represents the probability of choosing between translation or rotation | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of insertion moves | <code>PROBABILITY_CREATE</code> | Represents the probability of choosing between insertion or deletion | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Translational acceptance threshold | <code>ACC_TRANSLATION</code> | Represents the acceptance threshold for adjusting translational movements<br>**NOTE**: during equilibration, <code>MAX_TRANS</code> is adjusted whenever the current acceptance ratio is above/below the threshold | Any positive <code>FLOAT</code> number 0 and 1 |
+| Rotational acceptance threshold | <code>ACC_ROTATION</code> | Represents the acceptance threshold for adjusting rotational movements<br>**NOTE**: during equilibration, <code>MAX_ROT</code> is adjusted whenever the current acceptance ratio is above/below the threshold | Any positive <code>FLOAT</code> number 0 and 1 |
+| Insertion acceptance threshold | <code>ACC_CREATION</code> | Represents the acceptance threshold for insertion movements<br>(not used) | Any positive <code>FLOAT</code> number 0 and 1 |
+| Deletion acceptance threshold | <code>ACC_DESTRUCTION</code> | Represents the acceptance threshold for deletion movements<br>(not used) | Any positive <code>FLOAT</code> number 0 and 1 |
 
-| Translational acceptance threshold | <code>ACC_TRANSLATION</code> | Represent | Any <code>FLOAT</code> number 0 and 1 |
-| Rotational acceptance threshold | <code>ACC_ROTATION</code> | Represent | Any <code>FLOAT</code> number 0 and 1 |
-| Insertion acceptance threshold | <code>ACC_CREATION</code> | Represent (not used) | Any <code>FLOAT</code> number 0 and 1 |
-| Deletion acceptance threshold | <code>ACC_DESTRUCTION</code> | Represent (not used) | Any <code>FLOAT</code> number 0 and 1 |
-| Initial configuration type | <code>RANDOM_CONFIGURATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Initial configuration type | <code>RANDOM_CONFIGURATION</code> | Represents the type of the initial configuration | Any <code>FLOAT</code> number |
 | Seed type | <code>RANDOM_SEED_LOGICAL</code> | Represent (not used) | Any <code>FLOAT</code> number |
 | NUmber of layers | <code>NUMBER_SLABS</code> | Represent (not used) | Any <code>FLOAT</code> number |
 
