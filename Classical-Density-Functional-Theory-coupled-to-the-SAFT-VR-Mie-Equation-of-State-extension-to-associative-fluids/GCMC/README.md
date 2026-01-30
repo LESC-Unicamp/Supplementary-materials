@@ -226,4 +226,43 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
   Finally, to perform a simulation under confinement (slit pores), the user must set the flag <code>CONSIDER_CONFINEMENT</code> to <code>.TRUE.</code>. If <code>CONSIDER_CONFINEMENT</code> is set to <code>.FALSE.</code>, the initial-configuration routine generates a cubic simulation box whose volume is determined from the prespecified initial density of the system.
 </p>
 
+## <a name="filesandfolders"></a>Files
+
+<p align="justify">
+  The program organizes the output files within the <code>/bin/</code> directory and generates a total of <b>10</b> files.
+</p>
+
+<p align="justify">
+  The <code>density.dat</code> file contains information on the current number density of the system (second column), the current number of molecules (third column), and the calculated reduced chemical potential (fourth column). To compute the latter, the user must prespecify the variable <code>EXCESS_CHEMICAL_POT</code> in the <code>parameters.ini</code> file; otherwise, only the ideal contribution is calculated.
+</p>
+
+<p align="justify">
+  The <code>fraction_free_sites.dat</code> file contains information on the current number of associations (second column), the total number of possible associations (third column), and the fraction of free sites (fourth column).
+</p>
+
+<p align="justify">
+  The <code>potential.dat</code> file contains information on the total averaged potential energy (second column), the averaged contribution due to association (third column), the averaged contribution due to dispersion (fourth column), and the averaged contribution due to solid–fluid interactions (fifth column).
+</p>
+
+<p align="justify">
+  The <code>ratio_translation.dat</code>, <code>ratio_rotation.dat</code>, <code>ratio_creation.dat</code>, and <code>ratio_destruction.dat</code> files contain information on the acceptance ratio (second column) during equilibration for translational, rotational, insertion, and deletion trial moves, respectively. The <code>ratio_translation.dat</code> and <code>ratio_rotation.dat</code> files also include the current maximum displacement (third column) and the corresponding acceptance threshold.
+</p>
+
+<p align="justify">
+  The <code>rdf.dat</code> file contains information on the density profile of the system. This profile is computed only during the production stage and is evaluated for each layer (bin) defined by the parameter <code>NUMBER_SLABS</code>. The first column corresponds to the position of the bin along the <em>z</em>-direction, ranging from 0 to <code>PORE_WIDTH</code> Å. The second column contains the averaged histogram, i.e., the average number of water molecules in each bin. Therefore, the <code>rdf.dat</code> file does not directly provide the true density profile. It must be post-processed by the user. To do so, proceed as follows:
+</p>
+
+- Divide the histogram by the volume of the bin (<code>VBIN=PORE_HEIGHT\timesPORE_LENGTH\timesPORE_WIDTH</code>
+- S
+
+<p align="justify">
+  The <code>initial_configuration.xyz</code> file 
+</p>
+
+<p align="justify">
+  The <code>trajectory.xyz</code> file 
+</p>
+
+IF WIDOM
+
 ## <a name="running"></a>Running the Code
