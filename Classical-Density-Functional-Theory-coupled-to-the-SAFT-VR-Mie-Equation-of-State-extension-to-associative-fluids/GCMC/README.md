@@ -177,10 +177,37 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represents a cutoff scaling factor for associative fluid-fluid interactions described by the square-well potential<br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
 | Association sites<br>(position) | <code>RADIUS_SITES</code> | Represents a scaling factor that positions the association sites inside a sphere of diameter <code>SIGMA_FLUID</code><br>**NOTE**: the scaling factor is multiplied by the size parameter of the fluid | Any positive <code>FLOAT</code> number |
 | Association sites<br>(angle) | <code>WATER_ANGLE</code> | Represents the angle in degrees between association sites of the same type | Any positive <code>FLOAT</code> number in between 0 and 180 degrees |
+| Number of simulation cycles | <code>MC_CYCLES</code> | Represent | Any <code>FLOAT</code> number |
+| Number of equilibration cycles | <code>N_EQUILIBRATION</code> | Represent | Any <code>FLOAT</code> number |
 
-| Pore height | <code></code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>N_EQUILIBRATION_RANDOM</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>N_ADJUST</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>N_SAVE</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>N_SAVE_CONF</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>MAX_TRANS</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>MAX_TRANS_RD</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>MAX_ROT</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>MAX_ROT_RD</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>PROBABILITY_MOV</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>PROBABILITY_TRANS</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>PROBABILITY_CREATE</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>ACC_TRANSLATION</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>ACC_ROTATION</code> | Represent | Any <code>FLOAT</code> number |
+| Pore height | <code>ACC_CREATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Pore height | <code>ACC_DESTRUCTION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Pore height | <code>RANDOM_CONFIGURATION</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Pore height | <code>RANDOM_SEED_LOGICAL</code> | Represent (not used) | Any <code>FLOAT</code> number |
+| Pore height | <code>NUMBER_SLABS</code> | Represent (not used) | Any <code>FLOAT</code> number |
 
 POTENTIAL_SOL_ENABLED=true POTENTIAL_MIE_ENABLED=true POTENTIAL_ASSOC_ENABLED=true
 POTENTIAL_HS_ENABLED=false POTENTIAL_SW_ENABLED=false SW_RANGE
-OVERWRITE_COMBININGR
+OVERWRITE_COMBININGR SIGMA_SF EPSILON_SF
+RELEASE_XY=false PROB_TRANSLATION_XY
 
+RANDOM_CONFIGURATION=true
+
+DO_NPT_RANDOM=false MAX_ATTEMPTS_NPT MAX_ISO_RD MAX_ANISO_RD PRESSURE_RANDOM PROBABILITY_ISO ACC_ISO ACC_ANISO MAX_DISTORTION
+
+CONSIDER_CONFINEMENT=true
+
+CONSIDER_WIDOM=false WIDOM_FREQ
