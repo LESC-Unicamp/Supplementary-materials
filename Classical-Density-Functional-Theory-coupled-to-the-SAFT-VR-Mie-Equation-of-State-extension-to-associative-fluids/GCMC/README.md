@@ -105,7 +105,57 @@ The following features are supported in the current version:
   The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
 </p>
 
+## <a name="installation"></a>Building and Compiling
+<p align="justify">
+  Firstly, you must clone this GitHub repository using the command below:
+</p>
 
+```
+> git clone https://github.com/LESC-Unicamp/Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/
+```
+
+<p align="justify">
+  After that, change to the repository directory on your device and open the <code>/src/</code> folder:
+</p>
+
+```
+> cd Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/src/
+```
+
+<p align="justify">
+  The <code>/src/</code> folder contains two 'Makefiles' that you can use to compile the code. Each of these 'Makefiles' contains different compilation options. You can use either the 'makefile' to compile the standard version of the code or the 'makefile-debug' to compile the debug version of the code.
+</p>
+
+<p align="justify">
+  To compile it, first remove any object and module files using the <i>clean</i> command:
+</p>
+  
+```
+> make clean
+```
+
+<p align="justify">
+  Then, to compile the source code, run one of the commands below, depending on the chosen compilation type:
+</p>
+
+| **Compilation type** | **Command** |
+|:---:|:---:|
+| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-debug">Debug (without OpenMP)</a> | ```make -f makefile-debug``` |
+| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-debug-openmp">Debug (with OpenMP)</a> | ```make -f makefile-debug-openmp``` |
+| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile">Standard (without OpenMP)</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-openmp">Standard (with OpenMP)</a> | ```make -f makefile-openmp``` |
+
+If your compilation option includes the OpenMP API (**Version 1.3.1**), you can also choose the number of threads to be used on your simulation via the following command:
+
+```
+> export OMP_NUM_THREADS=X
+```
+
+where <code>X</code> is the number of threads.
+
+<p align="justify">
+  Each of these commands will produce an executable with a specific name depending on the chosen compilation type. All executables can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
+</p>
 
 
 
