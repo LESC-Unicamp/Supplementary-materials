@@ -48,7 +48,7 @@ Luís Fernando Mercier Franco<br></p>
 4. [Language](#language)
 5. [Building and Compiling](#installation)
 6. [Data Input](#datainput)
-7. [Files and Folders](#filesandfolders)
+7. [Files](#filesandfolders)
 8. [Running the Code](#running)
 9. [Reporting Errors](#reporting)
 10. [Citing Us](#citation)
@@ -150,4 +150,8 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
   This command will produce an executable named <code>gcmc_mie_assoc.out</code>, which can be found in the folder <code>/bin/</code> in the GCMC repository directory. Before running the program, there are a few initialization variables and options you need to set up.
 </p>
 
+## <a name="datainput"></a>Data Input
 
+<p align="justify">
+  Apart from the executable file, the <code>/bin/</code> folder contains an initialization file named <code>parameters.ini</code> that must be configured. The available options are straightforward and include comments; however, we provide a brief explanation of each of them below.
+</p>
