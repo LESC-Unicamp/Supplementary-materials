@@ -142,10 +142,12 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 |:---:|:---:|
 | <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/src/makefile">Standard</a> | ```make -f makefile``` |
 
-Please note that although the compilation includes a parallelization option (OpenMP), it has not yet been implemented in the code. This feature is reserved for future versions.
+<p align="justify">
+  Please note that although the compilation includes a parallelization option (OpenMP), it has not yet been implemented in the code. This feature is reserved for future versions.
+</p>
 
 <p align="justify">
-  This command will produce an executable named <code>gcmc_mie_assoc.out</code>. The executable can be found in the folder <code>/bin/</code> in the GCMC repository directory. Before running the program, there are a few initialization variables and options you need to set up.
+  This command will produce an executable named <code>gcmc_mie_assoc.out</code>, which can be found in the folder <code>/bin/</code> in the GCMC repository directory. Before running the program, there are a few initialization variables and options you need to set up.
 </p>
 
 
