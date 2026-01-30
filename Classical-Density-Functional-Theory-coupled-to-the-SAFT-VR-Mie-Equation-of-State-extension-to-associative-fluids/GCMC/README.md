@@ -161,7 +161,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Number of particles | <code>NUMBER_PARTICLES</code> | Represent the initial number of particles/molecules (N) in GCMC simulations | Any positive, non-zero <code>INTEGER</code> number |
 | Number density | <code>DENSITY</code> | Represent the initial number density (&rho;) of the system in [1/Å³] | Any positive, non-zero <code>FLOAT</code> number |
 | Temperature | <code>TEMPERATURE</code> | Represent the temperature (T) of the system in [K] | Any positive, non-zero <code>FLOAT</code> number |
-| Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represent the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any positive, non-zero <code>FLOAT</code> number |
+| Reduced chemical potential | <code>RED_CHEMICAL_POT</code> | Represent the target reduced chemical potential (&mu;<sup>*</sup>) of the system in kT units | Any <code>FLOAT</code> number |
 
 
 
