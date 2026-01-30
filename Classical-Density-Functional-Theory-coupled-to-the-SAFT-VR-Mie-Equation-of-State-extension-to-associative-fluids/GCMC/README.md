@@ -66,7 +66,7 @@ The authors make no warranties about the use of this software. The authors hold 
 </p>
 
 <p align="justify">
-The figures below illustrate the geometry of the simulation box containing water molecules confined within a slit pore of width **30 Å** (along the *z*-direction) at a reduced chemical potential
+The figures below illustrate the geometry of the simulation box containing water molecules confined within a slit pore of width <b>30 Å</b>b> (along the _z_-direction) at a reduced chemical potential
 \[
 \mu^\* = \frac{\mu}{kT} = -14.364,
 \]
