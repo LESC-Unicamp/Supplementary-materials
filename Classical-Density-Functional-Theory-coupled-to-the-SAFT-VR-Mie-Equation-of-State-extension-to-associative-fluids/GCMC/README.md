@@ -168,12 +168,12 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 | Interlayer spacing | <code>INTERLAYER_SPACING</code> | Represent the distance between adjacent graphene layers in the solid phase | Any positive <code>FLOAT</code> number |
 | Size parameter<br>(solid) | <code>SIGMA_SOLID</code> | Represent the size parameter of the solid<br>**NOTE**: used in the Lorentz combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
 | Energy parameter<br>(solid) | <code>EPSILON_SOLID</code> | Represent the energy parameter of the solid<br>**NOTE**: used in the Berthelot combining rule to obtain the solid-fluid interaction parameter (Mie potential) | Any positive <code>FLOAT</code> number |
+| Size parameter<br>(fluid) | <code>SIGMA_FLUID</code> | Represent the size parameter of the fluid | Any positive <code>FLOAT</code> number |
+| Energy parameter<br>(fluid) | <code>EPSILON_FLUID</code> | Represent the energy parameter of the fluid | Any positive <code>FLOAT</code> number |
+| Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represent the cutoff radius for dispersive fluid-fluid interactions described by the Mie Potential | Any positive <code>FLOAT</code> number |
+| Attractive range<br>(Mie potential) | <code>ARANGE</code> | Represent the attractive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
+| Repulsive range<br>(Mie potential) | <code>RRANGE</code> | Represent the repulsive exponent of the Mie potential | Any positive <code>FLOAT</code> number |
 
-| Size parameter<br>(fluid) | <code>SIGMA_FLUID</code> | Represent | Any <code>FLOAT</code> number |
-| Energy parameter<br>(fluid) | <code>EPSILON_FLUID</code> | Represent | Any <code>FLOAT</code> number |
-| Cutoff radius<br>(Mie potential) | <code>CUTOFF_RADIUS_MIE</code> | Represent | Any <code>FLOAT</code> number |
-| Attractive range<br>(Mie potential) | <code>ARANGE</code> | Represent | Any <code>FLOAT</code> number |
-| Repulsive range<br>(Mie potential) | <code>RRANGE</code> | Represent | Any <code>FLOAT</code> number |
 | Energy parameter<br>(association) | <code>EPSILON_WATER</code> | Represent | Any <code>FLOAT</code> number |
 | Cutoff radius<br>(SW potential) | <code>CUTOFF_RADIUS_WATER</code> | Represent | Any <code>FLOAT</code> number |
 | Association sites<br>(position) | <code>RADIUS_SITES</code> | Represent | Any <code>FLOAT</code> number |
