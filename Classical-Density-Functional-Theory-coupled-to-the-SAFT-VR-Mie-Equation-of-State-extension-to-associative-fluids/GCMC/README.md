@@ -68,7 +68,7 @@ The authors make no warranties about the use of this software. The authors hold 
 | |
 | **Front View** showing water molecules within an orthorhombic simulation box confined along the _z_-direction. |
 | ![paper_front](https://github.com/user-attachments/assets/d6294aee-85a4-4df4-be2b-117a9c04316a) |
-| of the simulation box highlighting its square cross-section. |
+| **Top View** of the simulation box highlighting its square cross-section. |
 | ![paper_top](https://github.com/user-attachments/assets/fea7664f-8719-463e-ba6b-4a11f84a3728) |
 | |
 
