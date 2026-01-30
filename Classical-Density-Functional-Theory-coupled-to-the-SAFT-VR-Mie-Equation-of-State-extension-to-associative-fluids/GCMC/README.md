@@ -155,3 +155,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 <p align="justify">
   Apart from the executable file, the <code>/bin/</code> folder contains an initialization file named <code>parameters.ini</code> that must be configured. The available options are straightforward and include comments; however, we provide a brief explanation of each of them below.
 </p>
+
+| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Number of particles | <code>NUMBER_PARTICLES</code> | Represent the initial number of particles/molecules in GCMC simulations | Any positive, non-zero <code>INTEGER</code> number |
