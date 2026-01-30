@@ -111,7 +111,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-> git clone https://github.com/LESC-Unicamp/Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/
+> git clone https://github.com/LESC-Unicamp/Supplementary-materials/
 ```
 
 <p align="justify">
@@ -119,7 +119,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-> cd Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/src/
+cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/src/
 ```
 
 <p align="justify">
