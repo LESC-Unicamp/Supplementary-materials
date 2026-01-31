@@ -766,8 +766,8 @@ DO iCycle = 1, nCycles
         nAcceptanceTranslation = 0
         nMovementTranslationCounter = 0
         ! Avoid multiple turns
-        IF( maxTranslationalDisplc >= 4.D0 * MAXVAL( BoxLength ) ) THEN
-          maxTranslationalDisplc = maxTranslationalDisplc - 2.D0 * MAXVAL( BoxLength )
+        IF( maxTranslationalDisplc >= MAXVAL( BoxLength ) ) THEN
+          maxTranslationalDisplc = MAXVAL( BoxLength )
         END IF
       END IF
     END IF
@@ -789,8 +789,8 @@ DO iCycle = 1, nCycles
         nAcceptanceRotation = 0
         nMovementRotationCounter  = 0
         ! Avoid multiple turns
-        IF( maxRotationalDisplc >= 4.D0 * cPi ) THEN
-          maxRotationalDisplc = maxRotationalDisplc - 2.D0 * cPi
+        IF( maxRotationalDisplc >= cPi ) THEN
+          maxRotationalDisplc = cPi
         END IF
       END IF
     END IF
@@ -983,5 +983,6 @@ END IF
 FLUSH( Unit= Output_Unit )
 
 RETURN
+
 
 END SUBROUTINE Progress_Bar
