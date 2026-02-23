@@ -39,4 +39,14 @@ Nathan Barros de Souza<br>
 Luís Fernando Mercier Franco<br>
 Carlos Avendaño<br></p>
 
-# <p align="center"><b>Grand Canonical Monte Carlo</b> (GCMC):<br> associative fluids</p>
+# <p align="center"><b>Parameter calculation</b></p>
+
+## Contents
+1. [Disclaimer](#disclaimer)
+2. [Overview](#overview)
+3. [Language](#language)
+4. [Building and Compiling](#installation)
+5. [Data Input](#datainput)
+6. [Running the Code](#running)
+7. [Reporting Errors](#reporting)
+8. [Citing Us](#citation)
