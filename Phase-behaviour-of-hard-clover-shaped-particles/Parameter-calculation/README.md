@@ -44,12 +44,13 @@ Carlos Avendaño<br></p>
 ## Contents
 1. [Disclaimer](#disclaimer)
 2. [Overview](#overview)
-3. [Language](#language)
-4. [Building and Compiling](#installation)
-5. [Data Input](#datainput)
-6. [Running the Code](#running)
-7. [Reporting Errors](#reporting)
-8. [Citing Us](#citation)
+3. [Features](#features)
+4. [Language](#language)
+5. [Building and Compiling](#installation)
+6. [Data Input](#datainput)
+7. [Running the Code](#running)
+8. [Reporting Errors](#reporting)
+9. [Citing Us](#citation)
 
 ## <a name="disclaimer"></a>Disclaimer
 <p align="justify">
@@ -62,3 +63,28 @@ The authors make no warranties about the use of this software. The authors hold 
 <p align="justify">
   This FORTRAN algorithm computes a set of order parameters, radial distribution functions, and structure factors from configurations provided in <code>XYZ</code> format. 
 </p>
+
+## <a name="features"></a>Features
+<p align="justify">
+The current version supports the calculation of the following parameters:
+</p>
+
+1. Order parameters
+    - Nematic phase
+    - Cubatic phase
+    - Smectic phase
+
+2. Bond-orientational order parameter
+    - Two-dimensional parameters (&psi;<sub>n</sub>)
+    - Three-dimensional parameters (Q<sub>&ell;</sub>)
+
+4. Moves
+    - Translation (NVT)
+    - Rotation (NVT)
+    - Insertion (&mu;VT)
+    - Deletion (&mu;VT)
+
+5. Force Fields
+    - Mie (for dispersive fluid-fluid interactions)
+    - Square Well (for associative fluid-fluid interactions)
+    - Steele (for solid-fluid interactions)
