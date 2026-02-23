@@ -73,18 +73,66 @@ The current version supports the calculation of the following parameters:
     - Nematic phase
     - Cubatic phase
     - Smectic phase
+    - Chirality
 
 2. Bond-orientational order parameter
     - Two-dimensional parameters (&psi;<sub>n</sub>)
-    - Three-dimensional parameters (Q<sub>&ell;</sub>)
+    - Three-dimensional (Steinhardt) parameters (Q<sub>&ell;</sub> and W<sub>&ell;</sub>)
 
-4. Moves
-    - Translation (NVT)
-    - Rotation (NVT)
-    - Insertion (&mu;VT)
-    - Deletion (&mu;VT)
+3. Radial distribution functions
+    - Full
+    - Parallel component
+    - Perpendicular component
+    - Legendre polynomials (S<sub>2</sub> and S<sub>4</sub>)
 
-5. Force Fields
-    - Mie (for dispersive fluid-fluid interactions)
-    - Square Well (for associative fluid-fluid interactions)
-    - Steele (for solid-fluid interactions)
+4. Structure factor
+
+## <a name="language"></a>Language
+<p align="justify">
+  The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
+</p>
+
+## <a name="installation"></a>Building and Compiling
+<p align="justify">
+  Firstly, you must clone this GitHub repository using the command below:
+</p>
+
+```
+> git clone https://github.com/LESC-Unicamp/Supplementary-materials/
+```
+
+<p align="justify">
+  After that, change to the repository directory on your device and open the <code>/src/</code> folder:
+</p>
+
+```
+cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/
+```
+
+<p align="justify">
+  The <code>/src/</code> folder contains a 'Makefile' that you can use to compile the standard version of the code.
+</p>
+
+<p align="justify">
+  To compile it, first remove any object and module files using the <i>clean</i> command:
+</p>
+  
+```
+> make clean
+```
+
+<p align="justify">
+  Then, to compile the source code, run the command below:
+</p>
+
+| **Compilation type** | **Command** |
+|:---:|:---:|
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/makefile">OpenMP</a> | ```make -f makefile``` |
+
+<p align="justify">
+  Please note that the compilation includes a parallelization option (OpenMP).
+</p>
+
+<p align="justify">
+  This command will produce an executable named <code>parameters.out</code>, which can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
+</p>
