@@ -127,7 +127,7 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Param
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/makefile">OpenMP</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/makefile">Standard</a> | ```make -f makefile``` |
 
 <p align="justify">
   Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
@@ -193,7 +193,7 @@ The remaining variables are self-explanatory and can be found in the correspondi
 **Standard compilation**
 
 ```
-./gcmc_mie_assoc.out
+./parameters.out
 ```
 
 ## <a name="reporting"></a>Reporting Errors
