@@ -130,7 +130,15 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Param
 | <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/makefile">OpenMP</a> | ```make -f makefile``` |
 
 <p align="justify">
-  Please note that the compilation includes a parallelization option (OpenMP).
+  Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
+</p>
+
+```
+> export OMP_NUM_THREADS=X
+```
+
+<p align="justify">
+where <code>X</code> is the number of threads.
 </p>
 
 <p align="justify">
@@ -169,3 +177,31 @@ FRAME #02
 <p align="justify">
 <code>X1</code>, <code>X2</code>, and <code>X3</code> are components of the box vector along the <i>x</i>-direction; <code>Y1</code>, <code>Y2</code>, and <code>Y3</code> are components along the <i>y</i>-direction; and <code>Z1</code>, <code>Z2</code>, and <code>Z3</code> are components along the <i>z</i>-direction. The first column represents the index of the particle. <code>P[X]</code>, <code>P[Y]</code>, and <code>P[Z]</code> are components of the position of a particle. <code>Q[W]</code>, <code>Q[X]</code>, <code>Q[Y]</code>, and <code>Q[Z]</code> are components of the quaternion of a particle, with <code>W</code> being the real part and <code>X</code>, <code>Y</code>, and <code>Z</code> being the imaginary vector.
 </p>
+
+<p align="justify">
+<code>INCLUDE_EQUILIBRATION</code>: Specifies whether equilibration data are included in the parameter analysis.
+</p>
+
+The remaining variables are self-explanatory and can be found in the corresponding modules and subroutines for further details.
+
+## <a name="running"></a>Running the Code
+
+<p align="justify">
+  It is time to run the code! After compilation, the executable can be found in the <code>/bin/</code> folder and can be executed using:
+</p>
+
+**Standard compilation**
+
+```
+./gcmc_mie_assoc.out
+```
+
+## <a name="reporting"></a>Reporting Errors
+
+<p align="justify">
+  If you spot an error in the program files and all other documentation, please submit an issue report using the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/issues">Issues</a> tab.
+</p>
+
+## <a name="citation"></a>Citing Us
+
+Unavailable.
