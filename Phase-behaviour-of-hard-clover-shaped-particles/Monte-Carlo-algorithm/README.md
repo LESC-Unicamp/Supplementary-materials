@@ -39,7 +39,7 @@ Nathan Barros de Souza<br>
 Luís Fernando Mercier Franco<br>
 Carlos Avendaño<br></p>
 
-# <p align="center"><b>Parameter calculation</b></p>
+# <p align="center"><b>NVT/NPT Monte Carlo simulation of nonconvex clover-shaped particles</b></p>
 
 ## Contents
 1. [Disclaimer](#disclaimer)
@@ -48,6 +48,14 @@ Carlos Avendaño<br></p>
 4. [Language](#language)
 5. [Building and Compiling](#installation)
 6. [Data Input](#datainput)
-7. [Running the Code](#running)
-8. [Reporting Errors](#reporting)
-9. [Citing Us](#citation)
+7. [Files and Folders](#filesandfolders)
+8. [Running the Code](#running)
+9. [Reporting Errors](#reporting)
+10. [Citing Us](#citation)
+
+## <a name="disclaimer"></a>Disclaimer
+<p align="justify">
+The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
+ recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in simulation studies involving nonconvex hard particles.
+ All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
+</p>
