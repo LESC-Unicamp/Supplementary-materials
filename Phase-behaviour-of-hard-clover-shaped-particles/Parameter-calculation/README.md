@@ -136,3 +136,36 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Param
 <p align="justify">
   This command will produce an executable named <code>parameters.out</code>, which can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
 </p>
+
+## <a name="datainput"></a>Data Input
+
+<p align="justify">
+  Apart from the executable file, the <code>/bin/</code> folder contains an initialization file named <code>initialization.ini</code> that must be configured. The available options are straightforward and include comments; however, we provide a brief explanation of some of them below.
+</p>
+
+<p align="justify">
+<code>FILENAME</code>: The XYZ file to be read by the algorithm. It must be properly formatted. A valid XYZ file has the following structure:
+</p>
+
+```
+FRAME #01
+  
+Box Length: X1 X2 X3 Y1 Y2 Y3 Z1 Z2 Z3
+  
+1 P1[X] P1[Y] P1[Z] Q1[W] Q1[X] Q1[Y] Q1[Z]
+2 P2[X] P2[Y] P2[Z] Q2[W] Q2[X] Q2[Y] Q2[Z]
+3 P3[X] P3[Y] P3[Z] Q3[W] Q3[X] Q3[Y] Q3[Z]
+4 P4[X] P4[Y] P4[Z] Q4[W] Q4[X] Q4[Y] Q4[Z]
+.
+.
+.
+
+FRAME #02
+.
+.
+.
+```
+
+<p align="justify">
+<code>X1</code>, <code>X2</code>, and <code>X3</code> are components of the box vector along the <i>x</i>-direction; <code>Y1</code>, <code>Y2</code>, and <code>Y3</code> are components along the <i>y</i>-direction; and <code>Z1</code>, <code>Z2</code>, and <code>Z3</code> are components along the <i>z</i>-direction. The first column represents the index of the particle. <code>P[X]</code>, <code>P[Y]</code>, and <code>P[Z]</code> are components of the position of a particle. <code>Q[W]</code>, <code>Q[X]</code>, <code>Q[Y]</code>, and <code>Q[Z]</code> are components of the quaternion of a particle, with <code>W</code> being the real part and <code>X</code>, <code>Y</code>, and <code>Z</code> being the imaginary vector.
+</p>
