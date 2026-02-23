@@ -50,3 +50,15 @@ Carlos Avendaño<br></p>
 6. [Running the Code](#running)
 7. [Reporting Errors](#reporting)
 8. [Citing Us](#citation)
+
+## <a name="disclaimer"></a>Disclaimer
+<p align="justify">
+The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
+ recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in simulation studies involving nonconvex hard particles.
+ All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
+</p>
+
+## <a name="overview"></a>Overview
+<p align="justify">
+  This FORTRAN algorithm computes a set of order parameters, radial distribution functions, and structure factors from configurations provided in <code>XYZ</code> format. 
+</p>
