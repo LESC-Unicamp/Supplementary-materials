@@ -168,20 +168,44 @@ where <code>X</code> is the number of threads.
 
 | Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Configuration selection | <code>MOLECULAR_CONFIGURATION</code> | Use to select the initial configuration | <ul><li><code>PB</code> for </li><li><code>FB</code> for </li></ul> |
+| Configuration selection | <code>MOLECULAR_CONFIGURATION</code> | Use to select the initial configuration | <ul><li><code>PB</code> for a packed-box configuration<sup>1</sup></li><li><code>FB</code> for a floppy-box configuration<sup>2,3</sup></li></ul> |
 | Arrangement selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for </li><li><code>2</code> for </li></ul> |
-| Quaternion angle | <code>QUATERNION_ANGLE</code> | Used to select the unrotated reference axis (initial configurations only) | <ul><li><code>X</code> to select the _x_-axis</li><li><code>Y</code> to select the _y_-axis</li><li><code>Z</code> to select the _z_-axis</li></ul> |
-| Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Used to select the orientation angle in degrees (initial configurations only) | Any <code>FLOAT</code> number |
-| Restore backup<br> | <code>RESTORE_BACKUP</code> | Used to define the initial volume of the simulation box (random configuration only)<br>**NOTE**: Smaller packing fractions (larger box volumes) are recommended | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
-| Packed-box<br> streching/shrinking factor | <code>BOX_FACTOR</code> | Used to correct the initial packing fraction of the simulation box to the target packing fraction (random configuration only)<br>**NOTE**: Higher pressures are recommended | Any positive, non-zero <code>FLOAT</code> number |
+| Quaternion angle | <code>QUATERNION_ANGLE</code> | Use to select the rotation angle in degrees<br> (PB configuration only) | Any <code>FLOAT</code> number |
+| Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Use to select the maximum number of cycles to randomize the initial PB configuration | Any <code>INTEGER</code> number |
+| Restore backup<br> | <code>RESTORE_BACKUP</code> | Use to restore a previously saved simulation from the point where it stopped | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
+| Packed-box<br> streching/shrinking factor | <code>BOX_FACTOR</code> | Use to stretch/shrink the packed-box configuration. Greater values help ramdomize the initial configuration. Lower values make the configuration more compact but can increase the chances of overlap. | Any positive, non-zero <code>FLOAT</code> number |
 
 <p align="justify">
-  <sup>¹P<sup>*</sup> = P&sigma;<sub>0</sub>³/(k<sub>B</sub>T), where <i>P</i> is the real pressure, <i>k<sub>B</sub></i> is the Boltzmann constant, <i>T</i> is the absolute temperature, and <i>&sigma;<sub>0</sub></i> is a reference diameter, such that &sigma;<sub>0</sub> = 1Å.</sup>
+  <sup><sup>1</sup>The packed-box configuration is a highly packed system but not necessarily the densest crystal configuration. Overlaps may occur if <code>QUATERNION_ANGLE</code> or <code>BOX_FACTOR</code> are not chosen wisely.</sup>
 </p>
 
 <p align="justify">
-  <b>OBS.</b>: When selecting a preset configuration, the user will be asked to enter a 14-character code at some point. This code is part of the name of a configuration file inside the '/bin/Initial_Configuration/' directory. The filename says something like:
+  <sup><sup>2</sup>The floppy-box configuration represents the closed-packed configuration, determined from a floppy-box Monte Carlo simulation.</sup>
 </p>
+
+<p align="justify">
+  <sup><sup>3</sup>The FB configuration is read from a <code>fbox.dat</code> file, located at <code>/bin/Floppy-box/</code> folder. Please, create the folder if it doesn't exist and place your file there. The file formatting should be:</sup>
+</p>
+
+```
+Arrangement_type: 2 # (article)
+Cylindrical_diameter: D
+Cylindrical_length: L
+Cylindrical_aspect_ratio: L/D
+Box_length: XX, XY, XZ, YZ, YY, YZ, ZX, ZY, ZZ # Unit-cell matrix
+Box_volume: V # Volume of the unit cell
+Packing_fraction: η # Maximum packing fraction (not necessary)
+Number_density: ρ # Maximum number density (not necessary)
+Number_of_particles: N # Number of particles in the unit cell
+Nematic_order_parameter: S # (not necessary)
+ 
+Positions_and_orientations: 
+1, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
+.
+.
+.
+N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
+```
 
 <code>[DATE][HOUR]\_initconf\_[CONFIGURATION]\_[GEOMETRY].xyz</code>
 
