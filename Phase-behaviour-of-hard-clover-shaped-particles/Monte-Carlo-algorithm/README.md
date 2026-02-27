@@ -166,7 +166,7 @@ where <code>X</code> is the number of threads.
   This file is used to set up the molecular geometry and the molecular configuration, including aditional information on the packed-box structure (if selected). The table below shows some options that can be used to define the configuration parameters:
 </p>
 
-| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Configuration selection | <code>MOLECULAR_CONFIGURATION</code> | Use to select the initial configuration | <ul><li><code>PB</code> for </li><li><code>FB</code> for </li></ul> |
 | Arrangement selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for </li><li><code>2</code> for </li></ul> |
