@@ -95,3 +95,61 @@ The following features are supported in the current version:
     - Orientational force field
 
 6. Cell Lists
+
+## <a name="language"></a>Language
+<p align="justify">
+  The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
+</p>
+
+## <a name="installation"></a>Building and Compiling
+<p align="justify">
+  Firstly, you must clone this GitHub repository using the command below:
+</p>
+
+```
+> git clone https://github.com/LESC-Unicamp/Supplementary-materials/
+```
+
+<p align="justify">
+  After that, change to the repository directory on your device and open the <code>/src/</code> folder:
+</p>
+
+```
+cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/src/
+```
+
+<p align="justify">
+  The <code>/src/</code> folder contains a 'Makefile' that you can use to compile the standard version of the code.
+</p>
+
+<p align="justify">
+  To compile it, first remove any object and module files using the <i>clean</i> command:
+</p>
+  
+```
+> make clean
+```
+
+<p align="justify">
+  Then, to compile the source code, run the command below:
+</p>
+
+| **Compilation type** | **Command** |
+|:---:|:---:|
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/src/makefile">Standard</a> | ```make -f makefile``` |
+
+<p align="justify">
+  Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
+</p>
+
+```
+> export OMP_NUM_THREADS=X
+```
+
+<p align="justify">
+where <code>X</code> is the number of threads.
+</p>
+
+<p align="justify">
+  This command will produce an executable named <code>nonconvex.out</code>, which can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
+</p>
