@@ -163,18 +163,17 @@ where <code>X</code> is the number of threads.
 ### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
 
 <p align="justify">
-  This file is used to set up the molecular geometry and the molecular configuration, including aditional information on the random structure (if selected). The table below shows some options that can be used to define the configuration parameters:
+  This file is used to set up the molecular geometry and the molecular configuration, including aditional information on the packed-box structure (if selected). The table below shows some options that can be used to define the configuration parameters:
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Geometry selection | <code>geometry_selection</code> | Used to select the molecular geometry | <ul><li><code>EOR</code> for ellipsoids of revolution</li><li><code>SPC</code> for spherocylinders</li><li><code>CYL</code> for cylinders</li></ul> |
-| Configuration selection | <code>molecular_configuration</code> | Used to select the initial configuration | <ul><li><code>SC</code> for a simple cubic structure</li><li><code>BCC</code> for a body-centered cubic structure</li><li><code>FCC</code> for a face-centered cubic structure</li><li><code>RND</code> for a random cubic structure</li></ul> |
-| Unrotated axis | <code>unrotated_axis</code> | Used to select the unrotated reference axis (initial configurations only) | <ul><li><code>X</code> to select the _x_-axis</li><li><code>Y</code> to select the _y_-axis</li><li><code>Z</code> to select the _z_-axis</li></ul> |
-| Quaternion angle | <code>quaternion_angle</code> | Used to select the orientation angle in degrees (initial configurations only) | Any <code>FLOAT</code> number |
-| Packing fraction<br> (<code>RND</code> only) | <code>packing_fraction_rnd</code> | Used to define the initial volume of the simulation box (random configuration only)<br>**NOTE**: Smaller packing fractions (larger box volumes) are recommended | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
-| Reduced pressure¹<br> (<code>RND</code> only) | <code>pressure_npt_rnd</code> | Used to correct the initial packing fraction of the simulation box to the target packing fraction (random configuration only)<br>**NOTE**: Higher pressures are recommended | Any positive, non-zero <code>FLOAT</code> number |
-| Preset configuration | <code>preset_initial_configuration</code> | Used to replace the current configuration with a previously generated configuration<br> **NOTE**: This overrides most of the simulation settings | <ul><li><code>.TRUE.</code> to use a preset configuration</li><li><code>.FALSE.</code> to use the current configuration</li></ul> |
+| Configuration selection | <code>MOLECULAR_CONFIGURATION</code> | Use to select the initial configuration | <ul><li><code>PB</code> for </li><li><code>FB</code> for </li></ul> |
+| Arrangement selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for </li><li><code>2</code> for </li></ul> |
+| Quaternion angle | <code>QUATERNION_ANGLE</code> | Used to select the unrotated reference axis (initial configurations only) | <ul><li><code>X</code> to select the _x_-axis</li><li><code>Y</code> to select the _y_-axis</li><li><code>Z</code> to select the _z_-axis</li></ul> |
+| Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Used to select the orientation angle in degrees (initial configurations only) | Any <code>FLOAT</code> number |
+| Restore backup<br> | <code>RESTORE_BACKUP</code> | Used to define the initial volume of the simulation box (random configuration only)<br>**NOTE**: Smaller packing fractions (larger box volumes) are recommended | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
+| Packed-box<br> streching/shrinking factor | <code>BOX_FACTOR</code> | Used to correct the initial packing fraction of the simulation box to the target packing fraction (random configuration only)<br>**NOTE**: Higher pressures are recommended | Any positive, non-zero <code>FLOAT</code> number |
 
 <p align="justify">
   <sup>¹P<sup>*</sup> = P&sigma;<sub>0</sub>³/(k<sub>B</sub>T), where <i>P</i> is the real pressure, <i>k<sub>B</sub></i> is the Boltzmann constant, <i>T</i> is the absolute temperature, and <i>&sigma;<sub>0</sub></i> is a reference diameter, such that &sigma;<sub>0</sub> = 1Å.</sup>
