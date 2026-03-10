@@ -111,7 +111,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-> git clone https://github.com/LESC-Unicamp/Supplementary-materials/
+git clone https://github.com/LESC-Unicamp/Supplementary-materials/
 ```
 
 <p align="justify">
