@@ -131,7 +131,7 @@ cd Supplementary-materials/Classical-Density-Functional-Theory-coupled-to-the-SA
 </p>
   
 ```
-> make clean
+make clean
 ```
 
 <p align="justify">
