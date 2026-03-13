@@ -69,7 +69,7 @@ This NVT/NPT Monte Carlo algorithm was developed to investigate the phase behavi
 |:---:|:---:|
 | | |
 | **Oblate Ellipsoids of Revolution** | **Spheres (Degenerate)** |
-| ![oblate_eor](https://user-images.githubusercontent.com/73966482/220217625-863c0551-3e97-4199-860f-f436746c32da.gif) |  |
+| ![oblate_eor](https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/gifs/platelets_github_compressionsim.gif) |  |
 | | |
 
 ## <a name="features"></a>Features
