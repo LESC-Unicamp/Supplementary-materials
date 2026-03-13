@@ -31,7 +31,7 @@
                         |  ██████/  | ██ \  ██   /██████  |  ██████/  | ██  | ██  | ██ \/  | ██  | ██
                          \______/   |__/  \__/  |______/   \______/   |__/  |__/  |__/     |__/  |__/
 ```
-<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
+<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Parameter-calculation/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
 
 <p align="center"><b>Authors</b></p>
 <p align="center">
@@ -106,7 +106,7 @@ The current version supports the calculation of the following parameters:
 </p>
 
 ```
-cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/
+cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Parameter-calculation/src/
 ```
 
 <p align="justify">
@@ -127,7 +127,7 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Param
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Parameter-calculation/src/makefile">Standard</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Parameter-calculation/src/makefile">Standard</a> | ```make -f makefile``` |
 
 <p align="justify">
   Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
