@@ -122,7 +122,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/src/
+cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/src/
 ```
 
 <p align="justify">
@@ -143,7 +143,7 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-particles/Monte
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/src/makefile">Standard</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/src/makefile">Standard</a> | ```make -f makefile``` |
 
 <p align="justify">
   Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
@@ -167,7 +167,7 @@ where <code>X</code> is the number of threads.
   Apart from the executable file, the <code>/bin/</code> folder contains some initialization files that need to be set up.
 </p>
 
-### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
+### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
 
 <p align="justify">
   This file is used to set up the molecular geometry and the molecular configuration, including aditional information on the packed-box structure (if selected). The table below shows some options that can be used to define the configuration parameters:
