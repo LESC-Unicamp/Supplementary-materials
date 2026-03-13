@@ -31,7 +31,7 @@
                         |  ██████/  | ██ \  ██   /██████  |  ██████/  | ██  | ██  | ██ \/  | ██  | ██
                          \______/   |__/  \__/  |______/   \______/   |__/  |__/  |__/     |__/  |__/
 ```
-<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-particles/Monte-Carlo-algorithm/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
+<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
 
 <p align="center"><b>Authors</b></p>
 <p align="center">
@@ -39,7 +39,7 @@ Nathan Barros de Souza<br>
 Luís Fernando Mercier Franco<br>
 Carlos Avendaño<br></p>
 
-# <p align="center"><b>NVT/NPT Monte Carlo simulation of nonconvex clover-shaped particles</b></p>
+# <p align="center"><b>NVT/NPT Monte Carlo simulation of nonconvex clover-shaped platelets</b></p>
 
 ## Contents
 1. [Disclaimer](#disclaimer)
@@ -64,6 +64,13 @@ The authors make no warranties about the use of this software. The authors hold 
 <p align="justify">
 This NVT/NPT Monte Carlo algorithm was developed to investigate the phase behavior of a system of clover-shaped hard particles, a nonconvex geometry formed by the union of four identical cylinders. Because particle interactions are purely hard-core, specialized routines are required to detect overlaps between the cylindrical subunits. In this work, we employ a hybrid overlap-detection routine that combines the methods proposed by Ibarra-Avalos <i>et al.</i> (<a href="https://doi.org/10.1080/08927020701191349"><b>Mol. Simul.</b>, 33, 505-515, 2007</a>), Orellana <i>et al.</i> (<a href="https://doi.org/10.1140/epje/i2018-11657-0"><b>Eur. Phys. J. E</b>, 41, 10, 2018</a>), and Lopes <i>et al.</i> (<a href="https://doi.org/10.1063/5.0040942"><b>J. Chem. Phys.</b>, 154, 104902, 2021</a>), with a minor modification to the disk–rim overlap test introduced in the latter. The algorithm also implements Widom’s particle insertion method to compute the excess chemical potential. In addition, simulations may be performed in the presence of an external orientational field that aligns the particles’ principal symmetry axis along a preferred direction.
 </p>
+
+| | | |
+|:---:|:---:|:---:|
+| | | |
+| **Oblate Ellipsoids of Revolution** | **Spheres (Degenerate)** | **Prolate Ellipsoids of revolution** |
+| ![oblate_eor](https://user-images.githubusercontent.com/73966482/220217625-863c0551-3e97-4199-860f-f436746c32da.gif) | ![sphere_eor](https://user-images.githubusercontent.com/73966482/220217633-d9a5dc8b-d624-456a-86d8-22f5d5bb6954.gif) | ![prolate_eor](https://user-images.githubusercontent.com/73966482/220217635-92cd7b1e-c5ef-41a6-af07-f52981402b5e.gif) |
+| | | |
 
 ## <a name="features"></a>Features
 <p align="justify">
