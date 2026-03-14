@@ -180,7 +180,7 @@ where <code>X</code> is the number of threads.
 | Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Configuration selection | <code>MOLECULAR_CONFIGURATION</code> | Use to select the initial configuration | <ul><li><code>PB</code> for a packed-box configuration<sup>1</sup></li><li><code>FB</code> for a floppy-box configuration<sup>2,3</sup></li></ul> |
-| Arrangement selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for an arrangement where a circle (cylindrical cross section) intersects the centers of the two nearest neighboring circles </li><li><code>2</code> for an arrangement where all four circles intersect the center of mass of the composed geometry (used in the paper) </li></ul> |
+| Arrangement<sup>4</sup> selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for an arrangement where a circle (cylindrical cross section) intersects the centers of the two nearest neighboring circles </li><li><code>2</code> for an arrangement where all four circles intersect the center of mass of the composed geometry (used in the paper) </li></ul> |
 | Quaternion angle | <code>QUATERNION_ANGLE</code> | Use to select the rotation angle in degrees<br> (PB configuration only) | Any <code>FLOAT</code> number |
 | Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Use to select the maximum number of cycles to randomize the initial PB configuration | Any <code>INTEGER</code> number |
 | Restore backup<br> | <code>RESTORE_BACKUP</code> | Use to restore a previously saved simulation from the point where it stopped | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
@@ -217,6 +217,10 @@ Positions_and_orientations:
 .
 N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 ```
+
+<p align="justify">
+  <sup><sup>4</sup>The main difference between the two arrangements is their degree of concavity: <code>1</code> is less concave than <code>2</code>, resembling a rounded-square cross section. As a result, arrangement <code>2</code> provides a larger concave region between neighboring units, increasing the available space for interdigitation compared with <code>1</code>.</sup>
+</p>
 
 <code>[DATE][HOUR]\_initconf\_[CONFIGURATION]\_[GEOMETRY].xyz</code>
 
