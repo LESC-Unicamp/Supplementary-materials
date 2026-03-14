@@ -171,7 +171,7 @@ where <code>X</code> is the number of threads.
   Apart from the executable file, the <code>/bin/</code> folder contains some initialization files that need to be set up.
 </p>
 
-### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
+### <a name="conffile"></a>The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
 
 <p align="justify">
   This file is used to define the molecular geometry and molecular configuration, including additional information about the packed-box structure (if selected). The table below lists the available options for configuring these parameters.
@@ -347,23 +347,31 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 ## <a name="filesandfolders"></a>Files and Folders
 
 <p align="justify">
-  The program organizes the output files and directories automatically. It creates <b>9</b> directories in total. To better organize the output files, all directories (or subdirectories) contains a date subfolder, corresponding to the starting date/hour of the simulation.
+  The program automatically organizes output files and directories. In total, it creates <b>11</b> directories. To improve organization, most directories (or subdirectories) contains a date-based subfolder corresponding to the starting date of the simulation.
 </p>
 
 <p align="justify">
-  The <code>Backup/</code> directory stores the backup files of the current simulation. These files hold information on system variables (number of components, number of particles, etc.) and on simulation variables (particles' positions and orientations, box properties, cell list properties, etc.). The backup files are written out every <code>saving_frequency</code> cycles.
+  The <code>Backup/</code> directory stores backup files generated during the simulation. These files contain information about system variables (e.g., number of particles, seed values) and simulation variables (e.g., particle positions and orientations, box properties, and cell-list properties). Backup files are written every <code>SAVING_FREQUENCY</code> cycles.
 </p>
 
 <p align="justify">
-  The <code>Box/</code> directory stores information on the box volume and box length, including the current distortion of the simulation box (only valid for <i>NPT</i>-simulations). This property is written out every <code>saving_frequency</code> cycles.
+  The <code>Box/</code> directory stores information about the distortion parameter of the simulation box (only applicable to <i>NPT</i> simulations). This property is written every <code>SAVING_FREQUENCY</code> cycles.
 </p>
 
 <p align="justify">
-  The <code>Configuration/</code> directory ... .
+  The <code>Configurations/</code> directory stores configuration files generated during the last simulation cycle. These files contain information about particle positions and orientations, box dimensions, the orientational field, and the maximum displacements associated with the simulation state.
 </p>
 
 <p align="justify">
-  The <code>Initial_Configuration/</code> directory stores the preset initial configuration file. It also contains the <code>OVITO/</code> subdirectory, which holds preformatted information on the position and orientation of particles, as well as their molecular geometry, that can be visualized directly on <a href="https://www.ovito.org/">OVITO</a> software. The <code>OVITO/</code> subdirectory also contains an 'RND' configuration file that is constantly updated to allow you to keep up with the development of the random configuration.
+  If <code>PATH = 1</code> is selected (compression/expansion ramp), the <code>Curve/</code> directory stores a <code>curve.dat</code> file containing the pressure–density curve of the simulated ramp, including the pressure, density, and nematic order parameter.
+</p>
+
+<p align="justify">
+  The <code>Floppy-box/</code> directory containd a fbox.dat file that described the properties of the unit cell of the densest configuration obtained using the Floppy Box MOnte Carlo (FBMC) method. Check the [Confiduration File](#conffile) for more information.
+</p>
+
+<p align="justify">
+  The <code>Initial_Configuration/</code> contains the <code>OVITO/</code> subdirectory, which holds preformatted information on the position and orientation of particles, as well as their molecular geometry, that can be visualized directly on <a href="https://www.ovito.org/">OVITO</a> software.
 </p>
 
 <p align="justify">
