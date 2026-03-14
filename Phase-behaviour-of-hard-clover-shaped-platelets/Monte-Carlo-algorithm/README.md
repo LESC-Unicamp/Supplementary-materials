@@ -341,6 +341,6 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 </p>
 
 <p align="justify">
-  <sup><sup>2</sup>The compression/expansion ramp (path 1) requires a configuration file named <code>config_old.xyz</code>. After each simulation, the final configuration of the system is stored in a file located in the <code>Configurations/</code> directory. The configuration file, named <code>config_[DATE][HOUR]_P[PRESSURE].xyz</code>, contains information about particle positions and orientations, box dimensions, the orientational field, and the maximum displacements from a previous simulation performed at pressure [PRESSURE]</sup>. If <code>PATH = 1</code> is selected, copy the desired configuration file from the <code>Configurations/</code> directory and place it in the <code>bin/</code> directory.
+  <sup><sup>2</sup>The compression/expansion ramp (path 1) requires a configuration file named <code>config_old.xyz</code>. After each simulation, the final configuration of the system is stored in a file located in the <code>Configurations/</code> directory. The configuration file, named <code>config_[DATE][HOUR]_P[PRESSURE].xyz</code>, contains information about particle positions and orientations, box dimensions, the orientational field, and the maximum displacements from a previous simulation performed at pressure [PRESSURE]. If <code>PATH = 1</code> is selected, copy the desired configuration file from the <code>Configurations/</code> directory and place it in the <code>bin/</code> directory.</sup>
 </p>
 
