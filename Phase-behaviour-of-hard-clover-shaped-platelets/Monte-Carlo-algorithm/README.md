@@ -302,3 +302,9 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 | Probability of translation | <code>PROBABILITY_TRANSLATION</code> | Defines the probability that a translational move is selected when a movement attempt is performed | Any positive <code>FLOAT</code> number between 0 and 1 |
 | Probability of isotropic volume change | <code>PROBABILITY_ISOTROPIC</code> | Defines the probability that an isotropic volume change is selected during a trial volume move | Any positive <code>FLOAT</code> number between 0 and 1 |
 | Probability of particle stack rotation | <code>PROBABILITY_STACKROTATION</code> | Defines the probability that a particle stack rotation move is selected during a trial move | Any positive <code>FLOAT</code> number between 0 and 1 |
+
+### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
+
+<p align="justify">
+  This file is used to set up the acceptance ratio thresholds of trial moves. The table below shows some options that can be used to define the threshold parameters:
+</p>
