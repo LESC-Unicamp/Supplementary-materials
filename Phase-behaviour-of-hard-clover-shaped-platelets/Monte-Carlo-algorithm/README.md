@@ -273,3 +273,9 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 <p align="justify">
   <sup><sup>1</sup>The box distortion is defined as the product of the total surface area and the perimeter of the simulation box divided by its volume. This quantity is normalized by dividing it by 72, which corresponds to the minimum possible distortion (a perfect cube). Thus, a value of 1 represents a perfect cubic box, while larger values correspond to increasingly distorted boxes, such as triclinic or non-cubic orthorhombic geometries.</sup>
 </p>
+
+### The Orientational Potential File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_orientational_field.ini"><sub>ini_orientational_field.ini</sub></a>
+
+<p align="justify">
+  This file is used to define variables related to the external orientational field that enforces the alignment of particles along a preferential direction. The table below lists the available options for configuring the force-field parameters.
+</p>
