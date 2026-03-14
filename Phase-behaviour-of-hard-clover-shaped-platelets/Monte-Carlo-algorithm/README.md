@@ -182,8 +182,8 @@ where <code>X</code> is the number of threads.
 | Configuration selection | <code>MOLECULAR_CONFIGURATION</code> | Use to select the initial configuration | <ul><li><code>PB</code> for a packed-box configuration<sup>1</sup></li><li><code>FB</code> for a floppy-box configuration<sup>2,3</sup></li></ul> |
 | Arrangement<sup>4</sup> selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for an arrangement where a circle (cylindrical cross section) intersects the centers of the two nearest neighboring circles </li><li><code>2</code> for an arrangement where all four circles intersect the center of mass of the composed geometry (used in the paper) </li></ul> |
 | Quaternion angle | <code>QUATERNION_ANGLE</code> | Use to select the rotation angle in degrees<br> (PB configuration only) | Any <code>FLOAT</code> number |
-| Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Use to select the maximum number of cycles to randomize the initial PB configuration | Any <code>INTEGER</code> number |
-| Restore backup<br> | <code>RESTORE_BACKUP</code> | Use to restore a previously saved simulation from the point where it stopped | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
+| Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Use to select the maximum number of cycles to randomize the initial PB configuration | Any positive <code>INTEGER</code> number |
+| Restore backup<br> | <code>RESTORE_BACKUP</code> | Use to restore a previously saved simulation from the point where it stopped | <ul><li><code>.TRUE.</code> to restore a previously saved simulation</li><li><code>.FALSE.</code> to start a new simulation</li></ul> |
 | Packed-box<br> streching/shrinking factor | <code>BOX_FACTOR</code> | Use to stretch/shrink the packed-box configuration. Greater values help ramdomize the initial configuration. Lower values make the configuration more compact but can increase the chances of overlap. | Any positive, non-zero <code>FLOAT</code> number |
 
 <p align="justify">
