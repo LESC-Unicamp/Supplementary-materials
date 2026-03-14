@@ -323,17 +323,24 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 ### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
 
 <p align="justify">
-  This file is used to set up system-related variables, including geometric properties. The table below shows some options that can be used to define the system parameters:
+  This file is used to define system-related variables, including geometric properties. The table below lists the available options for configuring the system parameters.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Packing fraction | <code>packing_fraction</code> | Used to define the target packing fraction of an <b>NVT</b>-simulation or the initial packing fraction (initial volume) of an <b>NPT</b>-simulation | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
-| Number of components | <code>components</code> | Used to define the number of components in the mixture | Any positive, non-zero <code>INTEGER</code> number |
-| Spherical components | <code>spherical_components</code> | Used to identify the spherical components in the mixture | <ul><li><code>T</code> if the component is spherical</li><li><code>F</code> if the component is nonspherical</li></ul> |
-| Molecular diameter | <code>diameter</code> | Used to define the molecular diameter in Å of each component in the mixture | Any positive, non-zero <code>FLOAT</code> number |
-| Molecular length | <code>length</code> | Used to define the molecular length in Å of each component in the mixture | Any positive, non-zero <code>FLOAT</code> number |
-| Mole fraction | <code>molar_fraction</code> | Used to define the mole fraction of each component in the mixture | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
-| Number of particles | <code>number_of_particles</code> | Used to define the total number of particles | Any positive, non-zero <code>INTEGER</code> number |
-| Temperature | <code>absolute_temperature</code> | Used to define the temperature of the system in K | Any positive, non-zero <code>FLOAT</code> number |
-| Reduced pressure¹ | <code>reduced_pressure</code> | Used to define the reduced pressure (only used in an <b>NPT</b>-simulation) | Any positive, non-zero <code>FLOAT</code> number |
+| Number of particles | <code>NUMBER_OF_PARTICLES</code> | Defines the total number of particles in the system | Any positive, non-zero <code>INTEGER</code> |
+| Number density | <code>NUMBER_DENSITY</code> | Defines the target number density (reduced units) for an <b>NVT</b> simulation or the initial number density (reduced units) for an <b>NPT</b> simulation | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
+| Cylinder diameter | <code>DIAMETER</code> | Defines the diameter of each cylindrical subunit (reduced units) | Any positive, non-zero <code>FLOAT</code> |
+| Cylinder length | <code>LENGTH</code> | Defines the length of each cylindrical subunit (reduced units) | Any positive, non-zero <code>FLOAT</code> |
+| Temperature | <code>TEMPERATURE</code> | Defines the system temperature (reduced units)<br><b>NOTE:</b> Does not affect simulations of hard-core particles | Any positive, non-zero <code>FLOAT</code> |
+| Reduced pressure<sup>1</sup> | <code>PRESSURE</code> | Defines the reduced pressure used in <b>NPT</b> simulations | Any positive, non-zero <code>FLOAT</code> |
+| Path | <code>PATH</code> | Selects the simulation protocol | <ul><li><code>1</code> for a compression/expansion simulation ramp<sup>2</sup></li><li><code>2</code> for a conventional simulation</li></ul> |
+
+<p align="justify">
+  <sup><sup>1</sup>P<sup>*</sup> = PD<sup>3</sup>/(k<sub>B</sub>T), where <i>P</i> is the real pressure, <i>k<sub>B</sub></i> is the Boltzmann constant, <i>T</i> is the absolute temperature, and <i>D</i> is the cylinder diameter</sup>
+</p>
+
+<p align="justify">
+  <sup><sup>2</sup>The compression/expansion ramp (path 1) requires a configuration file named <code>config_old.xyz</code>. After each simulation, the final configuration of the system is stored in a file located in the <code>Configurations/</code> directory. The configuration file, named <code>config_[DATE][HOUR]_P[PRESSURE].xyz</code>, contains information about particle positions and orientations, box dimensions, the orientational field, and the maximum displacements from a previous simulation performed at pressure [PRESSURE]</sup>
+</p>
+
