@@ -232,6 +232,12 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup>The 14-character code corresponds to the <code>[DATE][HOUR]</code> portion of the filename. This file can be opened with any text editor to modify some simulation settings if necessary. Note, however, that editing any parameter (position, orientation or box dimensions) may cause the program to detect overlapping configurations in the initial structure.</sup>
 </p>
 
+### The Control File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_control.ini"><sub>ini_control.ini</sub></a>
+
+<p align="justify">
+  This file is used to set up some control variables, such as data printing, seed type, and potential type. The table below shows some options that can be used to define the control parameters:
+</p>
+
 ### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
 
 <p align="justify">
