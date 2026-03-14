@@ -289,3 +289,18 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 <p align="justify">
   <sup><sup>1</sup>The field vector will be normalized if it is not already a unit vector</sup>
 </p>
+
+### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
+
+<p align="justify">
+  This file is used to set up the probability of trial moves. The table below shows some options that can be used to define the probability parameters:
+</p>
+
+| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Probability of movement | <code>prob_movement</code> | Used to define the probability a movement (translation/rotation) will occur during a trial move | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of movement<br> (<code>RND</code> only) | <code>prob_movement_rnd</code> | Used to define the probability a movement (translation/rotation) will occur during a trial move (random configuration only) | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of translation | <code>prob_translation</code> | Used to define the probability a translation will occur during a trial movement | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of translation<br> (<code>RND</code> only) | <code>prob_translation_rnd</code> | Used to define the probability a translation will occur during a trial movement (random configuration only) | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of isotropic volume change | <code>prob_volume_change_isotropic</code> | Used to define the probability an isotropic change will occur during a trial volume change | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Probability of isotropic volume change (<code>RND</code> only) | <code>prob_volume_change_isotropic_rnd</code> | Used to define the probability an isotropic change will occur during a trial volume change (random configuration only) | Any positive <code>FLOAT</code> number between 0 and 1 |
