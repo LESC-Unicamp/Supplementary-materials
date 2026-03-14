@@ -223,11 +223,11 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 </p>
 
 <p align="justify">
-  <sup><sup>5</sup>When restoring a backup configuration, the user will be asked to enter a 14-character code at some point. This code is part of the name of a configuration file inside the '/bin/Backup/' directory. The filename says something like:</sup>
+  <sup><sup>5</sup>When restoring a backup configuration, the user will be asked to enter a 14-character code. This code corresponds to part of the name of a configuration file located in the <code>/bin/Backup/</code> directory. The filename has the following format:</sup>
 </p>
 
 <sup><code>[DATE][HOUR]\_backup.dat</code></sup>
 
 <p align="justify">
-  <sup>The 14-character code is the [DATE][HOUR] descriptor of the filename. You can open this file using any text editor and edit some simulation settings that you find relevant. Please be reminded that editing anything in this file, except the reduced pressure and absolute temperature, may cause the program to detect overlapping configurations in the initial structure.</sup>
+  <sup>The 14-character code corresponds to the <code>[DATE][HOUR]</code> portion of the filename. This file can be opened with any text editor to modify some simulation settings if necessary. Note, however, that editing any parameter (position, orientation or box dimensions) may cause the program to detect overlapping configurations in the initial structure.</sup>
 </p>
