@@ -249,7 +249,11 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 | Maximum rotational displacement | <code>MAX_ROTATION</code> | Defines the maximum rotational displacement (±) in radians | Any non-zero <code>FLOAT</code> |
 | Maximum isotropic volumetric displacement | <code>MAX_VOLUME_ISO</code> | Defines the maximum isotropic volume displacement (±) in reduced units | Any non-zero <code>FLOAT</code> |
 | Maximum anisotropic volumetric displacement | <code>MAX_VOLUME_ANISO</code> | Defines the maximum anisotropic volume displacement (±) in reduced units | Any non-zero <code>FLOAT</code> |
-| Maximum box distortion | <code>MAX_DISTORTION</code> | Defines the maximum box distortion allowed before applying a lattice reduction procedure | Any positive <code>FLOAT</code> greater than 1 |
+| Maximum box distortion<sup>1</sup> | <code>MAX_DISTORTION</code> | Defines the maximum box distortion allowed before applying a lattice reduction procedure | Any positive <code>FLOAT</code> greater than 1 |
 | Maximum box length distortion | <code>BOX_MAX_LENGTH_RATIO</code> | Defines the maximum allowed ratio between the lengths of the simulation box edges | Any positive, non-zero <code>FLOAT</code> |
 | Maximum box angle distortion | <code>BOX_MAX_ANGLE_DEGREE</code> | Defines the maximum deviation angle (in degrees) between box edges relative to a perfect cube (90° ± <i>x</i>) | Any positive, non-zero <code>FLOAT</code> |
 | Lattice reduction algorithm | <code>LATTICE_REDUCTION</code> | Selects the algorithm used to perform lattice reduction | <ul><li><code>GOTTWALD</code> for the algorithm used in the <a href="https://doi.org/10.1063/1.4767529">floppy-box Monte Carlo</a> method</li><li><code>LLL</code> for the <a href="https://doi.org/10.1007/BF01457454">Lenstra–Lenstra–Lovász</a> algorithm</li></ul> |
+
+<p align="justify">
+  <sup><sup>1</sup>The box distortion is defined as the product of the total surface area and the perimeter of the simulation box divided by its volume. This quantity is normalized by dividing it by 72, which corresponds to the minimum possible distortion (a perfect cube). Thus, a value of 1 represents a perfect cubic box, while larger values correspond to increasingly distorted boxes, such as triclinic or non-cubic orthorhombic geometries.</sup>
+</p>
