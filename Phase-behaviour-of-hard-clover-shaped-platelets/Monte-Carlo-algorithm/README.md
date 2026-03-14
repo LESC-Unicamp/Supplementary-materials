@@ -306,5 +306,17 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 ### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
 
 <p align="justify">
-  This file is used to set up the acceptance ratio thresholds of trial moves. The table below shows some options that can be used to define the threshold parameters:
+  This file is used to define the acceptance ratio thresholds for trial moves. The table below lists the available options for configuring the threshold parameters.
 </p>
+
+| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Translational threshold | <code>RATIO_TRANSLATION</code> | Defines the target acceptance ratio<sup>1</sup> for translational moves | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Rotational threshold | <code>RATIO_ROTATION</code> | Defines the target acceptance ratio for rotational moves | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Isotropic volume change threshold | <code>RATIO_VOLUME_CHANGE_ISO</code> | Defines the target acceptance ratio for isotropic volume-change moves | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Anisotropic volume change threshold | <code>RATIO_VOLUME_CHANGE_ANISO</code> | Defines the target acceptance ratio for anisotropic volume-change moves | Any positive <code>FLOAT</code> number between 0 and 1 |
+
+<p align="justify">
+  <sup><sup>1</sup>Adjustments to the maximum displacements are performed only during the equilibration phase, every <code>ADJUSTMENT_FREQUENCY</code> cycles. Let <b>n_accepted</b> denote the number of accepted moves and <b>n_trialed</b> the number of attempted moves. If <b>n_accepted</b> / <b>n_trialed</b> &gt; <b>threshold</b>, the corresponding maximum displacement is increased by 5% of its current value; otherwise, it is decreased by 5% of its current value</sup>
+</p>
+
