@@ -66,7 +66,7 @@ This NVT/NPT Monte Carlo algorithm was developed to investigate the phase behavi
 </p>
 
 <p align="justify">
-  The isotropic fluid phase (compression path) and lamello–columnar phase (expansion path) are illustrated below.
+  For illustration, the isotropic fluid phase (observed during compression) and the lamello–columnar phase (observed during expansion) are shown below.
 </p>
 
 | | |
