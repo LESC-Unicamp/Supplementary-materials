@@ -240,7 +240,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of cycles | <code>NUMBER_OF_CYCLES</code> | Defines the maximum number of simulation cycles.<br><b>NOTE:</b> A cycle is defined as one attempt to displace a randomly selected particle in the system or to change the volume of the simulation box | Any positive, non-zero <code>INTEGER</code> |
+| Number of cycles | <code>NUMBER_OF_CYCLES</code> | Defines the maximum number of simulation cycles.<br><b>NOTE:</b> A cycle is defined as one attempt to displace a randomly selected particle in the system or to change the volume/shape of the simulation box | Any positive, non-zero <code>INTEGER</code> |
 | Number of equilibration cycles | <code>EQUILIBRATION_CYCLES</code> | Defines the number of equilibration cycles within the total number of simulation cycles | Any positive, non-zero <code>INTEGER</code> smaller than <code>NUMBER_OF_CYCLES</code> |
 | Saving frequency | <code>SAVING_FREQUENCY</code> | Defines how often simulation results are written to disk | Any positive, non-zero <code>INTEGER</code><br><b>NOTE:</b> <code>1</code> corresponds to the highest frequency (results written every cycle). |
 | Adjustment frequency<br>(movement) | <code>ADJUSTMENT_FREQUENCY_M</code> | Defines how often translational/rotational displacement adjustments are performed. | Any positive, non-zero <code>INTEGER</code> |
