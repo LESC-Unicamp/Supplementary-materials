@@ -367,43 +367,75 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 </p>
 
 <p align="justify">
-  The <code>Floppy-box/</code> directory contains a <code>fbox.dat</code> file that describes the properties of the unit cell of the densest configuration obtained using the Floppy Box Monte Carlo (FBMC) method. See the <a href="#conffile">Configuration File</a> section for more information.
+  The <code>Floppy-box/</code> directory contains a <code>fbox.dat</code> file that describes the properties of the unit cell of the densest configuration obtained using the Floppy-Box Monte Carlo (FBMC) method. See the <a href="#conffile">Configuration File</a> section for more information.
 </p>
 
 <p align="justify">
-  The <code>Initial_Configuration/</code> contains the <code>OVITO/</code> subdirectory, which holds preformatted information on the position and orientation of particles, as well as their molecular geometry, that can be visualized directly on <a href="https://www.ovito.org/">OVITO</a> software.
+  The <code>Initial_Configuration/</code> directory contains the <code>OVITO/</code> subdirectory, which stores preformatted information about particle positions and orientations, as well as their molecular geometry, that can be visualized directly using <a href="https://www.ovito.org/">OVITO</a>.
 </p>
 
 <p align="justify">
-  The <code>Order_Parameter/</code> directory stores the nematic order parameter. This property is written out every <code>saving_frequency</code> cycles.
+  The <code>Potential/</code> directory stores information about the potential energy associated with the external orientational field. This property is written every <code>SAVING_FREQUENCY</code> cycles.
 </p>
 
 <p align="justify">
-  The <code>Perturbed_Coefficient/</code> directory stores the calculated TPT coefficients and full Helmholtz free energy of the perturbed system. These properties are written out at the end of the simulation. If the square-well potential is selected, there will also be a subfolder for each attractive range point.
-</p>
-
-<p align="justify">
-  The <code>Potential/</code> directory stores information on the potential energy calculated through the selected force field. This property is written out every <code>saving_frequency</code> cycles. If the control variable <code>potential_production_only</code> is set to <code>Y</code>, then only production cycles will be accounted for. If the square-well potential is selected, there will also be a subfolder for each attractive range point.
-</p>
-
-<p align="justify">
-  The <code>Ratio/</code> directory stores information on equilibration cycles (acceptance ratio, maximum displacements, etc.). This information is sorted out into three subfolders: the <code>Rotation/</code> subfolder holds information on rotational moves; the <code>Translation/</code> subfolder holds information on translational moves; and the <code>Volume/</code> subfolder holds information on volumetric moves (only valid for <i>NPT</i>-simulations). These properties are only written out every <code>adjustment_frequency</code> equilibration cycles.
+  The <code>Ratio/</code> directory stores information related to equilibration cycles (e.g., acceptance ratios and maximum displacements). This information is organized into three subdirectories: <code>Rotation/</code>, which stores data for rotational moves; <code>Translation/</code>, which stores data for translational moves; and <code>Volume/</code>, which stores data for volumetric moves (only applicable to <i>NPT</i> simulations). These properties are written every <code>ADJUSTMENT_FREQUENCY</code> equilibration cycles.
 </p>
   
 <p align="justify">
-  The <code>Results/</code> directory stores relavant results of the <i>NPT</i>-simulation, including the packing fraction, number density, and box volume. These properties are written out every <code>saving_frequency</code> cycles.
+  The <code>Results/</code> directory stores relevant results from <i>NPT</i> simulations, including the packing fraction, number density, and nematic order parameter. These properties are written every <code>SAVING_FREQUENCY</code> cycles.
 </p>
 
 <p align="justify">
-  The <code>Trajectories/</code> directory stores the trajectory file containing preformatted information on the position and orientation of particles, as well as their molecular geometry, that can be visualized directly on <a href="https://www.ovito.org/">OVITO</a> software. These properties are written out every <code>saving_frequency</code> cycles.<br><b>NOTE</b>: the trajectory is only written out if the parameter <code>print_trajectory</code> is set to <code>Y</code>.
+  The <code>Stack_Rotation/</code> directory stores information about the acceptance of stack rotational moves. This property is written every <code>SAVING_FREQUENCY</code> cycles and only if the <code>STACK_ROTATION</code> flag is set to <code>.TRUE.</code>.
 </p>
 
 <p align="justify">
-  The aforementioned folders are created by executing a shell command via an intrinsic function called <code>SYSTEM</code> which works in Linux operating systems and Linux subsystems. Please note that which shell is used to invoke the command line is system-dependent and environment-dependent. Check this <a href="https://gcc.gnu.org/onlinedocs/gfortran/SYSTEM.html">link</a> for more information.
+  The <code>Trajectories/</code> directory stores the trajectory file containing preformatted information about particle positions and orientations, as well as the simulation box dimensions, which can be visualized directly using <a href="https://www.ovito.org/">OVITO</a>. These properties are written every <code>SAVING_FREQUENCY</code> cycles.<br><b>NOTE:</b> The trajectory file is written only if the parameter <code>TRAJECTORY_INQUIRY</code> is set to <code>.TRUE.</code>.
 </p>
 
 <p align="justify">
-  Filenames are based on the information they hold, followed by the packing fraction (<i>NVT</i>-simulations) or reduced pressure (<i>NPT</i>-simulations) and the number of components that were used to create them. To prevent identically named files from being overwritten, a time prefix indicating when the simulation started is added to the file.
+  The aforementioned folders are created by executing shell commands through the intrinsic function <code>SYSTEM</code>, which is available in Linux operating systems and Linux subsystems. Please note that the shell used to invoke the command line may depend on the operational system configuration and environment. See <a href="https://gcc.gnu.org/onlinedocs/gfortran/SYSTEM.html">this link</a> for more information.
 </p>
 
+<p align="justify">
+  Filenames are based on the information they contain, followed by the cylindrical aspect ratio and the reduced pressure. To prevent files with identical names from being overwritten, a time prefix indicating the start time of the simulation is added to the filename.
+</p>
 
+## <a name="running"></a>Running the Code
+
+<p align="justify">
+  Finally, it's time to get started! After compilation, the executable is located in the <code>/bin/</code> directory:
+</p>
+
+<b>Standard compilation</b> (with OpenMP API)
+
+<pre>
+./nonconvex.out
+</pre>
+
+<p align="justify">
+  When the code starts, a summary of all properties defined in the <b>*.ini</b> files is printed to the screen. If the parameters are correct, enter <code>Y</code> to continue; otherwise, enter <code>N</code> to exit and modify the input files.
+</p>
+
+<p align="justify">
+  The algorithm first creates the initial configuration directory and generates the corresponding initial configuration file.
+</p>
+
+<p align="justify">
+  It then checks the initial configuration for particle overlaps. If any overlapping configuration is detected, the program reports the indices of the overlapping particles and exits.
+</p>
+
+<p align="justify">
+  After this validation step, the property files are created and the simulation begins. The current stage of the simulation can be monitored through the progress bar.
+</p>
+
+## <a name="reporting"></a>Reporting Errors
+<p align="justify">
+  If you spot an error in the program files and all other documentation, please submit an issue report using the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/issues">Issues</a> tab.
+</p>
+
+## <a name="citation"></a>Citing Us
+<p align="justify">
+  Not Available.
+</p>
