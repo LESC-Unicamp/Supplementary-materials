@@ -410,9 +410,9 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 
 <b>Standard compilation</b> (with OpenMP API)
 
-<pre>
+```
 ./nonconvex.out
-</pre>
+```
 
 <p align="justify">
   When the code starts, a summary of all properties defined in the <b>*.ini</b> files is printed to the screen. If the parameters are correct, enter <code>Y</code> to continue; otherwise, enter <code>N</code> to exit and modify the input files.
