@@ -279,3 +279,13 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 <p align="justify">
   This file is used to define variables related to the external orientational field that enforces the alignment of particles along a preferential direction. The table below lists the available options for configuring the force-field parameters.
 </p>
+
+| Name<br> ________________________ | String Name<br> _______________________ | Definition<br> _________________________________ | Options<br> _______________________________________ |
+|:---:|:---:| --- | --- 
+| Orientational field selection | <code>EXTERNAL_POTENTIAL</code> | Specifies whether the external orientational field is applied | <ul><li><code>.TRUE.</code> to enable</li><li><code>.FALSE.</code> to disable</li></ul> |
+| Force field strength | <code>POTENTIAL_STRENGTH</code> | Defines the strength of the external field that enforces particle alignment along the direction defined by <code>ORIENTATIONAL_FIELD</code> | Any positive <code>FLOAT</code> |
+| Field orientation | <code>ORIENTATIONAL_FIELD</code> | Defines the unit vector specifying the direction of the external orientational field | A set of three <code>FLOAT</code> numbers<sub>1</sub> |
+
+<p align="justify">
+  <sup><sup>1</sup>The field vector will be normalized if it is not already a unit vector</sup>
+</p>
