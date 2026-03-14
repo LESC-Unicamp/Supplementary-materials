@@ -367,7 +367,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 </p>
 
 <p align="justify">
-  The <code>Floppy-box/</code> directory containd a fbox.dat file that described the properties of the unit cell of the densest configuration obtained using the Floppy Box MOnte Carlo (FBMC) method. Check the [Confiduration File](#conffile) for more information.
+  The <code>Floppy-box/</code> directory contains a <code>fbox.dat</code> file that describes the properties of the unit cell of the densest configuration obtained using the Floppy Box Monte Carlo (FBMC) method. See the <a href="#conffile">Configuration File</a> section for more information.
 </p>
 
 <p align="justify">
