@@ -174,7 +174,7 @@ where <code>X</code> is the number of threads.
 ### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
 
 <p align="justify">
-  This file is used to set up the molecular geometry and the molecular configuration, including aditional information on the packed-box structure (if selected). The table below shows some options that can be used to define the configuration parameters:
+  This file is used to define the molecular geometry and molecular configuration, including additional information about the packed-box structure (if selected). The table below lists the available options for configuring these parameters.
 </p>
 
 | Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
@@ -235,8 +235,18 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 ### The Control File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_control.ini"><sub>ini_control.ini</sub></a>
 
 <p align="justify">
-  This file is used to set up some control variables, such as data printing, seed type, and potential type. The table below shows some options that can be used to define the control parameters:
+  This file is used to define several control variables, such as data printing and seed type. The table below lists the available options for configuring the control parameters.
 </p>
+
+| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Trajectory printing | <code>TRAJECTORY_INQUIRY</code> | Used to specify whether trajectory files are written out | <ul><li><code>.TRUE.</code> to write trajectory files</li><li><code>.FALSE.</code> to not write trajectory files</li></ul> |
+| Seed type | <code>RANDOM_SEED</code> | Used to control the type of pseudorandom number generator seed | <ul><li><code>.FALSE.</code> for a fixed seed</li><li><code>.TRUE.</code> for a random seed</li></ul> |
+| Widom's insertion method | <code>WIDOM_METHOD</code> | Used to specify whether Widom's insertion method is applied to compute the excess chemical potential | <ul><li><code>.TRUE.</code> to apply Widom's method</li><li><code>.FALSE.</code> to ignore it</li></ul> |
+| Widom frequency | <code>WIDOM_CYCLES</code> | Used to specify how often (in simulation cycles) the Widom routine is called to compute the excess chemical potential | Any positive, non-zero <code>INTEGER</code> |
+| Particle stack<br>rotation | <code>STACK_ROTATION</code> | Used to enable stack rotational moves during the simulation | <ul><li><code>.TRUE.</code> to enable</li><li><code>.FALSE.</code> to disable</li></ul> |
+| Density threshold<br>(stack rotation) | <code>STACK_DENSITY_THRESHOLD</code> | Used to define the density threshold above which stack rotations are applied | Any positive <code>FLOAT</code> |
+| Cell lists | <code>CELL_LISTS</code> | Used to improve simulation performance by using neighbor cell lists instead of checking the entire system | <ul><li><code>.TRUE.</code> to use cell lists</li><li><code>.FALSE.</code> to not use cell lists</li></ul> |
 
 ### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
 
