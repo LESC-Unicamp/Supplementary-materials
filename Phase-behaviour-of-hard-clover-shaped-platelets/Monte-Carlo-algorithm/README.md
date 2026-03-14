@@ -332,7 +332,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 | Number density | <code>NUMBER_DENSITY</code> | Defines the target number density (reduced units) for an <b>NVT</b> simulation or the initial number density (reduced units) for an <b>NPT</b> simulation | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
 | Cylinder diameter | <code>DIAMETER</code> | Defines the diameter of each cylindrical subunit (reduced units) | Any positive, non-zero <code>FLOAT</code> |
 | Cylinder length | <code>LENGTH</code> | Defines the length of each cylindrical subunit (reduced units) | Any positive, non-zero <code>FLOAT</code> |
-| Temperature | <code>TEMPERATURE</code> | Defines the system temperature (reduced units)<br><b>NOTE:</b> Does not affect simulations of hard-core particles | Any positive, non-zero <code>FLOAT</code> |
+| Temperature | <code>TEMPERATURE</code> | Defines the system temperature in K<br><b>NOTE:</b> Does not affect simulations of hard-core particles | Any positive, non-zero <code>FLOAT</code> |
 | Reduced pressure<sup>1</sup> | <code>PRESSURE</code> | Defines the reduced pressure used in <b>NPT</b> simulations | Any positive, non-zero <code>FLOAT</code> |
 | Path | <code>PATH</code> | Selects the simulation protocol | <ul><li><code>1</code> for a compression/expansion simulation ramp<sup>2</sup></li><li><code>2</code> for a conventional simulation</li></ul> |
 
