@@ -320,3 +320,20 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup><sup>1</sup>Adjustments to the maximum displacements are performed only during the equilibration phase, every <code>ADJUSTMENT_FREQUENCY</code> cycles. Let <b>n_accepted</b> denote the number of accepted moves and <b>n_trialed</b> the number of attempted moves. If <b>n_accepted</b> / <b>n_trialed</b> &gt; <b>threshold</b>, the corresponding maximum displacement is increased by 5% of its current value; otherwise, it is decreased by 5% of its current value</sup>
 </p>
 
+### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
+
+<p align="justify">
+  This file is used to set up system-related variables, including geometric properties. The table below shows some options that can be used to define the system parameters:
+</p>
+
+| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Packing fraction | <code>packing_fraction</code> | Used to define the target packing fraction of an <b>NVT</b>-simulation or the initial packing fraction (initial volume) of an <b>NPT</b>-simulation | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
+| Number of components | <code>components</code> | Used to define the number of components in the mixture | Any positive, non-zero <code>INTEGER</code> number |
+| Spherical components | <code>spherical_components</code> | Used to identify the spherical components in the mixture | <ul><li><code>T</code> if the component is spherical</li><li><code>F</code> if the component is nonspherical</li></ul> |
+| Molecular diameter | <code>diameter</code> | Used to define the molecular diameter in Å of each component in the mixture | Any positive, non-zero <code>FLOAT</code> number |
+| Molecular length | <code>length</code> | Used to define the molecular length in Å of each component in the mixture | Any positive, non-zero <code>FLOAT</code> number |
+| Mole fraction | <code>molar_fraction</code> | Used to define the mole fraction of each component in the mixture | Any positive, non-zero <code>FLOAT</code> number between 0 and 1 |
+| Number of particles | <code>number_of_particles</code> | Used to define the total number of particles | Any positive, non-zero <code>INTEGER</code> number |
+| Temperature | <code>absolute_temperature</code> | Used to define the temperature of the system in K | Any positive, non-zero <code>FLOAT</code> number |
+| Reduced pressure¹ | <code>reduced_pressure</code> | Used to define the reduced pressure (only used in an <b>NPT</b>-simulation) | Any positive, non-zero <code>FLOAT</code> number |
