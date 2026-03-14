@@ -344,3 +344,58 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup><sup>2</sup>The compression/expansion ramp (path 1) requires a configuration file named <code>config_old.xyz</code>. After each simulation, the final configuration of the system is stored in a file located in the <code>Configurations/</code> directory. The configuration file, named <code>config_[DATE][HOUR]_P[PRESSURE].xyz</code>, contains information about particle positions and orientations, box dimensions, the orientational field, and the maximum displacements from a previous simulation performed at pressure [PRESSURE]. If <code>PATH = 1</code> is selected, copy the desired configuration file from the <code>Configurations/</code> directory, place it in the <code>bin/</code> directory, and rename it to <code>config_old.xyz</code></sup>
 </p>
 
+## <a name="filesandfolders"></a>Files and Folders
+
+<p align="justify">
+  The program organizes the output files and directories automatically. It creates <b>9</b> directories in total. To better organize the output files, all directories (or subdirectories) contains a date subfolder, corresponding to the starting date/hour of the simulation.
+</p>
+
+<p align="justify">
+  The <code>Backup/</code> directory stores the backup files of the current simulation. These files hold information on system variables (number of components, number of particles, etc.) and on simulation variables (particles' positions and orientations, box properties, cell list properties, etc.). The backup files are written out every <code>saving_frequency</code> cycles.
+</p>
+
+<p align="justify">
+  The <code>Box/</code> directory stores information on the box volume and box length, including the current distortion of the simulation box (only valid for <i>NPT</i>-simulations). This property is written out every <code>saving_frequency</code> cycles.
+</p>
+
+<p align="justify">
+  The <code>Configuration/</code> directory ... .
+</p>
+
+<p align="justify">
+  The <code>Initial_Configuration/</code> directory stores the preset initial configuration file. It also contains the <code>OVITO/</code> subdirectory, which holds preformatted information on the position and orientation of particles, as well as their molecular geometry, that can be visualized directly on <a href="https://www.ovito.org/">OVITO</a> software. The <code>OVITO/</code> subdirectory also contains an 'RND' configuration file that is constantly updated to allow you to keep up with the development of the random configuration.
+</p>
+
+<p align="justify">
+  The <code>Order_Parameter/</code> directory stores the nematic order parameter. This property is written out every <code>saving_frequency</code> cycles.
+</p>
+
+<p align="justify">
+  The <code>Perturbed_Coefficient/</code> directory stores the calculated TPT coefficients and full Helmholtz free energy of the perturbed system. These properties are written out at the end of the simulation. If the square-well potential is selected, there will also be a subfolder for each attractive range point.
+</p>
+
+<p align="justify">
+  The <code>Potential/</code> directory stores information on the potential energy calculated through the selected force field. This property is written out every <code>saving_frequency</code> cycles. If the control variable <code>potential_production_only</code> is set to <code>Y</code>, then only production cycles will be accounted for. If the square-well potential is selected, there will also be a subfolder for each attractive range point.
+</p>
+
+<p align="justify">
+  The <code>Ratio/</code> directory stores information on equilibration cycles (acceptance ratio, maximum displacements, etc.). This information is sorted out into three subfolders: the <code>Rotation/</code> subfolder holds information on rotational moves; the <code>Translation/</code> subfolder holds information on translational moves; and the <code>Volume/</code> subfolder holds information on volumetric moves (only valid for <i>NPT</i>-simulations). These properties are only written out every <code>adjustment_frequency</code> equilibration cycles.
+</p>
+  
+<p align="justify">
+  The <code>Results/</code> directory stores relavant results of the <i>NPT</i>-simulation, including the packing fraction, number density, and box volume. These properties are written out every <code>saving_frequency</code> cycles.
+</p>
+
+<p align="justify">
+  The <code>Trajectories/</code> directory stores the trajectory file containing preformatted information on the position and orientation of particles, as well as their molecular geometry, that can be visualized directly on <a href="https://www.ovito.org/">OVITO</a> software. These properties are written out every <code>saving_frequency</code> cycles.<br><b>NOTE</b>: the trajectory is only written out if the parameter <code>print_trajectory</code> is set to <code>Y</code>.
+</p>
+
+<p align="justify">
+  The aforementioned folders are created by executing a shell command via an intrinsic function called <code>SYSTEM</code> which works in Linux operating systems and Linux subsystems. Please note that which shell is used to invoke the command line is system-dependent and environment-dependent. Check this <a href="https://gcc.gnu.org/onlinedocs/gfortran/SYSTEM.html">link</a> for more information.
+</p>
+
+<p align="justify">
+  Filenames are based on the information they hold, followed by the packing fraction (<i>NVT</i>-simulations) or reduced pressure (<i>NPT</i>-simulations) and the number of components that were used to create them. To prevent identically named files from being overwritten, a time prefix indicating when the simulation started is added to the file.
+</p>
+
+
