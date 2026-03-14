@@ -183,7 +183,7 @@ where <code>X</code> is the number of threads.
 | Arrangement<sup>4</sup> selection | <code>GEOMETRY_SELECTION</code> | Use to select the molecular geometry based on a common intersection point | <ul><li><code>1</code> for an arrangement where a circle (cylindrical cross section) intersects the centers of the two nearest neighboring circles </li><li><code>2</code> for an arrangement where all four circles intersect the center of mass of the composed geometry (used in the paper) </li></ul> |
 | Quaternion angle | <code>QUATERNION_ANGLE</code> | Use to select the rotation angle in degrees<br> (PB configuration only) | Any <code>FLOAT</code> number |
 | Maximum number of cycles<br> (initial configuration) | <code>MAX_CYCLES_INIT</code> | Use to select the maximum number of cycles to randomize the initial PB configuration | Any positive <code>INTEGER</code> number |
-| Restore backup<br> | <code>RESTORE_BACKUP</code> | Use to restore a previously saved simulation from the point where it stopped | <ul><li><code>.TRUE.</code> to restore a previously saved simulation</li><li><code>.FALSE.</code> to start a new simulation</li></ul> |
+| Restore backup<sup>5</sup><br> | <code>RESTORE_BACKUP</code> | Use to initialize a new simulation from a previously saved state (the original simulation is not resumed) | <ul><li><code>.TRUE.</code> to start from a saved state</li><li><code>.FALSE.</code> to start from scratch</li></ul> |
 | Packed-box<br> streching/shrinking factor | <code>BOX_FACTOR</code> | Use to stretch/shrink the packed-box configuration. Greater values help ramdomize the initial configuration. Lower values make the configuration more compact but can increase the chances of overlap. | Any positive, non-zero <code>FLOAT</code> number |
 
 <p align="justify">
@@ -222,8 +222,12 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup><sup>4</sup>The main difference between the two arrangements is their degree of concavity: <code>1</code> is less concave than <code>2</code>, resembling a rounded-square cross section. As a result, arrangement <code>2</code> provides a larger concave region between neighboring units, increasing the available space for interdigitation compared with <code>1</code>.</sup>
 </p>
 
-<code>[DATE][HOUR]\_initconf\_[CONFIGURATION]\_[GEOMETRY].xyz</code>
+<p align="justify">
+  <sup><sup>5</sup>When restoring a backup configuration, the user will be asked to enter a 14-character code at some point. This code is part of the name of a configuration file inside the '/bin/Backup/' directory. The filename says something like:</sup>
+</p>
+
+<sup><code>[DATE][HOUR]\_backup.dat</code></sup>
 
 <p align="justify">
-  The 14-character code is the [DATE][HOUR] descriptor of the filename. You can open this file using any text editor and edit some simulation settings that you find relevant. Please be reminded that editing anything in this file, except the reduced pressure and absolute temperature, may cause the program to detect overlapping configurations in the initial structure.
+  <sup>The 14-character code is the [DATE][HOUR] descriptor of the filename. You can open this file using any text editor and edit some simulation settings that you find relevant. Please be reminded that editing anything in this file, except the reduced pressure and absolute temperature, may cause the program to detect overlapping configurations in the initial structure.</sup>
 </p>
