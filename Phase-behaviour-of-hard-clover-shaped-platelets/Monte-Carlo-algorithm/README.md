@@ -66,7 +66,7 @@ This NVT/NPT Monte Carlo algorithm was developed to investigate the phase behavi
 </p>
 
 <p align="justify">
-  For illustration, the <strong>isotropic fluid phase</strong> (observed during compression) and the <strong>lamello–columnar phase</strong> (observed during expansion) are shown below. The animations were generated using <a href="https://www.ovito.org/" target="_blank">OVITO</a>.
+  For illustration, the <strong>isotropic fluid phase</strong> (observed during compression runs) and the <strong>lamello–columnar phase</strong> (observed during expansion runs) are shown below. The animations were generated using <a href="https://www.ovito.org/" target="_blank">OVITO</a>.
 </p>
 
 | | |
