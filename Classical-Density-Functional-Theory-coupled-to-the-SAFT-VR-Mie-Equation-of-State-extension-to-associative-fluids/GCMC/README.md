@@ -284,4 +284,4 @@ make clean
 
 ## <a name="citation"></a>Citing Us
 
-<a href="https://doi.org/10.1021/acs.jpcb.6c00630">DOI: 10.1021/acs.jpcb.6c00630</a>.
+DOI: <a href="https://doi.org/10.1021/acs.jpcb.6c00630">10.1021/acs.jpcb.6c00630</a>.
