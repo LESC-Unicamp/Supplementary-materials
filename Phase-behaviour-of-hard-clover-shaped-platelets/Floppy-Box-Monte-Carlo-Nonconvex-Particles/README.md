@@ -31,7 +31,7 @@
                         |  ██████/  | ██ \  ██   /██████  |  ██████/  | ██  | ██  | ██ \/  | ██  | ██
                          \______/   |__/  \__/  |______/   \______/   |__/  |__/  |__/     |__/  |__/
 ```
-<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo/blob/main/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
+<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
 
 <p align="center"><b>Authors</b></p>
 <p align="center">
