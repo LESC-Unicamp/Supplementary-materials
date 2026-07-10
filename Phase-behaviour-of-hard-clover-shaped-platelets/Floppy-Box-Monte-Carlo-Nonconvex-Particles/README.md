@@ -149,26 +149,21 @@ The following features are supported in the current version:
 
 ## <a name="datainput"></a>Data Input
 
+<p align="justify">
+  Not available yet.
+</p>
+
 ## <a name="filesandfolders"></a>Files and Folders
 
+<p align="justify">
+  Not available yet.
+</p>
 
 ## <a name="running"></a>Running the Code
 
 <p align="justify">
-  Finally, it's time to run the code! After compilation, the executable(s) can be found in the <code>/bin/</code> folder:
+  Not available yet.
 </p>
-
-**Standard compilation**
-```
-./mc_mixtures_standard.out
-```
-
-or
-
-**Debug compilation**
-```
-./mc_mixtures_debug.out
-```
 
 ## <a name="reporting"></a>Reporting Errors
 <p align="justify">
