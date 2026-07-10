@@ -167,7 +167,7 @@ The following features are supported in the current version:
 
 ## <a name="reporting"></a>Reporting Errors
 <p align="justify">
-  If you spot an error in the program files and all other documentation, please submit an issue report using the <a href="https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/issues">Issues</a> tab.
+  If you spot an error in the program files and all other documentation, please submit an issue report using the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/issues">Issues</a> tab.
 </p>
 
 ## <a name="citation"></a>Citing Us
