@@ -31,7 +31,7 @@
                         |  ██████/  | ██ \  ██   /██████  |  ██████/  | ██  | ██  | ██ \/  | ██  | ██
                          \______/   |__/  \__/  |______/   \______/   |__/  |__/  |__/     |__/  |__/
 ```
-<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/CHANGELOG.md">Version: 2.0.0</a></sub></b></p>
+<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/CHANGELOG.md">Version: 2.0.0</a></sub></b></p>
 
 <p align="center"><b>Authors</b></p>
 <p align="center">
@@ -168,10 +168,10 @@ The following features are supported in the current version:
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-debug">Debug (without OpenMP)</a> | ```make -f makefile-debug``` |
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-debug-openmp">Debug (with OpenMP)</a> | ```make -f makefile-debug-openmp``` |
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile">Standard (without OpenMP)</a> | ```make -f makefile``` |
-| <a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/src/makefile-openmp">Standard (with OpenMP)</a> | ```make -f makefile-openmp``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/src/makefile-debug">Debug (without OpenMP)</a> | ```make -f makefile-debug``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/src/makefile-debug-openmp">Debug (with OpenMP)</a> | ```make -f makefile-debug-openmp``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/src/makefile">Standard (without OpenMP)</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/src/makefile-openmp">Standard (with OpenMP)</a> | ```make -f makefile-openmp``` |
 
 If your compilation option includes the OpenMP API (**Version 1.3.1**), you can also choose the number of threads to be used on your simulation via the following command:
 
@@ -191,7 +191,7 @@ where <code>X</code> is the number of threads.
   Apart from the executable file, the <code>/bin/</code> folder contains some initialization files that need to be set up.
 </p>
 
-### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_config.ini"><sub>ini_config.ini</sub></a>
+### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_config.ini"><sub>ini_config.ini</sub></a>
 
 <p align="justify">
   This file is used to set up the molecular geometry and the molecular configuration, including aditional information on the random structure (if selected). The table below shows some options that can be used to define the configuration parameters:
@@ -221,7 +221,7 @@ where <code>X</code> is the number of threads.
   The 14-character code is the [DATE][HOUR] descriptor of the filename. You can open this file using any text editor and edit some simulation settings that you find relevant. Please be reminded that editing anything in this file, except the reduced pressure and absolute temperature, may cause the program to detect overlapping configurations in the initial structure.
 </p>
 
-### The Control File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_control.ini"><sub>ini_control.ini</sub></a>
+### The Control File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_control.ini"><sub>ini_control.ini</sub></a>
 
 <p align="justify">
   This file is used to set up some control variables, such as data printing, seed type, and potential type. The table below shows some options that can be used to define the control parameters:
@@ -256,7 +256,7 @@ where <code>X</code> is the number of threads.
   <b>OBS. II</b>: cell lists are implemented for both the overlap check and potential computation.
 </p>
 
-### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
+### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
 
 <p align="justify">
   This file is used to set up the number of simulation cycles, maximum displacements, ensemble type, and lattice reduction algorithm (if anisotropic volume changes are considered). The table below shows some options that can be used to define the simulation parameters:
@@ -294,7 +294,7 @@ where <code>X</code> is the number of threads.
   <b>OBS. II</b>: The box distortion is defined as the product of the total surface area and perimeter of the box divided by its volume. We normalize the box distortion factor by dividing it by 72, which corresponds to minimum box distortion possible (perfect cube). In that case, 1 is a perfect cube and higher values represent triclinic or non-cubic orthorhombic structures.
 </p>
 
-### The Potential File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_potential.ini"><sub>ini_potential.ini</sub></a>
+### The Potential File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_potential.ini"><sub>ini_potential.ini</sub></a>
 
 <p align="justify">
   This file is used to set up variables related to the chosen force field. The table below shows some options that can be used to define the force field parameters:
@@ -325,7 +325,7 @@ where <code>X</code> is the number of threads.
   <b>OBS. III</b>: If the square well potential is chosen for the reference system, then only one potential range will be allowed.
 </p>
 
-### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
+### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
 
 <p align="justify">
   This file is used to set up the probability of trial moves. The table below shows some options that can be used to define the probability parameters:
@@ -348,7 +348,7 @@ where <code>X</code> is the number of threads.
   <b>OBS. II</b>: If the <i>NVT</i> ensemble is selected, the probability of movement is replaced by 1. If the <i>NPT</i> ensemble is selected, the probability of movement cannot be 1, which means that the probability of volume change cannot be set to 0.
 </p>
 
-### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_ratios.ini"><sub>ini_ratio.ini</sub></a>
+### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_ratios.ini"><sub>ini_ratio.ini</sub></a>
 
 <p align="justify">
   This file is used to set up the acceptance ratio thresholds of trial moves. The table below shows some options that can be used to define the threshold parameters:
@@ -365,7 +365,7 @@ where <code>X</code> is the number of threads.
   <b>OBS.</b>: Adjustments to maximum diplacements are only made during the equilibration phase for every <code>adjustment_frequency</code> cycles. Let's call the number of accepted moves <b>n_accepted</b> and the number of trialed moves <b>n_trialed</b>. If <b>n_accepted</b> / <b>n_trialed</b> > <b>threshold</b>, the corresponding maximum displacement is increased by 5% of its current value; otherwise, it is decreased by 5% of its current value.
 </p>
 
-### The System File<br><a href="https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders/blob/main/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
+### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
 
 <p align="justify">
   This file is used to set up system-related variables, including geometric properties. The table below shows some options that can be used to define the system parameters:
