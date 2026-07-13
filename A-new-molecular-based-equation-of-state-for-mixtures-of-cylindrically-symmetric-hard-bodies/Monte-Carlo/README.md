@@ -139,7 +139,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-> git clone https://github.com/LESC-Unicamp/Monte-Carlo-Mixtures-of-Ellipsoids-Spherocylinders-Cylinders
+> git clone https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Monte-Carlo
 ```
 
 <p align="justify">
