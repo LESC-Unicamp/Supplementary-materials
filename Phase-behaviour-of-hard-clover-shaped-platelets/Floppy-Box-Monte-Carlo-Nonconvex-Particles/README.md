@@ -113,7 +113,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-> git clone https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles
+> git clone https://github.com/LESC-Unicamp/Supplementary-materials/
 ```
 
 <p align="justify">
@@ -121,7 +121,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-> cd Floppy-Box-Monte-Carlo-Nonconvex-Particles/src/
+> cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/src/
 ```
 
 <p align="justify">
