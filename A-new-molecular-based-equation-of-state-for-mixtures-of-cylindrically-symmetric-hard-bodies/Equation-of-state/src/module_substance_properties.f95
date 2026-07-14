@@ -150,10 +150,10 @@ IF( .NOT. HigherOrderTPTLogical ) THEN ! No higher-order TPT
           ELSE
             IF( UseA1ForA2Logical ) THEN
               IF( ReferenceBoublikLogical ) THEN
-                cDiameter(cComponent) = 2.942307010D-10 ! Meter
-                cWellDepth(cComponent) = 336.7731104D0 * cBoltzmann ! Joule
-                cPotentialRange(cComponent) = 0.3511272314D0
-                cAspectRatio(cComponent) = 2.582751925D0
+                cDiameter(cComponent) = 2.906D-10 ! Meter
+                cWellDepth(cComponent) = 321.88D0 * cBoltzmann ! Joule
+                cPotentialRange(cComponent) = 0.3851D0
+                cAspectRatio(cComponent) = 2.5263D0
               ELSE
                 WRITE( *, "(G0)" ) "Properties not available for the selected potential. Exiting..."
                 CALL EXIT(  )
@@ -1113,10 +1113,10 @@ IF( .NOT. HigherOrderTPTLogical ) THEN ! No higher-order TPT
           ELSE
             IF( UseA1ForA2Logical ) THEN
               IF( ReferenceBoublikLogical ) THEN
-                cDiameter(cComponent) = 2.866211295D-10 ! Meter
-                cWellDepth(cComponent) = 313.4136298D0 * cBoltzmann ! Joule
-                cPotentialRange(cComponent) = 0.3544886372D0
-                cAspectRatio(cComponent) = 1.238619439D0
+                cDiameter(cComponent) = 2.719D-10 ! Meter
+                cWellDepth(cComponent) = 309.55D0 * cBoltzmann ! Joule
+                cPotentialRange(cComponent) = 0.3816D0
+                cAspectRatio(cComponent) = 1.4172D0
               ELSE
                 WRITE( *, "(G0)" ) "Properties not available for the selected potential. Exiting..."
                 CALL EXIT(  )
