@@ -436,6 +436,5 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 </p>
 
 ## <a name="citation"></a>Citing Us
-<p align="justify">
-  Not Available.
-</p>
+
+DOI: [10.1039/D6ME00070C](https://doi.org/10.1039/D6ME00070C)
