@@ -172,7 +172,7 @@ The following features are supported in the current version:
 
 ## <a name="citation"></a>Citing Us
 
-Upcoming.
+DOI: [10.1039/D6ME00070C](https://doi.org/10.1039/D6ME00070C)
 
 ---
 
