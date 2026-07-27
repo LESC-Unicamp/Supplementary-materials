@@ -204,4 +204,4 @@ The remaining variables are self-explanatory and can be found in the correspondi
 
 ## <a name="citation"></a>Citing Us
 
-[10.1039/D6ME00070C](https://doi.org/10.1039/D6ME00070C)
+DOI: [10.1039/D6ME00070C](https://doi.org/10.1039/D6ME00070C)
