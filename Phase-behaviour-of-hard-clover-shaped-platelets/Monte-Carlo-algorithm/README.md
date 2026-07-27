@@ -438,3 +438,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 ## <a name="citation"></a>Citing Us
 
 DOI: [10.1039/D6ME00070C](https://doi.org/10.1039/D6ME00070C)
+
+---
+
+“<i>With thermodynamics, one can calculate almost everything crudely; with kinetic theory, one can calculate fewer things, but more accurately; and with statistical mechanics, one can calculate almost nothing exactly.</i>” -- Eugene P. Wigner
