@@ -169,7 +169,7 @@ The following features are supported in the current version:
 
 <p align="justify">
   <sub>*In Pattern #1, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumference of each circular cross section passing through the centers of its two nearest-neighbour cylinders.</sub><br><sub>**In Pattern #2, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumferences of all four circular cross sections passing through the particle center of mass.</sub>
-</p><br>
+</p>
 
 <p align="justify">
   <b>OBS.</b>: The packed-box routine first estimates a cubic box large enough to accommodate the particles, expands that box by a random factor, and then performs the NVT-Monte Carlo randomization using translational and rotational moves while rejecting overlapping configurations.
@@ -189,7 +189,7 @@ The following features are supported in the current version:
 | Random-number generator | <code>random_number_gen</code> | Used to select the pseudorandom-number generator | <ul><li><code>FORTRAN</code> for the standard Fortran generator</li><li><code>BITWISE</code> for the generator based on bitwise operations</li></ul> |
 
 <p align="justify">
-  <b>OBS.</b>: An anisotropic trial move is rejected before the overlap test if either the box-length-ratio or box-angle criterion is violated.
+  <b>OBS.</b>: An anisotropic trial move is rejected before the overlap test if either the box length ratio or box angle criterion is violated.
 </p>
 
 ### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
