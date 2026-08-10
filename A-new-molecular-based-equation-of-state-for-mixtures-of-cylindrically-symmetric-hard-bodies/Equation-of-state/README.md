@@ -342,7 +342,7 @@ make -f makefile
 ## <a name="running"></a>Running the Code
 
 <p align="justify">
-  Finally, it's time to run the code! After compilation, the executable(s) can be found in the <code>/bin/</code> folder:
+  Finally, it's time to run the code! After compilation, the executable can be found in the <code>/bin/</code> folder. The program should be executed from this directory because the initialization files are read directly from it and some input data are accessed using relative paths.
 </p>
 
 **Standard compilation**
@@ -352,7 +352,27 @@ make -f makefile
 ```
 
 <p align="justify">
-Under construction.
+  When the program starts, it first reads the global specifications from <code>specs.ini</code> and requests the name of each component interactively. The corresponding molecular and thermodynamic properties are then loaded, and the required combining and mixing rules are evaluated. For mixtures, the unlike-interaction corrections defined in <code>specs_mixture.ini</code> are also applied. The calculation then proceeds according to the value of <code>PATH</code> defined in <code>path.ini</code>.
+</p>
+
+<p align="justify"> 
+  For thermodynamic property calculations (<code>PATH=1</code>), <code>PROCESS_TYPE</code> selects an isothermal, isobaric, or isochoric process. The corresponding ranges and increments are read from <code>process_1_specs.ini</code>. For mixtures, the composition is taken from <code>specs_mixture.ini</code> and normalized internally. The equation of state is evaluated throughout the specified thermodynamic path, and the calculated properties are written to the corresponding subdirectory of <code>ROUTE_01_THERMODYNAMIC_PROCESS/</code>.
+</p>
+
+<p align="justify"> 
+  For phase-equilibrium calculations (<code>PATH=2</code>) of a pure component, the program first calculates the critical temperature, pressure, density, and volume. The initial temperature, temperature increment, and damping-control parameter are then read from <code>process_2_specs.ini</code>. Starting from the specified temperature, vapor-liquid coexistence points are calculated successively toward the critical point by imposing equality of the liquid- and vapor-phase fugacities. The results are written to <code>ROUTE_02_COEXISTENCE_CURVE/</code>.
+</p>
+
+<p align="justify"> 
+  For a binary mixture, the phase-equilibrium calculation is partially controlled interactively. The program requests the mixture temperature, the initial feed composition of the most volatile component, the upper pressure limit, and the pressure increment. Pure-component critical properties and acentric factors are calculated internally, and the components are ordered according to their volatility. Initial equilibrium factors are estimated from the Wilson correlation, while Michelsen's successive-substitution method (<a href="https://tie-tech.com/vare/thermodynamic-models-fundamentals-computational-aspects-2nd-ed/"><b>Thermodynamic Models: Fundamentals & Computational Aspects</b>, 2nd ed., Tie-Line Publications, 2007</a>) is used to determine the liquid- and vapor-phase compositions. The pressure is successively increased until the specified upper limit is reached, and the resulting vapor-liquid equilibrium data are written to <code>ROUTE_02_COEXISTENCE_CURVE/</code>.
+</p>
+
+<p align="justify"> 
+  For parameter optimization (<code>PATH=3</code>) of a pure component, the program reads the experimental saturation dataset from <code>VLE_DATA/PURE/[FORMULA]/data.csv</code> and applies the criteria defined in <code>process_3_specs.ini</code>. The Nelder-Mead simplex method is then used to optimize the pure-component parameters against the selected vapor pressure and saturated liquid density data. The optimized parameters and the corresponding critical properties are written to <code>ROUTE_03_OPTIMIZATION/</code>.
+</p>
+
+<p align="justify"> 
+  For a binary mixture, the temperature and number of optimization parameters are read from <code>process_3_specs.ini</code>, and the corresponding experimental dataset is loaded from <code>VLE_DATA/MIXTURES/</code>. The Nelder-Mead simplex method is then used to optimize the unlike well-depth correction and, when selected, the unlike potential-range correction against the experimental vapor-liquid equilibrium data. The optimization history and final parameter values are written to <code>ROUTE_03_OPTIMIZATION/</code>.
 </p>
 
 ## <a name="reporting"></a>Reporting Errors
