@@ -314,8 +314,29 @@ make -f makefile
 </p>
 
 ## <a name="filesandfolders"></a>Files and Folders
+
 <p align="justify">
-Not available yet.
+  The program organizes the calculation results automatically according to the selected value of <code>PATH</code>. Output files are grouped in route-specific directories and then in a date subdirectory. The date descriptor follows the <code>YYYYMMDD</code> format, while each filename begins with an <code>HHMMSS</code> time descriptor corresponding to the starting time of the calculation.
+</p>
+
+<p align="justify">
+  The <code>ROUTE_01_THERMODYNAMIC_PROCESS/</code> directory stores thermodynamic-property calculations. It contains three subdirectories: <code>ISOTHERMAL/</code>, <code>ISOBARIC/</code>, and <code>ISOCHORIC/</code>. The selected process creates a <code>[DATE]/</code> subdirectory containing a comma-separated <b>*.dat</b> file named from the starting time and the component name(s). The file stores the process ranges and model settings followed by temperature, pressure, molar density, mass density, molar volume, isothermal compressibility, thermal expansion coefficient, compressibility factor, entropy, constant-volume and constant-pressure specific heats, speed of sound, Joule-Thomson coefficient, and the total and residual chemical potentials of each component.
+</p>
+
+<p align="justify">
+  The <code>ROUTE_02_COEXISTENCE_CURVE/</code> directory stores phase-equilibrium calculations. For a pure component, the <code>[DATE]/[HOUR]_[COMPONENT].dat</code> file contains the calculated critical properties and the vapor-liquid coexistence data, including temperature, pressure bounds, saturation pressure, saturated-liquid and saturated-vapor molar densities, fugacity ratio, damping factor, and iteration count. For a binary mixture, the corresponding file contains the fixed temperature, pressure, vapor and liquid compositions of the most volatile component, its equilibrium factor, the convergence error, and the number of iterations.
+</p>
+
+<p align="justify">
+  The <code>ROUTE_03_OPTIMIZATION/</code> directory stores Nelder-Mead simplex results. Pure-component optimization creates two files in the <code>[DATE]/</code> subdirectory: <code>[HOUR]_[COMPONENT]_Simplex_Optimization.dat</code>, containing the objective-function history and the optimized well depth, potential range, molecular diameter, and aspect ratio; and <code>[HOUR]_[COMPONENT]_Critical_Properties.dat</code>, containing the critical properties obtained from the updated parameter sets. Mixture optimization creates <code>[HOUR]_[FORMULA_1]+[FORMULA_2]_Simplex_Optimization.dat</code>, containing the objective-function history and the optimized unlike well-depth correction and, when selected, the unlike potential-range correction.
+</p>
+
+<p align="justify">
+  The <code>VLE_DATA/</code> directory under <code>/src/</code> is an input-data directory used by <code>PATH=3</code>, rather than an output directory. The <code>PURE/</code> branch stores pure-component saturation datasets, while the <code>MIXTURES/</code> branch stores isothermal mixture VLE datasets used by the optimization objective functions.
+</p>
+
+<p align="justify">
+  The route directories are created by executing <code>mkdir</code> through the Fortran <code>SYSTEM</code> intrinsic. The implementation therefore assumes an environment in which this shell command is available, such as Linux or a compatible Linux subsystem.
 </p>
 
 ## <a name="running"></a>Running the Code
