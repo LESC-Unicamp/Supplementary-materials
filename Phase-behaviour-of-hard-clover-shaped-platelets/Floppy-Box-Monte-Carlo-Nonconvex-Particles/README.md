@@ -42,15 +42,16 @@ Luís Fernando Mercier Franco<br></p>
 
 ## Contents
 1. [Disclaimer](#disclaimer)
-2. [Overview](#overview)
-3. [Features](#features)
-4. [Language](#language)
-5. [Building and Compiling](#installation)
-6. [Data Input](#datainput)
-7. [Files and Folders](#filesandfolders)
-8. [Running the Code](#running)
-9. [Reporting Errors](#reporting)
-10. [Citing Us](#citation)
+2. [License](#license)
+3. [Overview](#overview)
+4. [Features](#features)
+5. [Language](#language)
+6. [Building and Compiling](#installation)
+7. [Data Input](#datainput)
+8. [Files and Folders](#filesandfolders)
+9. [Running the Code](#running)
+10. [Reporting Errors](#reporting)
+11. [Citing Us](#citation)
 
 ## <a name="disclaimer"></a>Disclaimer
 
@@ -58,6 +59,11 @@ Luís Fernando Mercier Franco<br></p>
 The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
  recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in studies involving mixtures of hard convex bodies.
  All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
+</p>
+
+## <a name="license"></a>License
+<p align="justify">
+This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/LICENSE"><b>LICENSE</b></a> file for details.
 </p>
 
 ## <a name="overview"></a>Overview
