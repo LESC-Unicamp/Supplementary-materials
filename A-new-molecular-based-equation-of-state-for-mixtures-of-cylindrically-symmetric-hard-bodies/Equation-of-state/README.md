@@ -229,8 +229,8 @@ make -f makefile
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Mole fraction | <code>MOLAR_FRACTION</code> | Used to define the mole fraction of each component for multicomponent thermodynamic-property calculations | One <code>FLOAT</code> value per component |
-| Unlike well-depth correction | <code>EPSILON_CORRECTION</code> | Multiplicative correction applied to the unlike well depth after the geometric-mean combining rule | Any <code>FLOAT</code> number; <code>1.0</code> leaves the unlike well depth unchanged |
-| Unlike potential-range correction | <code>LAMBDA_CORRECTION</code> | Multiplicative correction applied to the unlike potential range after the combining rule | Any <code>FLOAT</code> number; <code>1.0</code> leaves the unlike potential range unchanged |
+| Unlike well-depth correction | <code>EPSILON_CORRECTION</code> | Multiplicative correction applied to the unlike well depth after the Berthelot combining rule | Any <code>FLOAT</code> number; <code>1.0</code> leaves the unlike well depth unchanged |
+| Unlike potential-range correction | <code>LAMBDA_CORRECTION</code> | Multiplicative correction applied to the unlike potential range after the combining rule based on a diameter-weighted arithmetic mean | Any <code>FLOAT</code> number; <code>1.0</code> leaves the unlike potential range unchanged |
 
 <p align="justify">
   <b>OBS. I</b>: For thermodynamic-property calculations of mixtures, the mole fractions are normalized internally by their sum. The values must be entered in the same component order used in <code>GEOMETRY</code> and in the interactive component selection.
