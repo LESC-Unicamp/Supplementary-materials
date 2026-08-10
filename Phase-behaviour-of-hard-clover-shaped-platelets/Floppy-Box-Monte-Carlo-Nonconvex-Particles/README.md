@@ -264,10 +264,10 @@ The following features are supported in the current version:
   <b>OBS. II</b>: Before and at the pressure point specified by <code>anisotropic_volume_change_index</code>, all selected volume changes are forced to be isotropic regardless of <code>probability_isotropic</code>.
 </p>
 
-### The Acceptance-Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
+### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
 
 <p align="justify">
-  This file defines the target acceptance ratio thresholds used to adjust the trial-move amplitudes during the equilibration period of each pressure point.
+  This file defines the target acceptance ratio thresholds used to adjust the trial move amplitudes during the equilibration period of each pressure point.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
@@ -284,7 +284,7 @@ The following features are supported in the current version:
 ### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
 
 <p align="justify">
-  This file defines the number and size of the nonconvex particles, the number of periodic-image layers explicitly constructed by the code, and the system temperature.
+  This file defines the number and size of the nonconvex particles, the number of periodic image layers explicitly constructed by the code, and the system temperature.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
@@ -292,7 +292,7 @@ The following features are supported in the current version:
 | Number of particles | <code>number_of_particles</code> | Used to define the number of nonconvex particles in the FBMC simulation | Any <code>INTEGER</code> number from <code>1</code> to <code>12</code> |
 | Cylinder diameter | <code>cylinder_diameter</code> | Used to define, in &Aring;, the diameter of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
 | Cylinder length | <code>cylinder_length</code> | Used to define, in &Aring;, the length of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
-| Number of periodic-image layers | <code>number_of_layers</code> | Used to define the number of surrounding layers of periodic images explicitly constructed around the primary simulation box | Any positive, non-zero <code>INTEGER</code> number |
+| Number of periodic image layers | <code>number_of_layers</code> | Used to define the number of surrounding layers of periodic images explicitly constructed around the primary simulation box | Any positive, non-zero <code>INTEGER</code> number |
 | Absolute temperature | <code>absolute_temperature</code> | Used to define the absolute temperature of the system in K | Any positive, non-zero <code>FLOAT</code> number |
 
 <p align="justify">
