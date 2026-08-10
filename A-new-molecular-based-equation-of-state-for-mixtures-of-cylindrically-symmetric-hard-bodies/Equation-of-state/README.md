@@ -56,7 +56,7 @@ Luís Fernando Mercier Franco<br></p>
 
 <p align="justify">
 The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
- recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in studies involving mixtures of hard convex bodies.
+ recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in studies involving mixtures of hard convex bodies (HCB).
  All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
 </p>
 
@@ -65,8 +65,60 @@ The authors make no warranties about the use of this software. The authors hold 
 
 ## <a name="features"></a>Features
 <p align="justify">
-Not available yet.
+The following features are supported in the current version:
 </p>
+
+1. Systems
+    - Pure components
+    - Multicomponent mixtures
+
+2. Molecular Geometries
+    - Ellipsoids of Revolution (EOR)
+    - Spherocylinders (SPC)
+    - Cylinders (CYL)
+    - Mixtures containing different molecular geometries when non-spherical mixing rules are selected
+
+3. Interaction Potentials
+    - Spherical Square-Well (SSW)
+    - Sutherland
+    - Yukawa
+    - Convex Square-Well (CSW)
+
+4. Reference and Perturbation Systems
+    - Parsons-Lee reference term
+    - Boublik reference term
+    - Barker-Henderson thermodynamic perturbation theory
+    - Zhang correction for the second-order perturbation contribution
+    - Optional higher-order perturbation contributions
+    - Percus-Yevick correction to the HCB isothermal compressibility
+
+5. Thermodynamic Property Routes
+    - Isothermal calculations
+    - Isobaric calculations
+    - Isochoric calculations
+    - Molar and mass densities
+    - Molar volume
+    - Isothermal compressibility
+    - Thermal expansion coefficient
+    - Compressibility factor
+    - Entropy
+    - Specific heats at constant volume and constant pressure
+    - Speed of sound
+    - Joule-Thomson coefficient
+    - Total and residual chemical potentials
+
+6. Phase-Equilibrium Calculations
+    - Pure-component critical properties and vapor-liquid coexistence curves
+    - Binary vapor-liquid equilibrium (VLE) at fixed temperature
+    - Topliss procedure for bracketing density roots
+    - Brent's method for numerical root finding
+    - Wilson correlation for initial equilibrium factor estimates in binary VLE calculations
+    - Rachford-Rice equation and successive substitution for binary flash calculations
+
+7. Parameter Optimization
+    - Nelder-Mead simplex optimization
+    - Pure-component optimization of well depth, potential range, molecular diameter, and aspect ratio against vapor pressure and saturated liquid density data
+    - Binary optimization of the unlike well depth correction factor and, optionally, the unlike potential range correction factor against VLE data
 
 ## <a name="language"></a>Language
 <p align="justify">
