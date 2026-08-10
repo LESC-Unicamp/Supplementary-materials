@@ -168,11 +168,7 @@ The following features are supported in the current version:
 | Initial configuration cycles | <code>max_cycles_initial_config</code> | Used to define the number of NVT-Monte Carlo cycles employed to randomly distribute the particles after construction of the packed box | Any positive, non-zero <code>INTEGER</code> number |
 
 <p align="justify">
-  <sub>*In Pattern #1, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumference of each circular cross section passing through the centers of its two nearest-neighbour cylinders.</sub>
-</p>
-
-<p align="justify">
-  <sub>**In Pattern #2, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumferences of all four circular cross sections passing through the particle center of mass.</sub>
+  <sub>*In Pattern #1, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumference of each circular cross section passing through the centers of its two nearest-neighbour cylinders.</sub><br><sub>**In Pattern #2, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumferences of all four circular cross sections passing through the particle center of mass.</sub>
 </p>
 
 <p align="justify">
