@@ -257,7 +257,7 @@ The following features are supported in the current version:
 | Probability of isotropic volume change | <code>probability_isotropic</code> | Used to define the probability that a selected volume change is isotropic rather than anisotropic once anisotropic moves are enabled | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
 
 <p align="justify">
-  <b>OBS. I</b>: The volume-change probability is calculated internally as <code>1 - probability_movement</code>, the rotational probability as <code>1 - probability_translation</code>, and the anisotropic-volume-change probability as <code>1 - probability_isotropic</code>.
+  <b>OBS. I</b>: The volume-change probability is calculated internally as <code>1 - probability_movement</code>, the rotational probability as <code>1 - probability_translation</code>, and the anisotropic volume-change probability as <code>1 - probability_isotropic</code>.
 </p>
 
 <p align="justify">
