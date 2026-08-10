@@ -354,7 +354,7 @@ or
 ```
 
 <p align="justify">
-  When the program starts, it reads the selected packed-box configuration and clover-particle arrangement, initializes the system, pressure-ramp, Monte Carlo, probability, acceptance-ratio, and control variables, and prints a summary of the selected settings. If everything is correct, enter <code>Y</code> when prompted to resume; any other response terminates the program so that the initialization files can be edited.
+  When the program starts, it reads the selected packed-box configuration and clover-shaped arrangement, initializes the system, pressure ramp, Monte Carlo, probability, acceptance ratio, and control variables, and prints a summary of the selected settings. If everything is correct, enter <code>Y</code> when prompted to resume; any other response terminates the program so that the initialization files can be edited.
 </p>
 
 <p align="justify">
@@ -362,15 +362,15 @@ or
 </p>
 
 <p align="justify">
-  Before the FBMC pressure ramp begins, the generated initial configuration is checked for particle overlaps. The simulation then proceeds through the reduced-pressure values defined in <code>ini_pramp.ini</code>, which are sorted automatically in ascending order. At each pressure point, the program performs <code>pchange_maxcycles</code> Monte Carlo cycles, using the final configuration at the previous pressure as the starting configuration of the next pressure point.
+  Before the FBMC pressure ramp begins, the generated initial configuration is checked for particle overlaps. The simulation then proceeds through the reduced pressure values defined in <code>ini_pramp.ini</code>, which are sorted automatically in ascending order. At each pressure point, the program performs <code>pchange_maxcycles</code> Monte Carlo cycles, using the final configuration at the previous pressure as the starting configuration of the next pressure point.
 </p>
 
 <p align="justify">
-  Trial moves are selected according to the probabilities defined in <code>ini_probabilities.ini</code>. Particle moves consist of translations or quaternion-based rotations. Selected box moves are restricted to isotropic scaling through the pressure point specified by <code>anisotropic_volume_change_index</code>; after this point, anisotropic box deformations are also permitted according to <code>probability_isotropic</code>. Anisotropic trial boxes that exceed the specified edge-length-ratio or angular-distortion limits are rejected. After an accepted volume change, the selected lattice-reduction algorithm is applied whenever the normalized box distortion exceeds <code>max_distortion</code>.
+  Trial moves are selected according to the probabilities defined in <code>ini_probabilities.ini</code>. Particle moves consist of translations or rotations. Selected box moves are restricted to isotropic scaling through the pressure point specified by <code>anisotropic_volume_change_index</code>; after this point, anisotropic box deformations are also permitted according to <code>probability_isotropic</code>. Anisotropic trial boxes that exceed the specified edge length ratio or angular distortion limits are rejected. After an accepted volume change, the selected lattice-reduction algorithm is applied whenever the normalized box distortion exceeds <code>max_distortion</code>.
 </p>
 
 <p align="justify">
-  During the equilibration period of each pressure point, the translational, rotational, isotropic-volume, and anisotropic-volume displacement amplitudes are adjusted toward their respective acceptance-ratio thresholds. Simulation properties are written every <code>saving_frequency</code> cycles, and the progress of each pressure point is displayed on screen. After the final pressure point, the program writes the final box state and reports the final box dimensions, box volume, packing fraction, number density, nematic order parameter, and total execution time.
+  During the equilibration period of each pressure point, the translational, rotational, isotropic-volume, and anisotropic-volume displacement amplitudes are adjusted toward their respective acceptance ratio thresholds. Simulation properties are written every <code>saving_frequency</code> cycles, and the progress of each pressure point is displayed on screen. After the final pressure point, the program writes the final box state and reports the final box dimensions, box volume, packing fraction, number density, nematic order parameter, and total execution time.
 </p>
 
 ## <a name="reporting"></a>Reporting Errors
