@@ -200,15 +200,15 @@ The following features are supported in the current version:
 
 | Name<br> ___________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of cycles | <code>pchange_maxcycles</code> | Used to define the number of Monte Carlo cycles performed at each reduced-pressure point | Any positive, non-zero <code>INTEGER</code> number |
-| Number of equilibration cycles | <code>pchange_equilibration_cycles</code> | Used to define the number of equilibration cycles at each reduced-pressure point | Any non-negative <code>INTEGER</code> number smaller than <code>pchange_maxcycles</code> |
+| Number of cycles | <code>pchange_maxcycles</code> | Used to define the number of Monte Carlo cycles performed at each reduced pressure point | Any positive, non-zero <code>INTEGER</code> number |
+| Number of equilibration cycles | <code>pchange_equilibration_cycles</code> | Used to define the number of equilibration cycles at each reduced pressure point | Any non-negative <code>INTEGER</code> number smaller than <code>pchange_maxcycles</code> |
 | Saving frequency | <code>saving_frequency</code> | Used to define how often simulation properties and, when selected, trajectory configurations are written out | Any positive, non-zero <code>INTEGER</code> number |
 | Adjustment frequency<br>(movement) | <code>adjustment_frequency_movement</code> | Used to define how often translational and rotational displacement amplitudes are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> number |
 | Adjustment frequency<br>(volume) | <code>adjustment_frequency_volume</code> | Used to define how often isotropic and anisotropic volume-change amplitudes are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> number |
-| Maximum translational displacement | <code>max_translation</code> | Used to define the initial amplitude of random translational displacements in &Aring; | Any non-zero <code>FLOAT</code> number |
+| Maximum translational displacement | <code>max_translation</code> | Used to define the initial amplitude of random translational displacements | Any non-zero <code>FLOAT</code> number |
 | Maximum rotational displacement | <code>max_rotation</code> | Used to define the initial amplitude of random rotational displacements in radians | Any non-zero <code>FLOAT</code> number |
 | Isotropic volume-scaling amplitude | <code>max_volume_iso</code> | Used to define the initial amplitude of isotropic trial moves applied to the logarithm of the box volume | Any non-zero <code>FLOAT</code> number |
-| Anisotropic box-deformation amplitude | <code>max_volume_aniso</code> | Used to define the initial amplitude, in &Aring;, of changes applied to a randomly selected independent component of the box matrix | Any non-zero <code>FLOAT</code> number |
+| Anisotropic box-deformation amplitude | <code>max_volume_aniso</code> | Used to define the initial amplitude of changes applied to a randomly selected independent component of the box matrix | Any non-zero <code>FLOAT</code> number |
 | Maximum box distortion | <code>max_distortion</code> | Used to define the normalized box-distortion threshold above which lattice reduction is applied | Any <code>FLOAT</code> number greater than or equal to <code>1</code> |
 | Lattice-reduction algorithm | <code>lattice_reduction</code> | Used to select the lattice-reduction algorithm | <ul><li><code>FBM</code> for the <a href="https://doi.org/10.1063/1.1901585">Gottwald</a> method</li><li><code>LLL</code> for the <a href="https://doi.org/10.1007/BF01457454">Lenstra-Lenstra-Lovász</a> algorithm</li></ul> |
 
