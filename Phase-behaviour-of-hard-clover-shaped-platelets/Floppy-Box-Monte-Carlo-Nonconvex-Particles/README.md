@@ -230,7 +230,7 @@ The following features are supported in the current version:
 |:---:|:---:| --- | --- |
 | Number of pressure points | <code>pressure_points</code> | Used to define the number of reduced pressure setpoints in the pressure ramp | Any positive, non-zero <code>INTEGER</code> number |
 | Reduced pressure values¹ | <code>reduced_pressure</code> | Used to define the reduced pressure setpoints of the FBMC compression | One positive, non-zero <code>FLOAT</code> number for each pressure point |
-| Anisotropic-volume-change index | <code>anisotropic_volume_change_index</code> | Used to define the last pressure point for which volume changes are restricted to isotropic scaling; anisotropic box deformations are allowed at subsequent pressure points | Any positive <code>INTEGER</code> number between <code>1</code> and <code>pressure_points</code> |
+| Anisotropic volume-change index | <code>anisotropic_volume_change_index</code> | Used to define the last pressure point for which volume changes are restricted to isotropic scaling; anisotropic box deformations are allowed at subsequent pressure points | Any positive <code>INTEGER</code> number between <code>1</code> and <code>pressure_points</code> |
 
 <p align="justify">
   <sup>¹P<sup>*</sup> = P&sigma;<sub>0</sub>³/(k<sub>B</sub>T), where <i>P</i> is the pressure, <i>k<sub>B</sub></i> is the Boltzmann constant, <i>T</i> is the absolute temperature, and &sigma;<sub>0</sub> = 1&Aring;.</sup>
