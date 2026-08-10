@@ -53,11 +53,15 @@ Luís Fernando Mercier Franco<br></p>
 10. [Citing Us](#citation)
 
 ## <a name="disclaimer"></a>Disclaimer
-
 <p align="justify">
 The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
  recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in studies involving mixtures of hard convex bodies.
  All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
+</p>
+
+## <a name="license"></a>License
+<p align="justify">
+This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/LICENSE"><b>LICENSE</b></a> file for details.
 </p>
 
 ## <a name="overview"></a>Overview
