@@ -218,7 +218,7 @@ make -f makefile
   <b>OBS. II</b>: The non-spherical mixing rules <code>1</code> and <code>2</code> require all components to have the same molecular geometry. Mixing rules <code>3</code> and <code>4</code> can be used when different geometries are present in the same mixture (Isihara-Hadwiger theorem).
 </p>
 
-<p align="justify"> <b>OBS. III</b>: By default, all overwrite flags are set to <code>.TRUE.</code>, corresponding to the parametrization adopted in the present implementation. </p>
+<p align="justify"> <b>OBS. III</b>: By default, all <code>OVERWRITE</code> flags are set to <code>.TRUE.</code>, corresponding to the parametrization adopted in the present implementation. </p>
 
 ### The Mixture Specification File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/specs_mixture.ini"><sub>specs_mixture.ini</sub></a>
 
