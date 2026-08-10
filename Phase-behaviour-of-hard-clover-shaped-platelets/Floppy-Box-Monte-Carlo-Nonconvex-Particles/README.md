@@ -220,16 +220,16 @@ The following features are supported in the current version:
   <b>OBS. II</b>: The normalized box-distortion factor is equal to 1 for a perfect cube. Lattice reduction is attempted after an accepted volume move whenever the current distortion exceeds <code>max_distortion</code>.
 </p>
 
-### The Pressure-Ramp File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_pramp.ini"><sub>ini_pramp.ini</sub></a>
+### The Pressure Ramp File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_pramp.ini"><sub>ini_pramp.ini</sub></a>
 
 <p align="justify">
-  This file defines the reduced-pressure ramp used by the FBMC simulation and determines when anisotropic volume changes become available.
+  This file defines the reduced pressure ramp used by the FBMC simulation and determines when anisotropic volume changes become available.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of pressure points | <code>pressure_points</code> | Used to define the number of reduced-pressure setpoints in the pressure ramp | Any positive, non-zero <code>INTEGER</code> number |
-| Reduced-pressure values¹ | <code>reduced_pressure</code> | Used to define the reduced-pressure setpoints of the FBMC compression | One positive, non-zero <code>FLOAT</code> number for each pressure point |
+| Number of pressure points | <code>pressure_points</code> | Used to define the number of reduced pressure setpoints in the pressure ramp | Any positive, non-zero <code>INTEGER</code> number |
+| Reduced pressure values¹ | <code>reduced_pressure</code> | Used to define the reduced pressure setpoints of the FBMC compression | One positive, non-zero <code>FLOAT</code> number for each pressure point |
 | Anisotropic-volume-change index | <code>anisotropic_volume_change_index</code> | Used to define the last pressure point for which volume changes are restricted to isotropic scaling; anisotropic box deformations are allowed at subsequent pressure points | Any positive <code>INTEGER</code> number between <code>1</code> and <code>pressure_points</code> |
 
 <p align="justify">
