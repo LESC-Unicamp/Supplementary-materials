@@ -267,17 +267,17 @@ make -f makefile
 | Final temperature<br>(isochoric) | <code>ISOCHORIC_FINAL_TEMPERATURE_K</code> | Upper temperature bound along each isochore | Any <code>FLOAT</code> number greater than or equal to the initial temperature |
 | Temperature increment<br>(isochoric) | <code>ISOCHORIC_STEP_TEMPERATURE_K</code> | Temperature increment along each isochore | Any positive, non-zero <code>FLOAT</code> number in K |
 
-### The Coexistence-Curve File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/process_2_specs.ini"><sub>process_2_specs.ini</sub></a>
+### The Coexistence Curve File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/process_2_specs.ini"><sub>process_2_specs.ini</sub></a>
 
 <p align="justify">
-  This file is used by the pure-component coexistence-curve route. It defines the starting temperature, temperature increment, and damping-factor update used while tracing the vapor-liquid coexistence curve toward the critical point.
+  This file is used by the pure-component coexistence curve route. It defines the starting temperature, temperature increment, and damping-factor adjustment used while tracing the vapor-liquid coexistence curve toward the critical point.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Initial temperature | <code>INITIAL_TEMPERATURE_K</code> | Used to define the starting temperature of the coexistence curve | Any positive, non-zero <code>FLOAT</code> number below the calculated critical temperature |
 | Temperature increment | <code>TEMPERATURE_INCREMENT_K</code> | Used to increase the temperature between successive coexistence points | Any positive, non-zero <code>FLOAT</code> number in K |
-| Damping-factor iteration | <code>DAMPING_FACTOR_ITERATION</code> | Multiplicative factor used to reduce the fugacity-update damping factor when additional damping is required | Any positive <code>FLOAT</code> number greater than 0 and less than or equal to 1 |
+| Damping-factor adjustment | <code>DAMPING_FACTOR_ITERATION</code> | Multiplicative factor used to further reduce the magnitude of fugacity-based updates when additional damping is required | Any positive <code>FLOAT</code> number greater than 0 and less than or equal to 1 |
 
 <p align="justify">
   <b>OBS.</b>: For a mixture with <code>PATH=2</code>, this file is not used by the binary VLE routine. The calculation instead requests the mixture temperature, the initial feed composition of the most volatile component, the upper pressure limit, and the pressure increment interactively.
@@ -292,7 +292,7 @@ make -f makefile
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Mixture temperature<br>(mixture only) | <code>TEMPERATURE_MIXTURE_K</code> | Used to identify the isothermal VLE dataset and define the optimization temperature | Any positive <code>FLOAT</code> number in K |
-| Damping-factor iteration | <code>DAMPING_FACTOR_ITERATION</code> | Multiplicative factor used to reduce the fugacity-update damping factor during phase-equilibrium calculations performed by the objective function | Any <code>FLOAT</code> number between 0 and 1 |
+| Damping-factor adjustment | <code>DAMPING_FACTOR_ITERATION</code> | Multiplicative factor used to further reduce the magnitude of fugacity-based updates during phase-equilibrium calculations performed by the objective function when additional damping is required | Any <code>FLOAT</code> number between 0 and 1 |
 | Number of mixture parameters<br>(mixture only) | <code>NUMBER_OF_PARAMETERS_MIXTURE</code> | Used to define the number of unlike-interaction correction factors optimized by the simplex method | <ul><li><code>1</code> to optimize only the well-depth correction</li><li><code>2</code> to optimize both the well-depth and potential-range corrections</li></ul> |
 | Line skipping<br>(pure component only) | <code>SKIP_EVERY_N_LINES</code> | Number of experimental rows skipped between two retained points when reducing the pure-component fitting dataset | Any non-negative <code>INTEGER</code> number |
 | Offset above triple-point temperature<br>(pure component only) | <code>SKIP_ABOVE_TRIPLE_TEMP_K</code> | Excludes experimental points below the triple-point temperature plus this offset | Any non-negative <code>FLOAT</code> number in K |
