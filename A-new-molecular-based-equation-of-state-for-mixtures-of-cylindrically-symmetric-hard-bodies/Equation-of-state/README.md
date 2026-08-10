@@ -382,9 +382,7 @@ make -f makefile
 
 ## <a name="citation"></a>Citing Us
 
-<p align="justify">
-Coming soon.
-</p>
+N. B. de Souza, J. T. Lopes, L. F. M. Franco. Fluid Ph. Equilibria 2022, 561, 113543. DOI: <a href="https://doi.org/10.1016/j.fluid.2022.113543">10.1016/j.fluid.2022.113543</a>
 
 ---
 
