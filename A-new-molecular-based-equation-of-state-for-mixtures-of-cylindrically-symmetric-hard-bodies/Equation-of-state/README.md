@@ -62,7 +62,7 @@ The authors make no warranties about the use of this software. The authors hold 
 
 ## <a name="license"></a>License
 <p align="justify">
-This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Classical-Density-Functional-Theory-coupled-to-the-SAFT-VR-Mie-Equation-of-State-extension-to-associative-fluids/GCMC/LICENSE"><b>LICENSE</b></a> file for details.
+This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/LICENSE"><b>LICENSE</b></a> file for details.
 </p>
 
 ## <a name="overview"></a>Overview
