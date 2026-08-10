@@ -150,7 +150,7 @@ The following features are supported in the current version:
 ## <a name="datainput"></a>Data Input
 
 <p align="justify">
-  Apart from the executable files, the <code>/bin/</code> folder contains seven initialization files used to define the particle geometry, pressure ramp, Monte Carlo parameters, move probabilities, acceptance-ratio thresholds, and output controls.
+  Apart from the executable files, the <code>/bin/</code> folder contains seven initialization files used to define the particle geometry, pressure ramp, Monte Carlo parameters, move probabilities, acceptance ratio thresholds, and output controls.
 </p>
 
 ### The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_config.ini"><sub>ini_config.ini</sub></a>
