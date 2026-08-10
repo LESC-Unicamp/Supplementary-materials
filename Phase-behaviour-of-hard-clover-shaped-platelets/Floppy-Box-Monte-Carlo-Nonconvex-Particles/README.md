@@ -167,8 +167,13 @@ The following features are supported in the current version:
 | Unrotated axis | <code>unrotated_axis</code> | Used to select the body-fixed reference axis for the initial orientation | <ul><li><code>X</code> for the <i>x</i>-axis</li><li><code>Y</code> for the <i>y</i>-axis</li><li><code>Z</code> for the <i>z</i>-axis</li></ul> |
 | Initial configuration cycles | <code>max_cycles_initial_config</code> | Used to define the number of NVT-Monte Carlo cycles employed to randomly distribute the particles after construction of the packed box | Any positive, non-zero <code>INTEGER</code> number |
 
-<sub>*In Pattern #1, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumference of each circular cross section passing through the centers of its two nearest-neighbour cylinders.</sub><br>
-<sub>**In Pattern #2, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumferences of all four circular cross sections passing through the particle center of mass.</sub>
+<p align="justify">
+  <sub>*In Pattern #1, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumference of each circular cross section passing through the centers of its two nearest-neighbour cylinders.</sub>
+</p>
+
+<p align="justify">
+  <sub>**In Pattern #2, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumferences of all four circular cross sections passing through the particle center of mass.</sub>
+</p>
 
 <p align="justify">
   <b>OBS.</b>: The packed-box routine first estimates a cubic box large enough to accommodate the particles, expands that box by a random factor, and then performs the NVT-Monte Carlo randomization using translational and rotational moves while rejecting overlapping configurations.
