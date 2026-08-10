@@ -169,13 +169,13 @@ make -f makefile
 ## <a name="datainput"></a>Data Input
 
 <p align="justify">
-  Apart from the executable file, the <code>/bin/</code> folder contains six initialization files used to select the calculation route, define the molecular model, specify mixture properties, and control the selected thermodynamic process. The component names themselves are entered interactively when the program starts.
+  Apart from the executable file, the <code>/bin/</code> folder contains six initialization files used to select the calculation route, define the molecular model, specify mixture properties, and control the selected thermodynamic process. The component names are entered interactively when the program starts.
 </p>
 
 ### The Path File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/path.ini"><sub>path.ini</sub></a>
 
 <p align="justify">
-  This file selects the main calculation route. When thermodynamic-property calculations are selected, it also defines the type of thermodynamic process.
+  This file selects the main calculation route. When thermodynamic property calculations are selected, it also defines the type of thermodynamic process.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
