@@ -241,7 +241,7 @@ The following features are supported in the current version:
 </p>
 
 <p align="justify">
-  <b>OBS. II</b>: The program automatically sorts the reduced-pressure values in ascending order before starting the simulation. The final configuration obtained at one pressure point is retained as the starting configuration of the next point.
+  <b>OBS. II</b>: The program automatically sorts the reduced pressure values in ascending order before starting the simulation. The final configuration obtained at one pressure point is retained as the starting configuration of the next point.
 </p>
 
 ### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
