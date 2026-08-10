@@ -198,7 +198,7 @@ The following features are supported in the current version:
   This file defines the number of Monte Carlo cycles performed at each pressure point, the equilibration and output frequencies, the initial displacement amplitudes, and the lattice-reduction criterion.
 </p>
 
-| Name<br> ___________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+| Name<br> ___________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Number of cycles | <code>pchange_maxcycles</code> | Used to define the number of Monte Carlo cycles performed at each reduced pressure point | Any positive, non-zero <code>INTEGER</code> number |
 | Number of equilibration cycles | <code>pchange_equilibration_cycles</code> | Used to define the number of equilibration cycles at each reduced pressure point | Any non-negative <code>INTEGER</code> number smaller than <code>pchange_maxcycles</code> |
