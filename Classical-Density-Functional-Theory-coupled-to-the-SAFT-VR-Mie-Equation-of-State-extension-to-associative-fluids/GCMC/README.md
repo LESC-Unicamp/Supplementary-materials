@@ -284,4 +284,4 @@ make clean
 
 ## <a name="citation"></a>Citing Us
 
-DOI: <a href="https://doi.org/10.1021/acs.jpcb.6c00630">10.1021/acs.jpcb.6c00630</a>.
+A. F. Gonçalves, N. B. de Souza, L. F. M. Franco. J. Phys. Chem. B 2026, 130, 5712–5724. DOI: <a href="https://doi.org/10.1021/acs.jpcb.6c00630">10.1021/acs.jpcb.6c00630</a>
