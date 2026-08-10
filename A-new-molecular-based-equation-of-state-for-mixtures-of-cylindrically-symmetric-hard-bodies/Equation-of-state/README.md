@@ -246,7 +246,7 @@ make -f makefile
   This file defines the ranges and increments used by the isothermal, isobaric, and isochoric routes selected through <code>PROCESS_TYPE</code>.
 </p>
 
-| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+| Name<br> _________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Initial temperature<br>(isothermal) | <code>ISOTHERMAL_INITIAL_TEMPERATURE_K</code> | Lower temperature bound of the isothermal calculations | Any positive <code>FLOAT</code> number in K |
 | Final temperature<br>(isothermal) | <code>ISOTHERMAL_FINAL_TEMPERATURE_K</code> | Upper temperature bound of the isothermal calculations | Any <code>FLOAT</code> number greater than or equal to the initial temperature |
