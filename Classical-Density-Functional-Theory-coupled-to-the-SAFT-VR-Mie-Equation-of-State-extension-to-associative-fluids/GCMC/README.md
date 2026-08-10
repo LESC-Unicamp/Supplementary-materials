@@ -60,6 +60,11 @@ The authors make no warranties about the use of this software. The authors hold 
  All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
 </p>
 
+## <a name="license"></a>License
+<p align="justify">
+This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/LICENSE"><b>LICENSE</b></a> file for details.
+</p>
+
 ## <a name="overview"></a>Overview
 <p align="justify">
   This Grand Canonical Monte Carlo (GCMC) algorithm was designed to evaluate the density profile of an associative fluid (water) confined in two-dimensional slit pores (graphite). The dispersive fluid–fluid interactions are described by the Mie potential, while the highly directional associative interactions (hydrogen bonding) are modeled using a spherical square-well potential. The solid–fluid interaction is represented by the Steele potential.
