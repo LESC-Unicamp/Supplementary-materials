@@ -437,7 +437,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 
 ## <a name="citation"></a>Citing Us
 
-DOI: [10.1039/D6ME00070C](https://doi.org/10.1039/D6ME00070C)
+N. B. de Souza, L. F. M. Franco, C. Avendaño. Mol. Syst. Des. Eng. 2026. DOI: <a href="https://doi.org/10.1039/D6ME00070C">10.1039/D6ME00070C</a>
 
 ---
 
