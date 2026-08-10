@@ -193,7 +193,7 @@ make -f makefile
   This file defines the number and geometry of the components, the interaction potential, the reference-system formulation, and the mixing and perturbation-theory options.
 </p>
 
-| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> ____________________________________________________ |
 |:---:|:---:| --- | --- |
 | Number of components | <code>NUMBER_OF_COMPONENTS</code> | Used to define the number of components in the system | Any positive, non-zero <code>INTEGER</code> number |
 | Molecular geometry | <code>GEOMETRY</code> | Used to select the molecular geometry of each component | <ul><li><code>1</code> for ellipsoids-of-revolution (EOR)</li><li><code>2</code> for spherocylinders (SPC)</li><li><code>3</code> for cylinders (CYL)</li></ul> |
