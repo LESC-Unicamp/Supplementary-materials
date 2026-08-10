@@ -54,7 +54,6 @@ Luís Fernando Mercier Franco<br></p>
 11. [Citing Us](#citation)
 
 ## <a name="disclaimer"></a>Disclaimer
-
 <p align="justify">
 The authors make no warranties about the use of this software. The authors hold no liabilities for the use of this software. The authors do not 
  recommend the use of this software whatsoever. The algorithm is made freely available to assist researchers in studies involving mixtures of hard convex bodies.
@@ -63,7 +62,7 @@ The authors make no warranties about the use of this software. The authors hold 
 
 ## <a name="license"></a>License
 <p align="justify">
-This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/LICENSE"><b>LICENSE</b></a> file for details.
+This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/LICENSE"><b>LICENSE</b></a> file for details.
 </p>
 
 ## <a name="overview"></a>Overview
