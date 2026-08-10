@@ -178,7 +178,7 @@ make -f makefile
   This file selects the main calculation route. When thermodynamic property calculations are selected, it also defines the type of thermodynamic process.
 </p>
 
-| Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+| Name<br> ___________________________ | String Name<br> ____________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Calculation route | <code>PATH</code> | Used to select the main calculation route | <ul><li><code>1</code> for thermodynamic-property calculations</li><li><code>2</code> for phase-equilibrium calculations</li><li><code>3</code> for parameter optimization</li></ul> |
 | Thermodynamic process<br>(<code>PATH=1</code> only) | <code>PROCESS_TYPE</code> | Used to select the thermodynamic path for property calculations | <ul><li><code>1</code> for an isothermal process</li><li><code>2</code> for an isobaric process</li><li><code>3</code> for an isochoric process</li></ul> |
