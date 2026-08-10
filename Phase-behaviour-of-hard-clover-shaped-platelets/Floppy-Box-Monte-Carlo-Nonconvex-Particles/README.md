@@ -290,8 +290,8 @@ The following features are supported in the current version:
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Number of particles | <code>number_of_particles</code> | Used to define the number of nonconvex particles in the FBMC simulation | Any <code>INTEGER</code> number from <code>1</code> to <code>12</code> |
-| Cylinder diameter | <code>cylinder_diameter</code> | Used to define, in &Aring;, the diameter of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
-| Cylinder length | <code>cylinder_length</code> | Used to define, in &Aring;, the length of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
+| Cylinder diameter | <code>cylinder_diameter</code> | Used to define the diameter of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
+| Cylinder length | <code>cylinder_length</code> | Used to define the length of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
 | Number of periodic image layers | <code>number_of_layers</code> | Used to define the number of surrounding layers of periodic images explicitly constructed around the primary simulation box | Any positive, non-zero <code>INTEGER</code> number |
 | Absolute temperature | <code>absolute_temperature</code> | Used to define the absolute temperature of the system in K | Any positive, non-zero <code>FLOAT</code> number |
 
