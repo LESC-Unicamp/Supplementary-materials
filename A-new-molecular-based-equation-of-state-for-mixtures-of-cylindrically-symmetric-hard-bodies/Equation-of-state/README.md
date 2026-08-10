@@ -184,7 +184,7 @@ make -f makefile
 | Thermodynamic process<br>(<code>PATH=1</code> only) | <code>PROCESS_TYPE</code> | Used to select the thermodynamic path for property calculations | <ul><li><code>1</code> for an isothermal process</li><li><code>2</code> for an isobaric process</li><li><code>3</code> for an isochoric process</li></ul> |
 
 <p align="justify">
-  <b>OBS.</b>: For <code>PATH=2</code>, the program calculates a pure-component coexistence curve when <code>NUMBER_OF_COMPONENTS=1</code> and performs the binary VLE calculation for mixtures. The present VLE implementation explicitly operates on two components.
+  <b>OBS.</b>: For <code>PATH=2</code>, the program calculates a pure-component coexistence curve when <code>NUMBER_OF_COMPONENTS=1</code>. For mixtures, the program calculates the VLE envelope. The present VLE implementation explicitly operates on two components.
 </p>
 
 ### The Global Specification File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/specs.ini"><sub>specs.ini</sub></a>
