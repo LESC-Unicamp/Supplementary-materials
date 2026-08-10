@@ -267,15 +267,15 @@ The following features are supported in the current version:
 ### The Acceptance-Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Floppy-Box-Monte-Carlo-Nonconvex-Particles/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
 
 <p align="justify">
-  This file defines the target acceptance-ratio thresholds used to adjust the trial-move amplitudes during the equilibration period of each pressure point.
+  This file defines the target acceptance ratio thresholds used to adjust the trial-move amplitudes during the equilibration period of each pressure point.
 </p>
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Translational threshold | <code>ratio_translation</code> | Used to define the acceptance-ratio threshold for translational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
-| Rotational threshold | <code>ratio_rotation</code> | Used to define the acceptance-ratio threshold for rotational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
-| Isotropic-volume threshold | <code>ratio_volume_change_iso</code> | Used to define the acceptance-ratio threshold for isotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
-| Anisotropic-volume threshold | <code>ratio_volume_change_aniso</code> | Used to define the acceptance-ratio threshold for anisotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Translational threshold | <code>ratio_translation</code> | Used to define the acceptance ratio threshold for translational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Rotational threshold | <code>ratio_rotation</code> | Used to define the acceptance ratio threshold for rotational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Isotropic volume threshold | <code>ratio_volume_change_iso</code> | Used to define the acceptance ratio threshold for isotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Anisotropic volume threshold | <code>ratio_volume_change_aniso</code> | Used to define the acceptance ratio threshold for anisotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
 
 <p align="justify">
   <b>OBS.</b>: Displacement amplitudes are adjusted only during equilibration. At the corresponding adjustment frequency, an observed acceptance ratio less than or equal to its threshold decreases the current amplitude by 5%, whereas a larger acceptance ratio increases it by 5%.
