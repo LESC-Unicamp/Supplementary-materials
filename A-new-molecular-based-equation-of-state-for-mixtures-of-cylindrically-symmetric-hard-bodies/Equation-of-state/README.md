@@ -233,14 +233,14 @@ make -f makefile
 | Unlike potential-range correction | <code>LAMBDA_CORRECTION</code> | Multiplicative correction applied to the unlike potential range after the combining rule based on a diameter-weighted arithmetic mean | Any <code>FLOAT</code> number; <code>1.0</code> leaves the unlike potential range unchanged |
 
 <p align="justify">
-  <b>OBS. I</b>: For thermodynamic-property calculations of mixtures, the mole fractions are normalized internally by their sum. The values must be entered in the same component order used in <code>GEOMETRY</code> and in the interactive component selection.
+  <b>OBS. I</b>: For thermodynamic property calculations of mixtures, the mole fractions are normalized internally by their sum. The values must be entered in the same component order used in <code>GEOMETRY</code> and in the interactive component selection.
 </p>
 
 <p align="justify">
   <b>OBS. II</b>: In the binary phase-equilibrium route, the initial feed composition is requested interactively. The <code>EPSILON_CORRECTION</code> and <code>LAMBDA_CORRECTION</code> values remain the unlike-interaction correction factors used by the equation of state.
 </p>
 
-### The Thermodynamic-Process File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/process_1_specs.ini"><sub>process_1_specs.ini</sub></a>
+### The Thermodynamic Process File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/A-new-molecular-based-equation-of-state-for-mixtures-of-cylindrically-symmetric-hard-bodies/Equation-of-state/bin/process_1_specs.ini"><sub>process_1_specs.ini</sub></a>
 
 <p align="justify">
   This file defines the ranges and increments used by the isothermal, isobaric, and isochoric routes selected through <code>PROCESS_TYPE</code>.
