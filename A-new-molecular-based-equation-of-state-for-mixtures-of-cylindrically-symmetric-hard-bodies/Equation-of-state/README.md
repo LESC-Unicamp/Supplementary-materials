@@ -289,7 +289,7 @@ make -f makefile
   This file controls the Nelder-Mead optimization route. Some entries are used only for pure-component optimization, whereas others apply only to mixture optimization.
 </p>
 
-| Name<br> __________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
+| Name<br> _____________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Mixture temperature<br>(mixture only) | <code>TEMPERATURE_MIXTURE_K</code> | Used to identify the isothermal VLE dataset and define the optimization temperature | Any positive <code>FLOAT</code> number in K |
 | Damping-factor adjustment | <code>DAMPING_FACTOR_ITERATION</code> | Multiplicative factor used to further reduce the magnitude of fugacity-based updates during phase-equilibrium calculations performed by the objective function when additional damping is required | Any <code>FLOAT</code> number between 0 and 1 |
