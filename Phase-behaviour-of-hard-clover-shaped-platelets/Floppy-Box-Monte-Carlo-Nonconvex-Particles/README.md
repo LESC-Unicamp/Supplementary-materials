@@ -166,11 +166,11 @@ The following features are supported in the current version:
 
 | Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Initial configuration | <code>molecular_configuration</code> | Used to select the initial molecular configuration | <ul><li><code>PB</code> for a packed-box configuration</li></ul> |
-| Cross-sectional arrangement | <code>geometry_selection</code> | Used to select the arrangement of the four cylindrical elements that form the nonconvex particle | <ul><li><code>1</code> for Pattern #1*</li><li><code>2</code> for Pattern #2**</li></ul> |
-| Quaternion angle | <code>quaternion_angle</code> | Used to define the initial particle-orientation angle in degrees | Any <code>FLOAT</code> number |
-| Unrotated axis | <code>unrotated_axis</code> | Used to select the body-fixed reference axis for the initial orientation | <ul><li><code>X</code> for the <i>x</i>-axis</li><li><code>Y</code> for the <i>y</i>-axis</li><li><code>Z</code> for the <i>z</i>-axis</li></ul> |
-| Initial configuration cycles | <code>max_cycles_initial_config</code> | Used to define the number of NVT-Monte Carlo cycles employed to randomly distribute the particles after construction of the packed box | Any positive, non-zero <code>INTEGER</code> number |
+| Initial configuration | <code>MOLECULAR_CONFIGURATION</code> | Used to select the initial molecular configuration | <ul><li><code>PB</code> for a packed-box configuration</li></ul> |
+| Cross-sectional arrangement | <code>GEOMETRY_SELECTION</code> | Used to select the arrangement of the four cylindrical elements that form the nonconvex particle | <ul><li><code>1</code> for Pattern #1*</li><li><code>2</code> for Pattern #2**</li></ul> |
+| Quaternion angle | <code>QUATERNION_ANGLE</code> | Used to define the initial particle-orientation angle in degrees | Any <code>FLOAT</code> number |
+| Unrotated axis | <code>UNROTATED_AXIS</code> | Used to select the body-fixed reference axis for the initial orientation | <ul><li><code>X</code> for the <i>x</i>-axis</li><li><code>Y</code> for the <i>y</i>-axis</li><li><code>Z</code> for the <i>z</i>-axis</li></ul> |
+| Initial configuration cycles | <code>MAX_CYCLES_INITIAL_CONFIG</code> | Used to define the number of NVT-Monte Carlo cycles employed to randomly distribute the particles after construction of the packed box | Any positive, non-zero <code>INTEGER</code> number |
 
 <p align="justify">
   <sub>*In Pattern #1, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumference of each circular cross section passing through the centers of its two nearest-neighbour cylinders.</sub><br><sub>**In Pattern #2, the centers of the four cylinders are arranged at the vertices of a square centered at the particle center of mass, with the circumferences of all four circular cross sections passing through the particle center of mass.</sub>
@@ -188,10 +188,10 @@ The following features are supported in the current version:
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Trajectory printing | <code>trajectory_inquiry</code> | Used to specify whether an OVITO-compatible trajectory file is written during the pressure ramp | <ul><li><code>Y</code> to write the trajectory file</li><li><code>N</code> to omit trajectory output</li></ul> |
-| Maximum box-length ratio | <code>box_max_length_ratio</code> | Used to limit the ratio between the lengths of any two box vectors during anisotropic volume changes | Any positive, non-zero <code>FLOAT</code> number |
-| Maximum box-angle deviation | <code>box_max_angle_degree</code> | Used to define the maximum allowed deviation, in degrees, of the angle between any two box vectors from 90&deg; during anisotropic volume changes | Any positive, non-zero <code>FLOAT</code> number |
-| Random-number generator | <code>random_number_gen</code> | Used to select the pseudorandom-number generator | <ul><li><code>FORTRAN</code> for the standard Fortran generator</li><li><code>BITWISE</code> for the generator based on bitwise operations</li></ul> |
+| Trajectory printing | <code>TRAJECTORY_INQUIRY</code> | Used to specify whether an OVITO-compatible trajectory file is written during the pressure ramp | <ul><li><code>Y</code> to write the trajectory file</li><li><code>N</code> to omit trajectory output</li></ul> |
+| Maximum box-length ratio | <code>BOX_MAX_LENGTH_RATIO</code> | Used to limit the ratio between the lengths of any two box vectors during anisotropic volume changes | Any positive, non-zero <code>FLOAT</code> number |
+| Maximum box-angle deviation | <code>BOX_MAX_ANGLE_DEGREE</code> | Used to define the maximum allowed deviation, in degrees, of the angle between any two box vectors from 90&deg; during anisotropic volume changes | Any positive, non-zero <code>FLOAT</code> number |
+| Random-number generator | <code>RANDOM_NUMBER_GEN</code> | Used to select the pseudorandom-number generator | <ul><li><code>FORTRAN</code> for the standard Fortran generator</li><li><code>BITWISE</code> for the generator based on bitwise operations</li></ul> |
 
 <p align="justify">
   <b>OBS.</b>: An anisotropic trial move is rejected before the overlap test if either the box length ratio or box angle criterion is violated.
@@ -205,17 +205,17 @@ The following features are supported in the current version:
 
 | Name<br> ___________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of cycles | <code>pchange_maxcycles</code> | Used to define the number of Monte Carlo cycles performed at each reduced pressure point | Any positive, non-zero <code>INTEGER</code> number |
-| Number of equilibration cycles | <code>pchange_equilibration_cycles</code> | Used to define the number of equilibration cycles at each reduced pressure point | Any non-negative <code>INTEGER</code> number smaller than <code>pchange_maxcycles</code> |
-| Saving frequency | <code>saving_frequency</code> | Used to define how often simulation properties and, when selected, trajectory configurations are written out | Any positive, non-zero <code>INTEGER</code> number |
-| Adjustment frequency<br>(movement) | <code>adjustment_frequency_movement</code> | Used to define how often translational and rotational displacement amplitudes are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> number |
-| Adjustment frequency<br>(volume) | <code>adjustment_frequency_volume</code> | Used to define how often isotropic and anisotropic volume-change amplitudes are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> number |
-| Maximum translational displacement | <code>max_translation</code> | Used to define the initial amplitude of random translational displacements | Any non-zero <code>FLOAT</code> number |
-| Maximum rotational displacement | <code>max_rotation</code> | Used to define the initial amplitude of random rotational displacements in radians | Any non-zero <code>FLOAT</code> number |
-| Isotropic volume-scaling amplitude | <code>max_volume_iso</code> | Used to define the initial amplitude of isotropic trial moves applied to the logarithm of the box volume | Any non-zero <code>FLOAT</code> number |
-| Anisotropic box-deformation amplitude | <code>max_volume_aniso</code> | Used to define the initial amplitude of changes applied to a randomly selected independent component of the box matrix | Any non-zero <code>FLOAT</code> number |
-| Maximum box distortion | <code>max_distortion</code> | Used to define the normalized box-distortion threshold above which lattice reduction is applied | Any <code>FLOAT</code> number greater than or equal to <code>1</code> |
-| Lattice-reduction algorithm | <code>lattice_reduction</code> | Used to select the lattice-reduction algorithm | <ul><li><code>FBM</code> for the <a href="https://doi.org/10.1063/1.1901585">Gottwald</a> method</li><li><code>LLL</code> for the <a href="https://doi.org/10.1007/BF01457454">Lenstra-Lenstra-Lovász</a> algorithm</li></ul> |
+| Number of cycles | <code>PCHANGE_MAXCYCLES</code> | Used to define the number of Monte Carlo cycles performed at each reduced pressure point | Any positive, non-zero <code>INTEGER</code> number |
+| Number of equilibration cycles | <code>PCHANGE_EQUILIBRATION_CYCLES</code> | Used to define the number of equilibration cycles at each reduced pressure point | Any non-negative <code>INTEGER</code> number smaller than <code>pchange_maxcycles</code> |
+| Saving frequency | <code>SAVING_FREQUENCY</code> | Used to define how often simulation properties and, when selected, trajectory configurations are written out | Any positive, non-zero <code>INTEGER</code> number |
+| Adjustment frequency<br>(movement) | <code>ADJUSTMENT_FREQUENCY_MOVEMENT</code> | Used to define how often translational and rotational displacement amplitudes are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> number |
+| Adjustment frequency<br>(volume) | <code>ADJUSTMENT_FREQUENCY_VOLUME</code> | Used to define how often isotropic and anisotropic volume-change amplitudes are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> number |
+| Maximum translational displacement | <code>MAX_TRANSLATION</code> | Used to define the initial amplitude of random translational displacements | Any non-zero <code>FLOAT</code> number |
+| Maximum rotational displacement | <code>MAX_ROTATION</code> | Used to define the initial amplitude of random rotational displacements in radians | Any non-zero <code>FLOAT</code> number |
+| Isotropic volume-scaling amplitude | <code>MAX_VOLUME_ISO</code> | Used to define the initial amplitude of isotropic trial moves applied to the logarithm of the box volume | Any non-zero <code>FLOAT</code> number |
+| Anisotropic box-deformation amplitude | <code>MAX_VOLUME_ANISO</code> | Used to define the initial amplitude of changes applied to a randomly selected independent component of the box matrix | Any non-zero <code>FLOAT</code> number |
+| Maximum box distortion | <code>MAX_DISTORTION</code> | Used to define the normalized box-distortion threshold above which lattice reduction is applied | Any <code>FLOAT</code> number greater than or equal to <code>1</code> |
+| Lattice-reduction algorithm | <code>LATTICE_REDUCTION</code> | Used to select the lattice-reduction algorithm | <ul><li><code>FBM</code> for the <a href="https://doi.org/10.1063/1.1901585">Gottwald</a> method</li><li><code>LLL</code> for the <a href="https://doi.org/10.1007/BF01457454">Lenstra-Lenstra-Lovász</a> algorithm</li></ul> |
 
 <p align="justify">
   <b>OBS. I</b>: The production period at each pressure point is defined automatically as <code>pchange_maxcycles - pchange_equilibration_cycles</code>.
@@ -233,9 +233,9 @@ The following features are supported in the current version:
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of pressure points | <code>pressure_points</code> | Used to define the number of reduced pressure setpoints in the pressure ramp | Any positive, non-zero <code>INTEGER</code> number |
-| Reduced pressure values¹ | <code>reduced_pressure</code> | Used to define the reduced pressure setpoints of the FBMC compression | One positive, non-zero <code>FLOAT</code> number for each pressure point |
-| Anisotropic volume-change index | <code>anisotropic_volume_change_index</code> | Used to define the last pressure point for which volume changes are restricted to isotropic scaling; anisotropic box deformations are allowed at subsequent pressure points | Any positive <code>INTEGER</code> number between <code>1</code> and <code>pressure_points</code> |
+| Number of pressure points | <code>PRESSURE_POINTS</code> | Used to define the number of reduced pressure setpoints in the pressure ramp | Any positive, non-zero <code>INTEGER</code> number |
+| Reduced pressure values¹ | <code>REDUCED_PRESSURE</code> | Used to define the reduced pressure setpoints of the FBMC compression | One positive, non-zero <code>FLOAT</code> number for each pressure point |
+| Anisotropic volume-change index | <code>ANISOTROPIC_VOLUME_CHANGE_INDEX</code> | Used to define the last pressure point for which volume changes are restricted to isotropic scaling; anisotropic box deformations are allowed at subsequent pressure points | Any positive <code>INTEGER</code> number between <code>1</code> and <code>pressure_points</code> |
 
 <p align="justify">
   <sup>¹P<sup>*</sup> = P&sigma;<sub>0</sub>³/(k<sub>B</sub>T), where <i>P</i> is the pressure, <i>k<sub>B</sub></i> is the Boltzmann constant, <i>T</i> is the absolute temperature, and &sigma;<sub>0</sub> = 1&Aring;.</sup>
@@ -257,9 +257,9 @@ The following features are supported in the current version:
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Probability of movement | <code>probability_movement</code> | Used to define the probability that a particle movement rather than a volume change is attempted | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
-| Probability of translation | <code>probability_translation</code> | Used to define the probability that a selected particle movement is translational rather than rotational | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
-| Probability of isotropic volume change | <code>probability_isotropic</code> | Used to define the probability that a selected volume change is isotropic rather than anisotropic once anisotropic moves are enabled | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
+| Probability of movement | <code>PROBABILITY_MOVEMENT</code> | Used to define the probability that a particle movement rather than a volume change is attempted | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
+| Probability of translation | <code>PROBABILITY_TRANSLATION</code> | Used to define the probability that a selected particle movement is translational rather than rotational | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
+| Probability of isotropic volume change | <code>PROBABILITY_ISOTROPIC</code> | Used to define the probability that a selected volume change is isotropic rather than anisotropic once anisotropic moves are enabled | Any <code>FLOAT</code> number between <code>0</code> and <code>1</code> |
 
 <p align="justify">
   <b>OBS. I</b>: The volume-change probability is calculated internally as <code>1 - probability_movement</code>, the rotational probability as <code>1 - probability_translation</code>, and the anisotropic volume-change probability as <code>1 - probability_isotropic</code>.
@@ -277,10 +277,10 @@ The following features are supported in the current version:
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Translational threshold | <code>ratio_translation</code> | Used to define the acceptance ratio threshold for translational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
-| Rotational threshold | <code>ratio_rotation</code> | Used to define the acceptance ratio threshold for rotational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
-| Isotropic volume threshold | <code>ratio_volume_change_iso</code> | Used to define the acceptance ratio threshold for isotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
-| Anisotropic volume threshold | <code>ratio_volume_change_aniso</code> | Used to define the acceptance ratio threshold for anisotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Translational threshold | <code>RATIO_TRANSLATION</code> | Used to define the acceptance ratio threshold for translational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Rotational threshold | <code>RATIO_ROTATION</code> | Used to define the acceptance ratio threshold for rotational moves | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Isotropic volume threshold | <code>RATIO_VOLUME_CHANGE_ISO</code> | Used to define the acceptance ratio threshold for isotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
+| Anisotropic volume threshold | <code>RATIO_VOLUME_CHANGE_ANISO</code> | Used to define the acceptance ratio threshold for anisotropic volume changes | Any positive <code>FLOAT</code> number greater than <code>0</code> and less than or equal to <code>1</code> |
 
 <p align="justify">
   <b>OBS.</b>: Displacement amplitudes are adjusted only during equilibration. At the corresponding adjustment frequency, an observed acceptance ratio less than or equal to its threshold decreases the current amplitude by 5%, whereas a larger acceptance ratio increases it by 5%.
@@ -294,11 +294,11 @@ The following features are supported in the current version:
 
 | Name<br> ______________________ | String Name<br> _________________________________ | Definition<br> _______________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
-| Number of particles | <code>number_of_particles</code> | Used to define the number of nonconvex particles in the FBMC simulation | Any <code>INTEGER</code> number from <code>1</code> to <code>12</code> |
-| Cylinder diameter | <code>cylinder_diameter</code> | Used to define the diameter of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
-| Cylinder length | <code>cylinder_length</code> | Used to define the length of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
-| Number of periodic image layers | <code>number_of_layers</code> | Used to define the number of surrounding layers of periodic images explicitly constructed around the primary simulation box | Any positive, non-zero <code>INTEGER</code> number |
-| Absolute temperature | <code>absolute_temperature</code> | Used to define the absolute temperature of the system in K | Any positive, non-zero <code>FLOAT</code> number |
+| Number of particles | <code>NUMBER_OF_PARTICLES</code> | Used to define the number of nonconvex particles in the FBMC simulation | Any <code>INTEGER</code> number from <code>1</code> to <code>12</code> |
+| Cylinder diameter | <code>CYLINDER_DIAMETER</code> | Used to define the diameter of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
+| Cylinder length | <code>CYLINDER_LENGTH</code> | Used to define the length of each of the four identical cylinders forming a particle | Any positive, non-zero <code>FLOAT</code> number |
+| Number of periodic image layers | <code>NUMBER_OF_LAYERS</code> | Used to define the number of surrounding layers of periodic images explicitly constructed around the primary simulation box | Any positive, non-zero <code>INTEGER</code> number |
+| Absolute temperature | <code>ABSOLUTE_TEMPERATURE</code> | Used to define the absolute temperature of the system in K | Any positive, non-zero <code>FLOAT</code> number |
 
 <p align="justify">
   <b>OBS.</b>: The cylinder aspect ratio is calculated internally as <code>cylinder_length / cylinder_diameter</code>. Each nonconvex particle is composed of four identical cylinders.
