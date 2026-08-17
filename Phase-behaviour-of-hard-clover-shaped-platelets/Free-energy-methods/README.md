@@ -31,7 +31,7 @@
                         |  ██████/  | ██ \  ██   /██████  |  ██████/  | ██  | ██  | ██ \/  | ██  | ██
                          \______/   |__/  \__/  |______/   \______/   |__/  |__/  |__/     |__/  |__/
 ```
-<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
+<p align="right"><b><sub><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/CHANGELOG.md">Version: 1.0.0</a></sub></b></p>
 
 <p align="center"><b>Authors</b></p>
 <p align="center">
@@ -63,19 +63,19 @@ The authors make no warranties about the use of this software. The authors hold 
 
 ## <a name="license"></a>License
 <p align="justify">
-This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/LICENSE"><b>LICENSE</b></a> file for details.
+This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/LICENSE"><b>LICENSE</b></a> file for details.
 </p>
 
 ## <a name="overview"></a>Overview
 <p align="justify">
-This NVT/NPT Monte Carlo algorithm was developed to investigate the phase behavior of a system of clover-shaped hard particles, a nonconvex geometry formed by the union of four identical cylinders. Because particle interactions are purely hard-core, specialized routines are required to detect overlaps between the cylindrical subunits. In this work, we employ a hybrid overlap-detection routine that combines the methods proposed by Ibarra-Avalos <i>et al.</i> (<a href="https://doi.org/10.1080/08927020701191349"><b>Mol. Simul.</b>, 33, 505-515, 2007</a>), Orellana <i>et al.</i> (<a href="https://doi.org/10.1140/epje/i2018-11657-0"><b>Eur. Phys. J. E</b>, 41, 10, 2018</a>), and Lopes <i>et al.</i> (<a href="https://doi.org/10.1063/5.0040942"><b>J. Chem. Phys.</b>, 154, 104902, 2021</a>), with a minor modification to the disk–rim overlap test introduced in the latter. The algorithm also implements Widom’s particle insertion method to compute the excess chemical potential. In addition, simulations may be performed in the presence of an external orientational field that aligns the particles’ principal symmetry axis along a preferred direction.
+
 </p>
 
 frenkel-Mulder: https://doi.org/10.1080/00268978500101971
 frenkel-ladd: https://doi.org/10.1063/1.448024
 
 <p align="justify">
-  For illustration, the <strong>isotropic fluid phase</strong> (observed during compression runs) and the <strong>lamello–columnar phase</strong> (observed during expansion runs) are shown below. The animations were generated using <a href="https://www.ovito.org/" target="_blank">OVITO</a>.
+  For illustration, 
 </p>
 
 | | | | |
@@ -89,32 +89,6 @@ frenkel-ladd: https://doi.org/10.1063/1.448024
 <p align="justify">
 The following features are supported in the current version:
 </p>
-
-1. Initial Configurations
-    - Packed box configuration
-    - Floppy-box configuration (closed-packed structure)
-
-2. Ensembles
-    - Canonical (NVT)
-    - Isothermal-Isobaric (NPT)
-    - Isothermal-Isostress (N&sigma;T)
-
-3. Moves
-    - Translation
-    - Rotation (Quaternion Algebra)
-    - Cubic Expansions/Compressions (Isotropic)
-    - Orthorhombic Expansions/Compressions (Anisotropic)
-    - Triclinic Deformations
-
-4. Lattice Reduction Algorithms
-    - <a href="https://doi.org/10.1063/1.1901585">Gottwald</a>
-    - <a href="https://doi.org/10.1007/BF01457454">Lenstra-Lenstra-Lovász</a>
-
-5. Force Fields
-    - Hard-core potential
-    - Orientational force field
-
-6. Cell Lists
 
 ## <a name="language"></a>Language
 <p align="justify">
@@ -135,7 +109,7 @@ The following features are supported in the current version:
 </p>
 
 ```
-cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/src/
+cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/src/
 ```
 
 <p align="justify">
@@ -156,7 +130,7 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Monte
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/src/makefile">Standard</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/src/makefile">Standard</a> | ```make -f makefile``` |
 
 <p align="justify">
   Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
@@ -180,7 +154,7 @@ where <code>X</code> is the number of threads.
   Apart from the executable file, the <code>/bin/</code> folder contains some initialization files that need to be set up.
 </p>
 
-### <a name="conffile"></a>The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
+### <a name="conffile"></a>The Configuration File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_initial_configuration.ini"><sub>ini_initial_configuration.ini</sub></a>
 
 <p align="justify">
   This file is used to define the molecular geometry and molecular configuration, including additional information about the packed-box structure (if selected). The table below lists the available options for configuring these parameters.
@@ -241,7 +215,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup>The 14-character code corresponds to the <code>[DATE][HOUR]</code> portion of the filename. This file can be opened with any text editor to modify some simulation settings if necessary. Note, however, that editing any parameter (position, orientation or box dimensions) may cause the program to detect overlapping configurations in the initial structure.</sup>
 </p>
 
-### The Control File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_control.ini"><sub>ini_control.ini</sub></a>
+### The Control File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_control.ini"><sub>ini_control.ini</sub></a>
 
 <p align="justify">
   This file is used to define several control variables, such as data printing and seed type. The table below lists the available options for configuring the control parameters.
@@ -257,7 +231,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 | Density threshold<br>(stack rotation) | <code>STACK_DENSITY_THRESHOLD</code> | Used to define the density threshold above which stack rotations are applied | Any positive <code>FLOAT</code> |
 | Cell lists | <code>CELL_LISTS</code> | Used to improve simulation performance by using neighbor cell lists instead of checking the entire system | <ul><li><code>.TRUE.</code> to use cell lists</li><li><code>.FALSE.</code> to not use cell lists</li></ul> |
 
-### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
+### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
 
 <p align="justify">
   This file is used to define the number of simulation cycles, maximum displacements, ensemble type, and the lattice reduction algorithm (if anisotropic volume changes are considered). The table below lists some options that can be used to configure the simulation parameters.
@@ -283,7 +257,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup><sup>1</sup>The box distortion is defined as the product of the total surface area and the perimeter of the simulation box divided by its volume. This quantity is normalized by dividing it by 72, which corresponds to the minimum possible distortion (a perfect cube). Thus, a value of 1 represents a perfect cubic box, while larger values correspond to increasingly distorted boxes, such as triclinic or non-cubic orthorhombic geometries.</sup>
 </p>
 
-### The Orientational Potential File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_orientational_field.ini"><sub>ini_orientational_field.ini</sub></a>
+### The Orientational Potential File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_orientational_field.ini"><sub>ini_orientational_field.ini</sub></a>
 
 <p align="justify">
   This file is used to define variables related to the external orientational field that enforces the alignment of particles along a preferential direction. The table below lists the available options for configuring the force-field parameters.
@@ -299,7 +273,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup><sup>1</sup>The field vector will be normalized if it is not already a unit vector</sup>
 </p>
 
-### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
+### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
 
 <p align="justify">
   This file is used to define the probabilities of trial moves. The table below lists the available options for configuring the probability parameters.
@@ -312,7 +286,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
 | Probability of isotropic volume change | <code>PROBABILITY_ISOTROPIC</code> | Defines the probability that an isotropic volume change is selected during a trial volume move | Any positive <code>FLOAT</code> number between 0 and 1 |
 | Probability of particle stack rotation | <code>PROBABILITY_STACKROTATION</code> | Defines the probability that a particle stack rotation move is selected during a trial move | Any positive <code>FLOAT</code> number between 0 and 1 |
 
-### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
+### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
 
 <p align="justify">
   This file is used to define the acceptance ratio thresholds for trial moves. The table below lists the available options for configuring the threshold parameters.
@@ -329,7 +303,7 @@ N, PX, PY, PZ, QW, QX, QY, QZ # Position[X,Y,Z] and Quaternion[W,X,Y,Z]
   <sup><sup>1</sup>Adjustments to the maximum displacements are performed only during the equilibration phase, every <code>ADJUSTMENT_FREQUENCY</code> cycles. Let <b>n_accepted</b> denote the number of accepted moves and <b>n_trialed</b> the number of attempted moves. If <b>n_accepted</b> / <b>n_trialed</b> &gt; <b>threshold</b>, the corresponding maximum displacement is increased by 5% of its current value; otherwise, it is decreased by 5% of its current value</sup>
 </p>
 
-### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
+### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
 
 <p align="justify">
   This file is used to define system-related variables, including geometric properties. The table below lists the available options for configuring the system parameters.
