@@ -330,7 +330,7 @@ Particle_Quaternions_[WXYZ]= QW1, QX1, QY1, QZ1, QW2, QX2, QY2, QZ2, ..., QWN, Q
 </p>
 
 <p align="justify">
-  The <code>Initial_Configuration/OVITO/</code> directory stores an XYZ file generated from the selected input configuration before the free-energy calculation begins. The file contains the four cylindrical subunits of each particle, their positions and quaternions, and the simulation-box dimensions in a format that can be visualized directly using <a href="https://www.ovito.org/">OVITO</a>.
+  The <code>Initial_Configuration/OVITO/</code> directory stores an XYZ file generated from the selected input configuration before the free-energy calculation begins. The file contains the four cylindrical subunits of each particle, their positions and quaternions, and the simulation box dimensions in a format that can be visualized directly using <a href="https://www.ovito.org/">OVITO</a>.
 </p>
 
 <p align="justify">
@@ -342,7 +342,7 @@ Particle_Quaternions_[WXYZ]= QW1, QX1, QY1, QZ1, QW2, QX2, QY2, QZ2, ..., QWN, Q
 </p>
 
 <p align="justify">
-  The <code>Results/</code> directory stores the free-energy results and intermediate thermodynamic-integration data. For <code>A0</code>, the output contains the translational, orientational, and total ideal Einstein-crystal contributions. For <code>ΔA1</code>, the code stores the sampled non-overlapping fraction and the resulting free-energy change. For <code>ΔA2</code>, separate files store the instantaneous and averaged Einstein-crystal energies at each coupling-parameter point, a <code>λpoints.dat</code> file collects the ensemble average at each Gauss–Legendre point, and a final file stores <code>ΔA2</code>. For <code>ΔAfield</code>, analogous files store the orientational-field energy, the ensemble average of the squared sine of the alignment angle, and the field-integration result.
+  The <code>Results/</code> directory stores the free-energy results and intermediate thermodynamic integration data. For <code>A0</code>, the output contains the translational, orientational, and total ideal Einstein-crystal contributions. For <code>ΔA1</code>, the code stores the sampled non-overlapping fraction and the resulting free-energy change. For <code>ΔA2</code>, separate files store the instantaneous and averaged Einstein-crystal energies at each coupling parameter point, a <code>λpoints.dat</code> file collects the ensemble average at each Gauss–Legendre point, and a final file stores <code>ΔA2</code>. For <code>ΔAfield</code>, analogous files store the orientational field energy, the ensemble average of the squared sine of the alignment angle, and the field integration result.
 </p>
 
 <p align="justify">
