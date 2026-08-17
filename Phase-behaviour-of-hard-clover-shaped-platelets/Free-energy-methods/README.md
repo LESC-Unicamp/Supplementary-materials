@@ -182,6 +182,20 @@ where <code>X</code> is the number of threads.
   Apart from the executable file, the <code>/bin/</code> directory contains the initialization files used to define the free-energy calculation, Monte Carlo sampling parameters, and system properties. Depending on the selected method, an initial configuration must also be supplied in either the <code>Floppy-box/</code> or <code>Liquid-crystal/</code> directory.
 </p>
 
+### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
+
+### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
+
+### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
+
+### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
+
+### The Integration Parameters File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_parameters.ini"><sub>ini_parameters.ini</sub></a>
+
+### <a name="fbfile"></a>The Floppy-Box Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Floppy-box/fbox.dat"><sub>Floppy-box/fbox.dat</sub></a>
+
+### <a name="lcfile"></a>The Liquid-Crystal Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Liquid-crystal/lc.dat"><sub>Liquid-crystal/lc.dat</sub></a>
+
 ## <a name="filesandfolders"></a>Files and Folders
 
 <p align="justify">
