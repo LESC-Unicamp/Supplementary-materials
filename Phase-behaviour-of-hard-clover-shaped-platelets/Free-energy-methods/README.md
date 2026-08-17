@@ -91,6 +91,38 @@ This software is licensed under the GNU General Public License v3.0. See the <a 
 The following features are supported in the current version:
 </p>
 
+1. Free-Energy Methods
+    - Frenkel–Ladd method for crystalline solids
+      - <code>A0</code>: ideal translational and orientational Einstein-crystal contributions
+      - <code>ΔA1</code>: free-energy change between interacting and non-interacting Einstein crystals
+      - <code>ΔA2</code>: free-energy change between the solid and the interacting Einstein crystal
+    - Frenkel–Mulder method for liquid crystals
+      - <code>ΔAfield</code>: free-energy change between the externally oriented fluid and the liquid-crystalline phase
+
+2. Initial Configurations
+    - Floppy-box unit-cell configuration (<code>FB</code>) for solids
+    - Liquid-crystal configuration (<code>LC</code>) containing particle positions, orientations, and box dimensions
+
+3. Particle Geometry
+    - Nonconvex clover-shaped particles composed of four identical cylinders
+    - Two cross-sectional arrangements with different degrees of concavity
+
+4. Monte Carlo Sampling
+    - Canonical ensemble (NVT)
+    - Translational moves
+    - Rotational moves (Quaternion Algebra)
+    - Hard-core overlap detection
+    - Automatic adjustment of maximum translational and rotational displacements during equilibration
+
+5. Numerical Integration
+    - Monte Carlo integration for the orientational contribution to <code>A0</code>
+    - 20-point Gauss–Legendre quadrature for <code>ΔA2</code> and <code>ΔAfield</code>
+
+6. Additional Features
+    - Fixed or non-fixed pseudorandom number generator (PRNG) seeds
+    - Optional OVITO-compatible trajectory output
+    - OpenMP parallelization of overlap-detection routines
+
 ## <a name="language"></a>Language
 <p align="justify">
   The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
