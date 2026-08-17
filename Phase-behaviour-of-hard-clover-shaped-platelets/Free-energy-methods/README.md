@@ -321,6 +321,34 @@ Particle_Quaternions_[WXYZ]= QW1, QX1, QY1, QZ1, QW2, QX2, QY2, QZ2, ..., QWN, Q
   The program automatically creates and organises the directories required for input and output. Output files are grouped into date-based subdirectories corresponding to the starting date of the calculation, and filenames include a time prefix together with the cylinder diameter (<code>D</code>), cylinder length (<code>L</code>), and aspect ratio (<code>LD</code>).
 </p>
 
+<p align="justify">
+  The <code>Floppy-box/</code> directory stores the <code>fbox.dat</code> unit-cell file used to construct crystalline solids. It also contains the <code>Other-Structures/</code> subdirectory, which stores additional crystalline structures (<code>SI.dat</code>–<code>SV.dat</code>). If the <code>Floppy-box/</code> directory does not exist, the program creates it; however, a valid <code>fbox.dat</code> file must be supplied before a floppy-box calculation can proceed. See the <a href="#fbfile">Floppy-Box Data File</a> section for the required format.
+</p>
+
+<p align="justify">
+  The <code>Liquid-crystal/</code> directory stores the <code>lc.dat</code> configuration used for Frenkel–Mulder calculations. If the directory does not exist, the program creates it; however, a valid <code>lc.dat</code> file must be supplied before a liquid-crystal calculation can proceed. See the <a href="#lcfile">Liquid-Crystal Data File</a> section for the required format.
+</p>
+
+<p align="justify">
+  The <code>Initial_Configuration/OVITO/</code> directory stores an XYZ file generated from the selected input configuration before the free-energy calculation begins. The file contains the four cylindrical subunits of each particle, their positions and quaternions, and the simulation-box dimensions in a format that can be visualized directly using <a href="https://www.ovito.org/">OVITO</a>.
+</p>
+
+<p align="justify">
+  The <code>Trajectories/</code> directory stores OVITO-compatible XYZ trajectory files generated during the Monte Carlo simulations. These files are written every <code>SAVING_FREQUENCY</code> cycles only when <code>TRANJECTORY_INQUIRY = "Y"</code>. For <code>ΔA2</code> and <code>ΔAfield</code>, separate trajectory files are generated for each selected quadrature point.
+</p>
+
+<p align="justify">
+  The <code>Ratio/</code> directory contains the <code>Translation/</code> and <code>Rotation/</code> subdirectories. These store the measured acceptance ratio, current maximum displacement, and target acceptance threshold during equilibration. Data are written every <code>ADJUSTMENT_FREQUENCY</code> cycles for the Monte Carlo-based free-energy calculations.
+</p>
+
+<p align="justify">
+  The <code>Results/</code> directory stores the free-energy results and intermediate thermodynamic-integration data. For <code>A0</code>, the output contains the translational, orientational, and total ideal Einstein-crystal contributions. For <code>ΔA1</code>, the code stores the sampled non-overlapping fraction and the resulting free-energy change. For <code>ΔA2</code>, separate files store the instantaneous and averaged Einstein-crystal energies at each coupling-parameter point, a <code>λpoints.dat</code> file collects the ensemble average at each Gauss–Legendre point, and a final file stores <code>ΔA2</code>. For <code>ΔAfield</code>, analogous files store the orientational-field energy, the ensemble average of the squared sine of the alignment angle, and the field-integration result.
+</p>
+
+<p align="justify">
+  The aforementioned folders are created by executing shell commands through the intrinsic function <code>SYSTEM</code>. The shell used to invoke these commands depends on the operating-system configuration. See <a href="https://gcc.gnu.org/onlinedocs/gfortran/SYSTEM.html">this link</a> for more information.
+</p>
+
 ## <a name="running"></a>Running the Code
 
 <p align="justify">
