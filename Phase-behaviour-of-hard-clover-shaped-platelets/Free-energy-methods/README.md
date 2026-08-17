@@ -270,6 +270,26 @@ where <code>X</code> is the number of threads.
   When <code>MOLECULAR_CONFIGURATION = "FB"</code>, the code reads a unit-cell configuration from <code>Floppy-box/fbox.dat</code>. The unit cell is rescaled to the number density defined in <code>ini_system.ini</code> and periodically replicated along the three box directions to generate the solid configuration. The file must follow the structure below:
 </p>
 
+```
+Arrangement_type: 2
+Cylindrical_diameter: D
+Cylindrical_length: L
+Cylindrical_aspect_ratio: L/D
+Box_length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
+Box_volume: V
+Packing_fraction: η
+Number_density: ρ
+Number_of_particles: NCELL
+Nematic_order_parameter: S
+
+Positions_and_orientations:
+R, PX, PY, PZ, QW, QX, QY, QZ
+.
+.
+.
+R, PX, PY, PZ, QW, QX, QY, QZ
+```
+
 ### <a name="lcfile"></a>The Liquid-Crystal Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Liquid-crystal/lc.dat"><sub>Liquid-crystal/lc.dat</sub></a>
 
 ## <a name="filesandfolders"></a>Files and Folders
