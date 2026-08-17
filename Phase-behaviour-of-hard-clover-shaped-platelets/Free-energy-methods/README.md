@@ -290,6 +290,10 @@ R, PX, PY, PZ, QW, QX, QY, QZ
 R, PX, PY, PZ, QW, QX, QY, QZ
 ```
 
+<p align="justify">
+  Here, <code>NCELL</code> is the number of particles in the unit cell, <code>P[X,Y,Z]</code> are particle coordinates, and <code>Q[W,X,Y,Z]</code> are quaternion components. The total number of particles defined by <code>NUMBER_OF_PARTICLES</code> must satisfy <code>NUMBER_OF_PARTICLES / NCELL = n³</code>, where <code>n</code> is an integer, so that the unit cell can be replicated equally along all three box directions. The packing fraction and number density stored in <code>fbox.dat</code> are metadata; the generated solid is rescaled using <code>NUMBER_DENSITY</code> from <code>ini_system.ini</code>.
+</p>
+
 ### <a name="lcfile"></a>The Liquid-Crystal Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Liquid-crystal/lc.dat"><sub>Liquid-crystal/lc.dat</sub></a>
 
 ## <a name="filesandfolders"></a>Files and Folders
