@@ -352,7 +352,41 @@ Particle_Quaternions_[WXYZ]= QW1, QX1, QY1, QZ1, QW2, QX2, QY2, QZ2, ..., QWN, Q
 ## <a name="running"></a>Running the Code
 
 <p align="justify">
-  Finally, it's time to get started! After compilation, the executable is located in the <code>/bin/</code> directory:
+  Finally, it's time to get started! After compilation, move to the <code>/bin/</code> directory and run the executable:
+</p>
+
+<b>Standard compilation</b> (with OpenMP API)
+
+```
+./free-energy-method.out
+```
+
+<p align="justify">
+  At startup, the program reads the selected initial configuration file and the <b>*.ini</b> files, prints a summary of the system and simulation parameters, reports the number of available OpenMP threads, and asks whether the calculation should proceed. Enter <code>Y</code> to continue or <code>N</code> to exit and modify the input files.
+</p>
+
+<p align="justify">
+  The code then generates an OVITO-compatible copy of the initial configuration and executes the calculation selected by <code>CALCULATION_TYPE</code>. The Frenkel–Ladd solid route is evaluated as three separate calculations: run once with <code>CALCULATION_TYPE = 0</code> for <code>A0</code>, once with <code>CALCULATION_TYPE = 1</code> for <code>ΔA1</code>, and once with <code>CALCULATION_TYPE = 2</code> for <code>ΔA2</code>. The corresponding contributions are written separately to the <code>Results/</code> directory.
+</p>
+
+<p align="justify">
+  When <code>CALCULATION_TYPE = 0</code>, the orientational reference contribution is evaluated by Monte Carlo integration using the settings in <code>ini_parameters.ini</code>.
+</p>
+
+<p align="justify">
+  When <code>CALCULATION_TYPE = 1</code>, an NVT-Monte Carlo simulation samples the interacting Einstein crystal. After equilibration, the fraction of non-overlapping configurations is used to determine <code>ΔA1</code>.
+</p>
+
+<p align="justify">
+  When <code>CALCULATION_TYPE = 2</code>, the program asks for the initial and final Gauss–Legendre quadrature-point indices. The current implementation uses 20 points spanning the coupling parameter from 0 to 1. For a complete <code>ΔA2</code> evaluation in a single run, enter <code>1 20</code>. An independent NVT Monte Carlo simulation is then performed at each selected coupling parameter, and the ensemble-averaged Einstein-crystal potential is integrated to obtain <code>ΔA2</code>. Alternatively, any subset of the quadrature points may be selected by specifying the corresponding initial and final indices; for example, <code>1 10</code> evaluates the first ten points, whereas <code>11 20</code> evaluates the remaining ten points. A single quadrature point can also be evaluated by assigning the same value to both indices, such as <code>7 7</code>. This allows the calculation to be divided into independent batches or individual simulations when desired.
+</p>
+
+<p align="justify">
+  When <code>CALCULATION_TYPE = 3</code>, the program performs the Frenkel–Mulder field integration for the liquid-crystalline configuration. It asks for the initial and final Gauss–Legendre quadrature-point indices; the 20 points span the orientational-field strength from 0 to <code>ORIENTATIONAL_FIELD_STRENGTH</code>. For a complete <code>ΔAfield</code> evaluation in a single run, enter <code>1 20</code>. At each field strength, an NVT-Monte Carlo simulation samples the squared sine of the angle between the particle orientation and <code>ORIENTATIONAL_FIELD</code>, whose ensemble average is then integrated over the field strength. Alternatively, a subset or a single quadrature point may also be selected, as described above for the <code>ΔA2</code> calculation.
+</p>
+
+<p align="justify">
+  During Monte Carlo calculations, the current stage of the simulation can be monitored through the progress bar. The program terminates automatically if the required <code>fbox.dat</code> or <code>lc.dat</code> file is missing or if an overlap is detected in an invalid initial configuration.
 </p>
 
 ## <a name="reporting"></a>Reporting Errors
