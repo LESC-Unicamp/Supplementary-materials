@@ -78,12 +78,12 @@ frenkel-ladd: https://doi.org/10.1063/1.448024
   For illustration, the <strong>isotropic fluid phase</strong> (observed during compression runs) and the <strong>lamello–columnar phase</strong> (observed during expansion runs) are shown below. The animations were generated using <a href="https://www.ovito.org/" target="_blank">OVITO</a>.
 </p>
 
-| | |
-|:---:|:---:|
-| | |
-| **Isotropic fluid phase** | **Lamello–columnar phase** |
-| ![compress_sim](https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/gifs/platelets_github_compressionsim.gif) | ![exp_sim](https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Monte-Carlo-algorithm/gifs/platelets_github_expansionsim.gif) |
-| | |
+| | | | |
+|:---:|:---:|:---:|:---:|
+| | | | |
+| **Pattern #1**<br> Platelet | **Pattern #1**<br> Rod | **Pattern #2**<br> Platelet | **Pattern #2**<br> Rod |
+| ![platelet_1](https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/assets/73966482/188e1445-2357-4aa0-ace4-c138ee089121) | ![rod_1](https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/assets/73966482/f0ca0b47-81d3-400d-b04f-d152039bb380) | ![platelet_2](https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/assets/73966482/df2113fc-a269-43b9-9523-29a8e003be53) | ![rod_2](https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/assets/73966482/f53e5cc6-7bdc-4635-951f-df15e00eb693) |
+| | | | |
 
 ## <a name="features"></a>Features
 <p align="justify">
