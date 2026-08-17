@@ -208,7 +208,7 @@ where <code>X</code> is the number of threads.
   This file selects the initial configuration and defines the parameters used by the NVT-Monte Carlo simulations performed for <code>ΔA1</code>, <code>ΔA2</code>, and <code>ΔAfield</code>.
 </p>
 
-| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+| Name<br> ____________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Molecular configuration | <code>MOLECULAR_CONFIGURATION</code> | Selects the initial configuration | <ul><li><code>FB</code> for a floppy-box solid configuration</li><li><code>LC</code> for a liquid-crystal configuration</li></ul> |
 | Number of cycles | <code>NUMBER_OF_CYCLES</code> | Defines the total number of Monte Carlo cycles | Any positive, non-zero <code>INTEGER</code> |
