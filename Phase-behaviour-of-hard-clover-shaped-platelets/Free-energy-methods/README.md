@@ -226,6 +226,14 @@ where <code>X</code> is the number of threads.
 
 ### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
 
+<p align="justify">
+  This file defines the probability of selecting a translational move during a Monte Carlo trial. The rotational probability is calculated automatically as <code>1 - PROBABILITY_TRANSLATION</code>.
+</p>
+
+| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Probability of translation | <code>PROBABILITY_TRANSLATION</code> | Defines the probability that a translational move is selected rather than a rotational move | Any <code>FLOAT</code> number between 0 and 1 |
+
 ### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
 
 ### The Integration Parameters File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_parameters.ini"><sub>ini_parameters.ini</sub></a>
