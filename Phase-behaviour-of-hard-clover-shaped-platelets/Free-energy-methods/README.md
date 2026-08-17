@@ -236,6 +236,19 @@ where <code>X</code> is the number of threads.
 
 ### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
 
+<p align="justify">
+  This file defines the target acceptance ratio thresholds used to adjust the maximum translational and rotational displacements during equilibration.
+</p>
+
+| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Translational threshold | <code>RATIO_TRANSLATION</code> | Defines the target acceptance ratio for translational moves | Any positive <code>FLOAT</code> number between 0 and 1 |
+| Rotational threshold | <code>RATIO_ROTATION</code> | Defines the target acceptance ratio for rotational moves | Any positive <code>FLOAT</code> number between 0 and 1 |
+
+<p align="justify">
+  <sup>The acceptance ratios are evaluated every <code>ADJUSTMENT_FREQUENCY</code> equilibration cycles. If the measured ratio is less than or equal to the corresponding threshold, the maximum displacement is reduced by 5%; otherwise, it is increased by 5%.</sup>
+</p>
+
 ### The Integration Parameters File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_parameters.ini"><sub>ini_parameters.ini</sub></a>
 
 ### <a name="fbfile"></a>The Floppy-Box Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Floppy-box/fbox.dat"><sub>Floppy-box/fbox.dat</sub></a>
