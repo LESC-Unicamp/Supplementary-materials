@@ -1,4 +1,4 @@
-# <p align="center">NVT/NPT Monte Carlo simulation of nonconvex clover-shaped platelets</b></p>
+# <p align="center">Frenkel–Ladd and Frenkel–Mulder thermodynamic integration methods</b></p>
 <p align="right"><b><sub>Version: 1.0.0</sub></b></p>
 
 <p align="center"><b>Authors</b></p>
