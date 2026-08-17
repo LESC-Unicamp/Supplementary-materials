@@ -240,7 +240,7 @@ where <code>X</code> is the number of threads.
   This file defines the target acceptance ratio thresholds used to adjust the maximum translational and rotational displacements during equilibration.
 </p>
 
-| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+| Name<br> ____________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
 |:---:|:---:| --- | --- |
 | Translational threshold | <code>RATIO_TRANSLATION</code> | Defines the target acceptance ratio for translational moves | Any positive <code>FLOAT</code> number between 0 and 1 |
 | Rotational threshold | <code>RATIO_ROTATION</code> | Defines the target acceptance ratio for rotational moves | Any positive <code>FLOAT</code> number between 0 and 1 |
