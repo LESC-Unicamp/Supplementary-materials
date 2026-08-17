@@ -61,6 +61,10 @@ The authors make no warranties about the use of this software. The authors hold 
  All information contained herein regarding any specific methodology does not constitute or imply its endorsement or recommendation by the authors.
 </p>
 
+<p align="justify">
+  This README was prepared with the assistance of generative AI for language editing and documentation support. All technical content was reviewed by the authors.
+</p>
+
 ## <a name="license"></a>License
 <p align="justify">
 This software is licensed under the GNU General Public License v3.0. See the <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/LICENSE"><b>LICENSE</b></a> file for details.
