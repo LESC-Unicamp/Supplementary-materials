@@ -279,20 +279,20 @@ Box_length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
 Box_volume: V
 Packing_fraction: η
 Number_density: ρ
-Number_of_particles: NCELL
+Number_of_particles: N
 Nematic_order_parameter: S
 
 Positions_and_orientations:
-R, PX_1, PY_1, PZ_1, QW_1, QX_1, QY_1, QZ_1
-R, PX_2, PY_2, PZ_2, QW_2, QX_2, QY_2, QZ_2
+R, PX1, PY1, PZ1, QW1, QX1, QY1, QZ1
+R, PX2, PY2, PZ2, QW2, QX2, QY2, QZ2
 .
 .
 .
-R, PX_NCELL, PY_NCELL, PZ_NCELL, QW_NCELL, QX_NCELL, QY_NCELL, QZ_NCELL
+R, PXN, PYN, PZN, QWN, QXN, QYN, QZN
 ```
 
 <p align="justify">
-  Here, <code>NCELL</code> is the number of particles in the unit cell, <code>P[X,Y,Z]</code> are particle coordinates, and <code>Q[W,X,Y,Z]</code> are quaternion components. The total number of particles defined by <code>NUMBER_OF_PARTICLES</code> must satisfy <code>NUMBER_OF_PARTICLES / NCELL = n³</code>, where <code>n</code> is an integer, so that the unit cell can be replicated equally along all three box directions. The packing fraction and number density stored in <code>fbox.dat</code> are metadata; the generated solid is rescaled using <code>NUMBER_DENSITY</code> from <code>ini_system.ini</code>.
+  Here, <code>N</code> is the number of particles in the unit cell, <code>P[X,Y,Z]</code> are particle coordinates, and <code>Q[W,X,Y,Z]</code> are quaternion components. The total number of particles defined by <code>NUMBER_OF_PARTICLES</code> must satisfy <code>NUMBER_OF_PARTICLES / N = n³</code>, where <code>n</code> is an integer, so that the unit cell can be replicated equally along all three box directions. The packing fraction and number density stored in <code>fbox.dat</code> are metadata; the generated solid is rescaled using <code>NUMBER_DENSITY</code> from <code>ini_system.ini</code>.
 </p>
 
 ### <a name="lcfile"></a>The Liquid-Crystal Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Liquid-crystal/lc.dat"><sub>Liquid-crystal/lc.dat</sub></a>
@@ -307,8 +307,8 @@ Cylindrical_diameter: D
 Cylindrical_length: L
 Box_Length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
 Number_of_Particles: N
-Particle_Positions_[XYZ]= X_1, Y_1, Z_1, X_2, Y_2, Z_2, ..., X_N, Y_N, Z_N
-Particle_Quaternions_[WXYZ]= W_1, X_1, Y_1, Z_1, W_2, X_2, Y_2, Z_2, ..., W_N, X_N, Y_N, Z_N
+Particle_Positions_[XYZ]= X1, Y1, Z1, X2, Y2, Z2, ..., XN, YN, ZN
+Particle_Quaternions_[WXYZ]= W1, X1, Y1, Z1, W2, X2, Y2, Z2, ..., WN, XN, YN, ZN
 ```
 
 ## <a name="filesandfolders"></a>Files and Folders
