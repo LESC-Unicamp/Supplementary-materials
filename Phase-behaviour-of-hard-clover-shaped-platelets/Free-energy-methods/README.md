@@ -309,11 +309,11 @@ Box_Length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
 Number_of_Particles: N
 Particle_Positions_[XYZ]= PX1, PY1, PZ1, PX2, PY2, PZ2, ..., PXN, PYN, PZN
 Particle_Quaternions_[WXYZ]= QW1, QX1, QY1, QZ1, QW2, QX2, QY2, QZ2, ..., QWN, QXN, QYN, QZN
+```
 
 <p align="justify">
   The arrays must contain exactly <code>3 × NUMBER_OF_PARTICLES</code> position values and <code>4 × NUMBER_OF_PARTICLES</code> quaternion values. Unlike the floppy-box route, the liquid-crystal box is read directly from <code>lc.dat</code> and is not rescaled according to <code>NUMBER_DENSITY</code>.
 </p>
-```
 
 ## <a name="filesandfolders"></a>Files and Folders
 
