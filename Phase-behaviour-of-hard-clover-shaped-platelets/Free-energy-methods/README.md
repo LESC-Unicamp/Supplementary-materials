@@ -307,14 +307,18 @@ Cylindrical_diameter: D
 Cylindrical_length: L
 Box_Length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
 Number_of_Particles: N
-Particle_Positions_[XYZ]= X1, Y1, Z1, X2, Y2, Z2, ..., XN, YN, ZN
-Particle_Quaternions_[WXYZ]= W1, X1, Y1, Z1, W2, X2, Y2, Z2, ..., WN, XN, YN, ZN
+Particle_Positions_[XYZ]= PX1, PY1, PZ1, PX2, PY2, PZ2, ..., PXN, PYN, PZN
+Particle_Quaternions_[WXYZ]= QW1, QX1, QY1, QZ1, QW2, QX2, QY2, QZ2, ..., QWN, QXN, QYN, QZN
+
+<p align="justify">
+  The arrays must contain exactly <code>3 × NUMBER_OF_PARTICLES</code> position values and <code>4 × NUMBER_OF_PARTICLES</code> quaternion values. Unlike the floppy-box route, the liquid-crystal box is read directly from <code>lc.dat</code> and is not rescaled according to <code>NUMBER_DENSITY</code>.
+</p>
 ```
 
 ## <a name="filesandfolders"></a>Files and Folders
 
 <p align="justify">
-  The program automatically organizes output files and directories. In total, 
+  The program automatically creates and organises the directories required for input and output. Output files are grouped into date-based subdirectories corresponding to the starting date of the calculation, and filenames include a time prefix together with the cylinder diameter (<code>D</code>), cylinder length (<code>L</code>), and aspect ratio (<code>LD</code>).
 </p>
 
 ## <a name="running"></a>Running the Code
