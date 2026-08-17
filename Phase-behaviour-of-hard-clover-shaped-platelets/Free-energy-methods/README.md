@@ -184,6 +184,24 @@ where <code>X</code> is the number of threads.
 
 ### The System File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_system.ini"><sub>ini_system.ini</sub></a>
 
+<p align="justify">
+  This file defines system-related variables and selects the free-energy contribution to be evaluated.
+</p>
+
+| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Number of particles | <code>NUMBER_OF_PARTICLES</code> | Defines the total number of nonconvex particles in the system | Any positive, non-zero <code>INTEGER</code> |
+| Number density | <code>NUMBER_DENSITY</code> | Defines the target number density used to construct a solid from a floppy-box unit cell; for an <code>LC</code> configuration, this value should be consistent with the supplied box and particle coordinates | Any positive, non-zero <code>FLOAT</code> |
+| Spring constant | <code>SPRING_CONSTANT</code> | Defines the reduced Einstein-crystal spring constant used in the Frenkel–Ladd calculations | Any positive, non-zero <code>FLOAT</code> |
+| Orientational field strength | <code>ORIENTATIONAL_FIELD_STRENGTH</code> | Defines the maximum reduced orientational-field strength used in the Frenkel–Mulder thermodynamic integration | Any positive, non-zero <code>FLOAT</code> |
+| Orientational field | <code>ORIENTATIONAL_FIELD</code> | Defines the direction of the external orientational field | Three <code>FLOAT</code> values defining a non-zero vector<sup>1</sup> |
+| Reduced temperature | <code>REDUCED_TEMPERATURE</code> | Defines the reduced temperature | Any positive, non-zero <code>FLOAT</code><br><b>NOTE:</b> The current hard-core calculations do not use this value |
+| Calculation type | <code>CALCULATION_TYPE</code> | Selects the free-energy calculation | <ul><li><code>0</code> for <code>A0</code> (Frenkel–Ladd)</li><li><code>1</code> for <code>ΔA1</code> (Frenkel–Ladd)</li><li><code>2</code> for <code>ΔA2</code> (Frenkel–Ladd)</li><li><code>3</code> for <code>ΔAfield</code> (Frenkel–Mulder)</li></ul> |
+
+<p align="justify">
+  <sup><sup>1</sup>The field vector does not need to be normalized beforehand; its magnitude is explicitly accounted for when the angle between the particle orientation and the field is evaluated.</sup>
+</p>
+
 ### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
 
 ### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
