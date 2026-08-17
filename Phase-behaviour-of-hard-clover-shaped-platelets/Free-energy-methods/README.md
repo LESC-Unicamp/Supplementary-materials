@@ -251,7 +251,24 @@ where <code>X</code> is the number of threads.
 
 ### The Integration Parameters File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_parameters.ini"><sub>ini_parameters.ini</sub></a>
 
+<p align="justify">
+  This file is used only when <code>CALCULATION_TYPE = 0</code>. It defines the Monte Carlo integration used to evaluate the orientational contribution of the Einstein-crystal reference state.
+</p>
+
+| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Integral dimension | <code>DIMENSION</code> | Defines the dimensionality of the orientational integral | <code>3</code> for the complete three-angle integral used by the supplied configuration |
+| Angle unit | <code>ANGLE_UNIT</code> | Defines the unit used for the integration bounds | <ul><li><code>DEG</code> for degrees</li><li><code>RAD</code> for radians</li></ul> |
+| Lower integration bounds | <code>INTEGRAL_LBOUND</code> | Defines the lower integration bounds for the orientational variables | Three <code>FLOAT</code> values for the default three-dimensional integral |
+| Upper integration bounds | <code>INTEGRAL_UBOUND</code> | Defines the upper integration bounds for the orientational variables | Three <code>FLOAT</code> values for the default three-dimensional integral |
+| Maximum number of steps | <code>MAX_STEPS</code> | Defines the number of random samples used in the Monte Carlo integration | Any positive, non-zero <code>INTEGER</code> |
+| Fixed seed | <code>FIXED_SEED_LOGICAL</code> | Controls the pseudorandom number generator (PRNG) seed used by the Monte Carlo integration | <ul><li><code>.TRUE.</code> to use a fixed seed and obtain reproducible pseudorandom sequences</li><li><code>.FALSE.</code> to use a random seed and obtain different pseudorandom sequences between runs</li></ul> |
+
 ### <a name="fbfile"></a>The Floppy-Box Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Floppy-box/fbox.dat"><sub>Floppy-box/fbox.dat</sub></a>
+
+<p align="justify">
+  When <code>MOLECULAR_CONFIGURATION = "FB"</code>, the code reads a unit-cell configuration from <code>Floppy-box/fbox.dat</code>. The unit cell is rescaled to the number density defined in <code>ini_system.ini</code> and periodically replicated along the three box directions to generate the solid configuration. The file must follow the structure below:
+</p>
 
 ### <a name="lcfile"></a>The Liquid-Crystal Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Liquid-crystal/lc.dat"><sub>Liquid-crystal/lc.dat</sub></a>
 
