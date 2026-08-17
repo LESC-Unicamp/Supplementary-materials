@@ -204,6 +204,26 @@ where <code>X</code> is the number of threads.
 
 ### The Monte Carlo File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_montecarlo.ini"><sub>ini_montecarlo.ini</sub></a>
 
+<p align="justify">
+  This file selects the initial configuration and defines the parameters used by the NVT-Monte Carlo simulations performed for <code>ΔA1</code>, <code>ΔA2</code>, and <code>ΔAfield</code>.
+</p>
+
+| Name<br> ________________________ | String Name<br> _________________________________ | Definition<br> _________________________________ | Options<br> _________________________________________________ |
+|:---:|:---:| --- | --- |
+| Molecular configuration | <code>MOLECULAR_CONFIGURATION</code> | Selects the initial configuration | <ul><li><code>FB</code> for a floppy-box solid configuration</li><li><code>LC</code> for a liquid-crystal configuration</li></ul> |
+| Number of cycles | <code>NUMBER_OF_CYCLES</code> | Defines the total number of Monte Carlo cycles | Any positive, non-zero <code>INTEGER</code> |
+| Number of equilibration cycles | <code>EQUILIBRATION_CYCLES</code> | Defines the number of equilibration cycles within the total simulation | Any non-negative <code>INTEGER</code> smaller than <code>NUMBER_OF_CYCLES</code> |
+| Saving frequency | <code>SAVING_FREQUENCY</code> | Defines how often simulation results and, if enabled, trajectory configurations are written | Any positive, non-zero <code>INTEGER</code> |
+| Adjustment frequency | <code>ADJUSTMENT_FREQUENCY</code> | Defines how often maximum translational and rotational displacements are adjusted during equilibration | Any positive, non-zero <code>INTEGER</code> |
+| Maximum translational displacement | <code>MAX_TRANSLATION</code> | Defines the initial maximum translational displacement (±) | Any positive, non-zero <code>FLOAT</code> |
+| Maximum rotational displacement | <code>MAX_ROTATION</code> | Defines the initial maximum rotational displacement (±), in radians | Any positive, non-zero <code>FLOAT</code> |
+| Trajectory printing | <code>TRANJECTORY_INQUIRY</code> | Specifies whether OVITO-compatible trajectory files are written | <ul><li><code>Y</code> to write trajectory files</li><li><code>N</code> to not write trajectory files</li></ul> |
+| Fixed seed | <code>FIXED_SEED_LOGICAL</code> | Controls the pseudorandom number generator (PRNG) seed used by the Monte Carlo simulations | <ul><li><code>.TRUE.</code> to use a fixed seed and obtain reproducible pseudorandom sequences</li><li><code>.FALSE.</code> to obtain a different stochastic realization between runs</li></ul> |
+
+<p align="justify">
+  <b>NOTE:</b> The intended combinations are <code>FB</code> with <code>CALCULATION_TYPE = 0</code>, <code>1</code>, or <code>2</code> for the Frenkel–Ladd solid route, and <code>LC</code> with <code>CALCULATION_TYPE = 3</code> for the Frenkel–Mulder liquid-crystal route.
+</p>
+
 ### The Probabilities File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_probabilities.ini"><sub>ini_probabilities.ini</sub></a>
 
 ### The Acceptance Ratios File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/ini_ratios.ini"><sub>ini_ratios.ini</sub></a>
