@@ -2323,7 +2323,8 @@ FreeEnergyChangeAField = - CouplingParameterHalfWidth * SUM( QuadratureContribut
 ! Summary
 WRITE( *, "(G0)" ) "Writing log..."
 WRITE( *, "(G0)" ) " "
-WRITE( *, "(G0,G0.5)" ) "Free energy change between the solid and the interacting EC is: ", FreeEnergyChangeAField
+WRITE( *, "(G0,G0.5)" ) "Free energy change between the externally oriented fluid and the LC phase of interest  is: ", &
+&                       FreeEnergyChangeAField
 
 ! Results file
 OPEN( Unit= 95, File= "Results/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_A2_D"//TRIM( FileDescriptor(1) )// &
