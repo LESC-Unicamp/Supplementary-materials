@@ -284,6 +284,7 @@ Nematic_order_parameter: S
 
 Positions_and_orientations:
 R, PX_1, PY_1, PZ_1, QW_1, QX_1, QY_1, QZ_1
+R, PX_2, PY_2, PZ_2, QW_2, QX_2, QY_2, QZ_2
 .
 .
 .
@@ -306,8 +307,8 @@ Cylindrical_diameter: D
 Cylindrical_length: L
 Box_Length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
 Number_of_Particles: N
-Particle_Positions_[XYZ]= X1, Y1, Z1, X2, Y2, Z2, ..., XN, YN, ZN
-Particle_Quaternions_[WXYZ]= W1, X1, Y1, Z1, W2, X2, Y2, Z2, ..., WN, XN, YN, ZN
+Particle_Positions_[XYZ]= X_1, Y_1, Z_1, X_2, Y_2, Z_2, ..., X_N, Y_N, Z_N
+Particle_Quaternions_[WXYZ]= W_1, X_1, Y_1, Z_1, W_2, X_2, Y_2, Z_2, ..., W_N, X_N, Y_N, Z_N
 ```
 
 ## <a name="filesandfolders"></a>Files and Folders
