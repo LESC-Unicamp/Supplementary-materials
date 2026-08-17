@@ -218,7 +218,7 @@ where <code>X</code> is the number of threads.
 | Maximum translational displacement | <code>MAX_TRANSLATION</code> | Defines the initial maximum translational displacement (±) | Any positive, non-zero <code>FLOAT</code> |
 | Maximum rotational displacement | <code>MAX_ROTATION</code> | Defines the initial maximum rotational displacement (±), in radians | Any positive, non-zero <code>FLOAT</code> |
 | Trajectory printing | <code>TRANJECTORY_INQUIRY</code> | Specifies whether OVITO-compatible trajectory files are written | <ul><li><code>Y</code> to write trajectory files</li><li><code>N</code> to not write trajectory files</li></ul> |
-| Fixed seed | <code>FIXED_SEED_LOGICAL</code> | Controls the pseudorandom number generator (PRNG) seed used by the Monte Carlo simulations | <ul><li><code>.TRUE.</code> to use a fixed seed and obtain reproducible pseudorandom sequences</li><li><code>.FALSE.</code> to obtain a different stochastic realization between runs</li></ul> |
+| Fixed seed | <code>FIXED_SEED_LOGICAL</code> | Controls the pseudorandom number generator (PRNG) seed used by the Monte Carlo simulations | <ul><li><code>.TRUE.</code> to use a fixed seed and obtain reproducible pseudorandom sequences</li><li><code>.FALSE.</code> to use a random seed and obtain different pseudorandom sequences between runs</li></ul> |
 
 <p align="justify">
   <b>NOTE:</b> The intended combinations are <code>FB</code> with <code>CALCULATION_TYPE = 0</code>, <code>1</code>, or <code>2</code> for the Frenkel–Ladd solid route, and <code>LC</code> with <code>CALCULATION_TYPE = 3</code> for the Frenkel–Mulder liquid-crystal route.
