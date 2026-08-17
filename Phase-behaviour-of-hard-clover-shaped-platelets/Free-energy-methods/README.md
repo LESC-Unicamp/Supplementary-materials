@@ -116,7 +116,11 @@ The following features are supported in the current version:
 
 ## <a name="language"></a>Language
 <p align="justify">
-  The main program, subroutines, and modules contain some explanatory comments and are mainly written in Fortran 95. The user can look for more information on Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
+  The main program, subroutines, and modules contain explanatory comments and are mainly written in Fortran 95. The source is compiled with GNU Fortran (<code>gfortran</code>) and uses the OpenMP API for parallel sections of the overlap-detection algorithm. The user can look for more information on the Fortran language <a href="https://docs.oracle.com/cd/E19957-01/806-3591/C_f95.html">here</a>.
+</p>
+
+<p align="justify">
+  The code creates directories by executing shell commands through the intrinsic function <code>SYSTEM</code>. The current implementation is therefore intended for Linux operating systems and Linux subsystems.
 </p>
 
 ## <a name="installation"></a>Building and Compiling
@@ -137,11 +141,11 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Free-
 ```
 
 <p align="justify">
-  The <code>/src/</code> folder contains a 'Makefile' that you can use to compile the standard version of the code.
+  The <code>/src/</code> folder contains a <code>makefile</code> that compiles the code with GNU Fortran and OpenMP support.
 </p>
 
 <p align="justify">
-  To compile it, first remove any object and module files using the <i>clean</i> command:
+  To compile it, first remove any object, module, and previously generated executable files using the <i>clean</i> command:
 </p>
   
 ```
@@ -149,12 +153,12 @@ cd Supplementary-materials/Phase-behaviour-of-hard-clover-shaped-platelets/Free-
 ```
 
 <p align="justify">
-  Then, to compile the source code, run the command below:
+  Then, compile the source code using the command below:
 </p>
 
 | **Compilation type** | **Command** |
 |:---:|:---:|
-| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/src/makefile">Standard</a> | ```make -f makefile``` |
+| <a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/src/makefile">Standard (with OpenMP)</a> | ```make -f makefile``` |
 
 <p align="justify">
   Please note that the compilation supports parallelization via OpenMP. In this case, it is recommended to set the number of threads using the following command:
@@ -169,13 +173,13 @@ where <code>X</code> is the number of threads.
 </p>
 
 <p align="justify">
-  This command will produce an executable named <code>nonconvex.out</code>, which can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
+  This command will produce an executable named <code>free-energy-method.out</code>, which can be found in the folder <code>/bin/</code> in the repository directory. Before running the program, there are a few initialization variables and options you need to set up.
 </p>
 
 ## <a name="datainput"></a>Data Input
 
 <p align="justify">
-  Apart from the executable file, the <code>/bin/</code> folder contains some initialization files that need to be set up.
+  Apart from the executable file, the <code>/bin/</code> directory contains the initialization files used to define the free-energy calculation, Monte Carlo sampling parameters, and system properties. Depending on the selected method, an initial configuration must also be supplied in either the <code>Floppy-box/</code> or <code>Liquid-crystal/</code> directory.
 </p>
 
 ## <a name="filesandfolders"></a>Files and Folders
