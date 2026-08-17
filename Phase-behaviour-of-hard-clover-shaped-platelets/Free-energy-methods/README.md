@@ -283,11 +283,11 @@ Number_of_particles: NCELL
 Nematic_order_parameter: S
 
 Positions_and_orientations:
-R, PX, PY, PZ, QW, QX, QY, QZ
+R, PX_1, PY_1, PZ_1, QW_1, QX_1, QY_1, QZ_1
 .
 .
 .
-R, PX, PY, PZ, QW, QX, QY, QZ
+R, PX_NCELL, PY_NCELL, PZ_NCELL, QW_NCELL, QX_NCELL, QY_NCELL, QZ_NCELL
 ```
 
 <p align="justify">
@@ -295,6 +295,20 @@ R, PX, PY, PZ, QW, QX, QY, QZ
 </p>
 
 ### <a name="lcfile"></a>The Liquid-Crystal Data File<br><a href="https://github.com/LESC-Unicamp/Supplementary-materials/blob/main/Phase-behaviour-of-hard-clover-shaped-platelets/Free-energy-methods/bin/Liquid-crystal/lc.dat"><sub>Liquid-crystal/lc.dat</sub></a>
+
+<p align="justify">
+  When <code>MOLECULAR_CONFIGURATION = "LC"</code>, the code reads the simulation box, particle positions, and particle quaternions directly from <code>Liquid-crystal/lc.dat</code>. The file has six entries:
+</p>
+
+```
+Arrangement_type: 2
+Cylindrical_diameter: D
+Cylindrical_length: L
+Box_Length: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ
+Number_of_Particles: N
+Particle_Positions_[XYZ]= X1, Y1, Z1, X2, Y2, Z2, ..., XN, YN, ZN
+Particle_Quaternions_[WXYZ]= W1, X1, Y1, Z1, W2, X2, Y2, Z2, ..., WN, XN, YN, ZN
+```
 
 ## <a name="filesandfolders"></a>Files and Folders
 
