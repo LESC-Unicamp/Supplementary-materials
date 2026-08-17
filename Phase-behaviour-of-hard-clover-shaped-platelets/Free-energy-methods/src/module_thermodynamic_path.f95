@@ -1882,7 +1882,7 @@ END IF
 ! Results file
 OPEN( Unit= 80, File= "Results/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_results_D" &
 &                     //TRIM( FileDescriptor(1) )//"_L"//TRIM( FileDescriptor(2) )//"_LD" &
-&                     //TRIM( FileDescriptor(3) )//"_λpoints.dat" )
+&                     //TRIM( FileDescriptor(3) )//"_ξpoints.dat" )
 WRITE( 80, "(G0)" ) "QuadraturePoint,OrientationalFieldStrength,AverageOrientationalPotentialEnergy"
 FLUSH( 80 )
 
@@ -1898,7 +1898,7 @@ WRITE( *, "(G0)" ) " "
 DO qPoint = qPointInitial, qPointFinal
 
   ! Status
-  WRITE( *, "(G0,G0.5,3G0)" ) "Current λ value: ", GaussLegendrePoints(qPoint), " (", qPoint, ")"
+  WRITE( *, "(G0,G0.5,3G0)" ) "Current ξ value: ", GaussLegendrePoints(qPoint), " (", qPoint, ")"
   WRITE( *, "(G0)" ) " "
 
   ! Descriptor (lambda)
@@ -1990,7 +1990,7 @@ DO qPoint = qPointInitial, qPointFinal
   IF( TrajectoryLogical ) THEN
     OPEN( Unit= 20, File= "Trajectories/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_traj_D" &
     &                     //TRIM( FileDescriptor(1) )//"_L"//TRIM( FileDescriptor(2) )//"_LD" &
-    &                     //TRIM( FileDescriptor(3) )//"_λ"//TRIM( FileDescriptor(4) )//".xyz" )
+    &                     //TRIM( FileDescriptor(3) )//"_ξ"//TRIM( FileDescriptor(4) )//".xyz" )
     WRITE( 20, "(I5)" ) nParticles * 4
     DescriptorString = "(G0,8(G0.6,1X),G0.6,G0,2(G0.6,1X),G0.6,2G0)"
     WRITE( 20, DescriptorString ) 'Lattice="', BoxLength(1:9), '" Origin="', -0.5D0 * ( BoxLength(1) + BoxLength(4) + &
@@ -2015,21 +2015,21 @@ DO qPoint = qPointInitial, qPointFinal
   ! Ratio file (translation)
   OPEN( Unit= 30, File= "Ratio/Translation/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_ratio_D" &
   &                     //TRIM( FileDescriptor(1) )//"_L"//TRIM( FileDescriptor(2) )//"_LD" &
-  &                     //TRIM( FileDescriptor(3) )//"_λ"//TRIM( FileDescriptor(4) )//".dat" )
+  &                     //TRIM( FileDescriptor(3) )//"_ξ"//TRIM( FileDescriptor(4) )//".dat" )
   WRITE( 30, "(G0)" ) "Cycles,Ratio,MaxTranslationalDisplacement,AcceptanceRatioTranslation"
   FLUSH( 30 )
 
   ! Ratio file (rotation)
   OPEN( Unit= 40, File= "Ratio/Rotation/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_ratio_D" &
   &                     //TRIM( FileDescriptor(1) )//"_L"//TRIM( FileDescriptor(2) )//"_LD" &
-  &                     //TRIM( FileDescriptor(3) )//"_λ"//TRIM( FileDescriptor(4) )//".dat" )
+  &                     //TRIM( FileDescriptor(3) )//"_ξ"//TRIM( FileDescriptor(4) )//".dat" )
   WRITE( 40, "(G0)" ) "Cycles,Ratio,MaxAngularDisplacement,AcceptanceRatioRotation"
   FLUSH( 40 )
 
   ! Results file
   OPEN( Unit= 70, File= "Results/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_results_D" &
   &                     //TRIM( FileDescriptor(1) )//"_L"//TRIM( FileDescriptor(2) )//"_LD" &
-  &                     //TRIM( FileDescriptor(3) )//"_λ"//TRIM( FileDescriptor(4) )//".dat" )
+  &                     //TRIM( FileDescriptor(3) )//"_ξ"//TRIM( FileDescriptor(4) )//".dat" )
   WRITE( 70, "(G0)" ) "Cycles,OrientationalFieldEnergy,SquaredSineAngle,CumulativeSquaredSineAngle"
   FLUSH( 70 )
 
@@ -2324,11 +2324,11 @@ FreeEnergyChangeAField = - CouplingParameterHalfWidth * SUM( QuadratureContribut
 WRITE( *, "(G0)" ) "Writing log..."
 WRITE( *, "(G0)" ) " "
 WRITE( *, "(G0,G0.5)" ) "Free energy change between the externally oriented fluid and the LC phase of interest  is: ", &
-&                       FreeEnergyChangeAField
+&                        FreeEnergyChangeAField
 
 ! Results file
 OPEN( Unit= 95, File= "Results/"//TRIM( DateDescriptor )//"/"//TRIM( HourDescriptor )//"_A2_D"//TRIM( FileDescriptor(1) )// &
-&                     "_L"//TRIM( FileDescriptor(2) )//"_LD"//TRIM( FileDescriptor(3) )//"_λENERGY.dat" )
+&                     "_L"//TRIM( FileDescriptor(2) )//"_LD"//TRIM( FileDescriptor(3) )//"_ξENERGY.dat" )
 WRITE( 95, "(G0,G0.15)" ) "Free energy change between the solid and the interacting EC is: ", FreeEnergyChangeAField
 FLUSH( 95 )
 CLOSE( 95 )
