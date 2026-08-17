@@ -39,7 +39,7 @@ Nathan Barros de Souza<br>
 Luís Fernando Mercier Franco<br>
 Carlos Avendaño<br></p>
 
-# <p align="center"><b>NVT/NPT Monte Carlo simulation of nonconvex clover-shaped platelets</b></p>
+# <p align="center">Frenkel–Ladd and Frenkel–Mulder<br>thermodynamic integration methods</b></p>
 
 ## Contents
 1. [Disclaimer](#disclaimer)
@@ -70,6 +70,9 @@ This software is licensed under the GNU General Public License v3.0. See the <a 
 <p align="justify">
 This NVT/NPT Monte Carlo algorithm was developed to investigate the phase behavior of a system of clover-shaped hard particles, a nonconvex geometry formed by the union of four identical cylinders. Because particle interactions are purely hard-core, specialized routines are required to detect overlaps between the cylindrical subunits. In this work, we employ a hybrid overlap-detection routine that combines the methods proposed by Ibarra-Avalos <i>et al.</i> (<a href="https://doi.org/10.1080/08927020701191349"><b>Mol. Simul.</b>, 33, 505-515, 2007</a>), Orellana <i>et al.</i> (<a href="https://doi.org/10.1140/epje/i2018-11657-0"><b>Eur. Phys. J. E</b>, 41, 10, 2018</a>), and Lopes <i>et al.</i> (<a href="https://doi.org/10.1063/5.0040942"><b>J. Chem. Phys.</b>, 154, 104902, 2021</a>), with a minor modification to the disk–rim overlap test introduced in the latter. The algorithm also implements Widom’s particle insertion method to compute the excess chemical potential. In addition, simulations may be performed in the presence of an external orientational field that aligns the particles’ principal symmetry axis along a preferred direction.
 </p>
+
+frenkel-Mulder: https://doi.org/10.1080/00268978500101971
+frenkel-ladd: https://doi.org/10.1063/1.448024
 
 <p align="justify">
   For illustration, the <strong>isotropic fluid phase</strong> (observed during compression runs) and the <strong>lamello–columnar phase</strong> (observed during expansion runs) are shown below. The animations were generated using <a href="https://www.ovito.org/" target="_blank">OVITO</a>.
