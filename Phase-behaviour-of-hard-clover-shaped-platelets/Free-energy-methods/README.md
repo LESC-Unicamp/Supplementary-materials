@@ -82,7 +82,7 @@ This software is licensed under the GNU General Public License v3.0. See the <a 
 | | |
 |:---:|:---:|
 | | |
-| **Arrangement #1**<br> Platelet | **Arrangement #2**<br> Platelet |
+| **Arrangement #1** | **Arrangement #2** |
 | ![platelet_1](https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/assets/73966482/188e1445-2357-4aa0-ace4-c138ee089121) | ![platelet_2](https://github.com/LESC-Unicamp/Floppy-Box-Monte-Carlo-Nonconvex-Particles/assets/73966482/df2113fc-a269-43b9-9523-29a8e003be53) |
 | | |
 
