@@ -364,10 +364,10 @@ IF( isAssociativePotentialEnabled .AND. isParticleDestroyed .AND. ANY( isSiteAss
           SquaredDistance = DOT_PRODUCT( VectorDistance, VectorDistance )
           ! Four-site model potential
           CALL FourSite_Model( SquaredDistance, AccumulateEnergy )
-          ! Increment energy
-          iPotentialEnergy = iPotentialEnergy + AccumulateEnergy
+          ! Subtract energy of associations newly formed among surviving particles
+          iPotentialEnergy = iPotentialEnergy - AccumulateEnergy
           ! Set association contribution
-          iAssociationTerm = iAssociationTerm + AccumulateEnergy
+          iAssociationTerm = iAssociationTerm - AccumulateEnergy
           ! Associate particles
           IF( SquaredDistance < cutoffSquaredRadiusWater ) THEN
             isSiteAssociated(jSite,jParticle) = .TRUE.
